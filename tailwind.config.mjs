@@ -7,11 +7,37 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        rethink: ['var(--font-rethink-sans)', 'sans-serif'],
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      textStrokeWidth: {
+        thin: '1px',
+        medium: '2px',
+        thick: '3px',
+      },
+      textStrokeColor: {
+        black: '#000',
+        white: '#fff',
+        custom: '#6c8de9', // Add custom colors
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-outline': {
+          color: 'transparent',
+          '-webkit-text-stroke': '1px #000', // Default stroke
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };

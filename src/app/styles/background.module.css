@@ -1,0 +1,13 @@
+.background {
+  --_mesh-gradient-blur: 0px;
+  --_mesh-gradient-blend-mode: normal;
+
+  background: radial-gradient(
+      at 12.546752403987965% 51.14795918367348%,
+      #0a0a0a 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 76.73175623856999% 37.5%, #0c100e 0px, transparent 50%)
+      #000000;
+  mix-blend-mode: var(--_mesh-gradient-blend-mode);
+}

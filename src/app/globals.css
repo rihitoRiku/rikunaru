@@ -5,17 +5,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --tw-bg-opacity: 1;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+  background-color: #010101;
   font-family: Arial, Helvetica, sans-serif;
 }

@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         rethink: ['var(--font-rethink-sans)', 'sans-serif'],
+        passionsConflict: ['var(--font-passions-conflict)', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
@@ -16,6 +17,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primarytext: '#e5e5e5',
+        secondarytext: '#a3a3a3',
       },
       textStrokeWidth: {
         thin: '1px',

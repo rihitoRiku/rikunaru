@@ -1,5 +1,12 @@
-import { Geist, Geist_Mono, Rethink_Sans, Inter } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Rethink_Sans,
+  Passions_Conflict,
+  Inter,
+} from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +23,12 @@ export const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
 });
 
+export const passionsConflict = Passions_Conflict({
+  subsets: ["latin"],
+  variable: "--font-passions-conflict",
+  weight: "400",
+});
+
 export const metadata = {
   title: "Muhammad Rafi Shidiq",
   description: "Personal Website of Muhammad Rafi Shidiq",
@@ -25,8 +38,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${rethinkSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rethinkSans.variable} ${passionsConflict.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

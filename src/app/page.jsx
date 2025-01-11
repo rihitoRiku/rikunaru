@@ -306,9 +306,10 @@ export default function Home() {
               </motion.div>
             </div>
             <p>
-              Hello! You can call me <strong className="text-primarytext">Rafi</strong> . I am a Software
-              Engineer who works with the React ecosystem, dedicated to staying
-              updated in the ever-evolving tech landscape and bringing
+              Hello! You can call me{" "}
+              <strong className="text-primarytext">Rafi</strong> . I am a
+              Software Engineer who works with the React ecosystem, dedicated to
+              staying updated in the ever-evolving tech landscape and bringing
               innovative solutions to the table.
             </p>
             <p>
@@ -424,7 +425,8 @@ export default function Home() {
         </div>
 
         {/* Education */}
-        <div className="relative px-6 mt-28 min-h-[32rem]">
+        <div className="relative mt-28 min-h-[32rem]">
+          {/* Background Text */}
           <div
             className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20"
             style={{
@@ -436,6 +438,7 @@ export default function Home() {
             EDUCATION
           </div>
 
+          {/* Background Image */}
           <div className="absolute inset-0 flex justify-center items-start -z-10 text-zinc-800/20 w-full">
             <Image
               src="/bnwupi.png"
@@ -446,8 +449,10 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute -z-10 pt-16 flex flex-col items-start h-1/3">
-            <div className="ms-4 lg:ms-8">
+          {/* Content Container */}
+          <div className="absolute -z-10 pt-16 px-4 lg:px-8 flex flex-col items-start w-full">
+            {/* Education Header */}
+            <div className="relative">
               <div className="text-2xl lg:text-3xl font-semibold text-center">
                 <div
                   className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
@@ -458,10 +463,114 @@ export default function Home() {
                 <span>Education</span>
               </div>
             </div>
-            <div className="ms-4 lg:ms-8">
-              <p className="text-3xl"></p>
+
+            {/* Main Content Container */}
+            <div className="relative mt-3 md:flex gap-8 w-full">
+              {/* Left Column */}
+              <div className="w-full md:max-w-[36rem]">
+                {/* Education Description */}
+                <div className="text-secondarytext text-justify md:text-left w-full md:max-w-[36rem]">
+                  <p>
+                    As a fresh graduate of Computer Science from Indonesia
+                    University of Education (UPI), I have developed a strong
+                    foundation in programming, covering algorithms,
+                    object-oriented programming (OOP), databases, and web
+                    development. Balancing academic coursework with hands-on
+                    experience, I took on the role of an assistant lecturer and
+                    actively collaborated on projects, enhancing both my
+                    technical expertise and teamwork skills.
+                  </p>
+                </div>
+
+                {/* New Content - Desktop Only */}
+                <div className="hidden md:block mt-8 text-secondarytext">
+                  <div
+                    className="p-6 rounded-xl border"
+                    style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-4">
+                      Additional Content
+                    </h3>
+                    <p>
+                      Place your new content here. This section will appear
+                      below the education description on desktop screens.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Assistant Lecturer Card */}
+              <div className="relative md:-top-28 w-full flex justify-center">
+                <div
+                  className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border"
+                  style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                >
+                  <div className="absolute -bottom-4 -right-2 text-[120px] font-bold text-white/5 select-none leading-none">
+                    2022
+                  </div>
+
+                  <div className="relative z-10 text-primarytext">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center text-secondarytext text-sm">
+                        <span>College Experience</span>
+                      </div>
+                      <div className="bg-green-500/10 text-green-500 px-2 py-1 rounded-full text-xs">
+                        2 semester / 1 year
+                      </div>
+                    </div>
+
+                    <div className="relative -mx-6 my-6">
+                      <div className="h-[1px] bg-gray-800"></div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <h2 className="text-2xl font-semibold">
+                        Assistant Lecturer
+                      </h2>
+                      <p className="text-secondarytext text-sm">
+                        I have experience in curriculum design, teaching over 50
+                        students, and laboratory management. My responsibilities
+                        have included:
+                      </p>
+                      <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
+                        <li>
+                          Developed lesson plans, modules, and exam materials of
+                          computer networking and RPL.
+                        </li>
+                        <li>
+                          Taught practical sessions and supervised student
+                          competitions.
+                        </li>
+                        <li>
+                          Conducted exams and assessed student performance.
+                        </li>
+                        <li>
+                          Facilitated software development life cycle (SDLC)
+                          tutorials
+                        </li>
+                        <li>Managed and maintained the computer laboratory.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            {/* New Content - Mobile Only */}
+            <div className="md:hidden mt-8 text-secondarytext w-full">
+              <div
+                className="p-6 rounded-xl border"
+                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+              >
+                <h3 className="text-xl font-semibold mb-4">
+                  Additional Content
+                </h3>
+                <p>
+                  Place your new content here. This section will appear below
+                  the assistant lecturer card on mobile screens.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

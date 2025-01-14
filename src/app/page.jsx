@@ -1,8 +1,9 @@
 "use client";
-import { useState, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
 import { Tooltip } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
+import { Timeline } from "antd";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineWork } from "react-icons/md";
 
@@ -25,7 +26,6 @@ export default function Home() {
     });
   };
 
-  // ANTD
   const [arrow, setArrow] = useState("Show");
   const mergedArrow = useMemo(() => {
     if (arrow === "Hide") {
@@ -38,6 +38,20 @@ export default function Home() {
       pointAtCenter: true,
     };
   }, [arrow]);
+
+  const customStyles = {
+    borderLeft: "2px solid #52c41a", // Change to your desired color
+  };
+
+  useEffect(() => {
+    // Ensure the document is available (client-side)
+    if (typeof document !== "undefined") {
+      document.querySelectorAll(".ant-timeline-item-tail").forEach((el) => {
+        el.style.borderLeft = "2px solid #52c41a"; // Change vertical line color
+      });
+    }
+  }, []);
+
   return (
     <>
       {/* Container */}
@@ -424,158 +438,384 @@ export default function Home() {
           </div>
         </div>
 
+        {/* REV */}
+
         {/* Education */}
-        <div className="relative mt-28 min-h-[32rem]">
-          {/* Background Text */}
-          <div
-            className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20"
-            style={{
-              writingMode: "vertical-rl",
-              transform: "rotate(180deg)",
-              filter: "blur(8px)",
-            }}
-          >
-            EDUCATION
-          </div>
-
-          {/* Background Image */}
-          <div className="absolute inset-0 flex justify-center items-start -z-10 text-zinc-800/20 w-full">
-            <Image
-              src="/bnwupi.png"
-              width={350}
-              height={350}
-              alt="LogoUPI"
-              style={{ filter: "grayscale(100%)", opacity: 0.02 }}
-            />
-          </div>
-
-          {/* Content Container */}
-          <div className="absolute -z-10 pt-16 px-4 lg:px-8 flex flex-col items-start w-full">
-            {/* Education Header */}
-            <div className="relative">
-              <div className="text-2xl lg:text-3xl font-semibold text-center">
-                <div
-                  className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
-                  style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                >
-                  <GiGraduateCap className="text-5xl lg:text-6xl" />
-                </div>
-                <span>Education</span>
-              </div>
+        <div className="relative mt-28">
+          {/* Background Elements */}
+          <div className="relative">
+            {/* Background Text */}
+            <div
+              className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold text-zinc-800/20"
+              style={{
+                writingMode: "vertical-rl",
+                transform: "rotate(180deg)",
+                filter: "blur(5px)",
+              }}
+            >
+              EDUCATION
             </div>
 
-            {/* Main Content Container */}
-            <div className="relative mt-3 md:flex gap-8 w-full">
-              {/* Left Column */}
-              <div className="w-full md:max-w-[36rem]">
-                {/* Education Description */}
-                <div className="text-secondarytext text-justify md:text-left w-full md:max-w-[36rem]">
-                  <p>
-                    As a fresh graduate of Computer Science from Indonesia
-                    University of Education (UPI), I have developed a strong
-                    foundation in programming, covering algorithms,
-                    object-oriented programming (OOP), databases, and web
-                    development. Balancing academic coursework with hands-on
-                    experience, I took on the role of an assistant lecturer and
-                    actively collaborated on projects, enhancing both my
-                    technical expertise and teamwork skills.
-                  </p>
-                </div>
+            {/* Background Image */}
+            <div className="absolute inset-0 flex justify-center items-start text-zinc-800/20 w-full">
+              <Image
+                src="/bnwupi.png"
+                width={350}
+                height={350}
+                alt="LogoUPI"
+                style={{ filter: "grayscale(100%)", opacity: 0.02 }}
+              />
+            </div>
 
-                {/* New Content - Desktop Only */}
-                <div className="hidden md:block mt-8 text-secondarytext">
+            {/* Content Container - Changed from absolute to relative positioning */}
+            <div className="relative pt-16 px-4 lg:px-8 flex flex-col items-start w-full">
+              {/* Education Header */}
+              <div className="relative">
+                <div className="text-2xl lg:text-3xl font-semibold text-center">
                   <div
-                    className="p-6 rounded-xl border"
+                    className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
                     style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
                   >
-                    <h3 className="text-xl font-semibold mb-4">
-                      Additional Content
-                    </h3>
-                    <p>
-                      Place your new content here. This section will appear
-                      below the education description on desktop screens.
-                    </p>
+                    <GiGraduateCap className="text-5xl lg:text-6xl" />
                   </div>
+                  <span>Education</span>
                 </div>
               </div>
 
-              {/* Assistant Lecturer Card */}
-              <div className="relative md:-top-28 w-full flex justify-center">
-                <div
-                  className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border"
-                  style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                >
-                  <div className="absolute -bottom-4 -right-2 text-[120px] font-bold text-white/5 select-none leading-none">
-                    2022
+              {/* Rest of the content - same as before but nested under the relative container */}
+              <div className="relative mt-3 md:flex gap-8 w-full">
+                {/* Left Column */}
+                <div className="w-full md:max-w-[36rem]">
+                  {/* Education Description */}
+                  <div className="text-secondarytext text-justify md:text-left w-full md:max-w-[36rem]">
+                    <p>GPA: 3.85 of 4 (cumlaude) | Total Credit Hours: 144</p>
+                    <p>
+                      As a fresh graduate of Computer Science (S.Kom.) from
+                      Indonesia University of Education (UPI), I have developed
+                      a strong foundation in programming, covering algorithms,
+                      object-oriented programming (OOP), databases, and web
+                      development. Balancing academic coursework with hands-on
+                      experience, I took on the role of an assistant lecturer
+                      and actively collaborated on projects, enhancing both my
+                      technical expertise and teamwork skills.
+                    </p>
                   </div>
 
-                  <div className="relative z-10 text-primarytext">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center text-secondarytext text-sm">
-                        <span>College Experience</span>
-                      </div>
-                      <div className="bg-green-500/10 text-green-500 px-2 py-1 rounded-full text-xs">
-                        2 semester / 1 year
-                      </div>
+                  {/* Rest of the content remains the same */}
+                  {/* New Content - Desktop Only */}
+                  <div className="hidden md:block mt-8 text-secondarytext">
+                    <div className="">
+                      <h3 className="text-xl font-semibold mb-4">
+                        Competition
+                      </h3>
+                      <Timeline
+                        className="text-secondarytext"
+                        items={[
+                          {
+                            color: "green",
+                            children: (
+                              <div>
+                                <p>GEMASTIK XV 2022</p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur,
+                                  adipisicing elit. Quasi, tempora ut!
+                                  Architecto eos reprehenderit atque, similique
+                                  sequi recusandae culpa quae!
+                                </p>
+                              </div>
+                            ),
+                          },
+                          {
+                            color: "green",
+                            children: (
+                              <div>
+                                <p>Comfest Cyber Security CTF</p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur,
+                                  adipisicing elit. Quasi, tempora ut!
+                                  Architecto eos reprehenderit atque, similique
+                                  sequi recusandae culpa quae!
+                                </p>
+                              </div>
+                            ),
+                          },
+                          {
+                            color: "green",
+                            children: (
+                              <div>
+                                <p>
+                                  DINAMIK 18 computer programming competition
+                                  (CP)
+                                </p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur,
+                                  adipisicing elit. Quasi, tempora ut!
+                                  Architecto eos reprehenderit atque, similique
+                                  sequi recusandae culpa quae!
+                                </p>
+                              </div>
+                            ),
+                          },
+                          {
+                            color: "green",
+                            children: (
+                              <div>
+                                <p>Scavenger Hunt</p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur,
+                                  adipisicing elit. Quasi, tempora ut!
+                                  Architecto eos reprehenderit atque, similique
+                                  sequi recusandae culpa quae!
+                                </p>
+                              </div>
+                            ),
+                          },
+                        ]}
+                      />
                     </div>
-
-                    <div className="relative -mx-6 my-6">
-                      <div className="h-[1px] bg-gray-800"></div>
+                    <div className="">
+                      <h3 className="text-xl font-semibold mb-4">
+                        Publication
+                      </h3>
+                      <Timeline
+                        className="text-secondarytext"
+                        items={[
+                          {
+                            color: "green",
+                            children: (
+                              <>
+                                <p>
+                                  Implementation of Bayesian Knowledge Tracing
+                                  in a TOEFL Learning Application Based on
+                                  Gamification with The Octalysis Framework
+                                </p>
+                              </>
+                            ),
+                          },
+                          {
+                            color: "green",
+                            children: (
+                              <>
+                                <p>
+                                  Analisis Pengaruh Metode Penjualan Terhadap
+                                  Tingkat Penjualan Barang
+                                </p>
+                              </>
+                            ),
+                          },
+                        ]}
+                      />
                     </div>
-
-                    <div className="space-y-2">
-                      <h2 className="text-2xl font-semibold">
-                        Assistant Lecturer
-                      </h2>
-                      <p className="text-secondarytext text-sm">
-                        I have experience in curriculum design, teaching over 50
-                        students, and laboratory management. My responsibilities
-                        have included:
-                      </p>
+                    <div
+                      className="p-6 rounded-xl border"
+                      style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                    >
+                      <h3 className="text-xl font-semibold mb-4">
+                        Organization
+                      </h3>
                       <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
                         <li>
-                          Developed lesson plans, modules, and exam materials of
-                          computer networking and RPL.
+                          Google Developer Student Club (GDSC) – Active member
+                          of the Indonesia student programmer community,
+                          collaborating on projects, attending workshops, and
+                          enhancing skills in web development and cloud
+                          computing.
                         </li>
                         <li>
-                          Taught practical sessions and supervised student
-                          competitions.
+                          Ostric – Tutor for web development and cloud
+                          computing, mentoring students, providing hands-on
+                          guidance, and contributing to a collaborative learning
+                          environment.
                         </li>
-                        <li>
-                          Conducted exams and assessed student performance.
-                        </li>
-                        <li>
-                          Facilitated software development life cycle (SDLC)
-                          tutorials
-                        </li>
-                        <li>Managed and maintained the computer laboratory.</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* New Content - Mobile Only */}
-            <div className="md:hidden mt-8 text-secondarytext w-full">
-              <div
-                className="p-6 rounded-xl border"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
-                <h3 className="text-xl font-semibold mb-4">
-                  Additional Content
-                </h3>
-                <p>
-                  Place your new content here. This section will appear below
-                  the assistant lecturer card on mobile screens.
-                </p>
+                {/* Assistant Lecturer Card - Changed positioning */}
+                <div className="w-full flex justify-center md:mt-[-7rem]">
+                  <div
+                    className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border"
+                    style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                  >
+                    {/* Card content remains the same */}
+                    <div className="absolute -bottom-4 -right-2 text-[120px] font-bold text-white/5 select-none leading-none">
+                      2022
+                    </div>
+
+                    <div className="relative z-10 text-primarytext">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center text-secondarytext text-sm">
+                          <span>College Experience</span>
+                        </div>
+                        <div className="bg-green-500/10 text-green-500 px-2 py-1 rounded-full text-xs">
+                          2 semester / 1 year
+                        </div>
+                      </div>
+
+                      <div className="relative -mx-6 my-6">
+                        <div className="h-[1px] bg-gray-800"></div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <h2 className="text-2xl font-semibold">
+                          Assistant Lecturer
+                        </h2>
+                        <p className="text-secondarytext text-sm">
+                          I have experience in curriculum design, teaching over
+                          50 students, and laboratory management. My
+                          responsibilities have included:
+                        </p>
+                        <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
+                          <li>
+                            Developed lesson plans, modules, and exam materials
+                            of computer networking and RPL.
+                          </li>
+                          <li>
+                            Taught practical sessions and supervised student
+                            competitions.
+                          </li>
+                          <li>
+                            Conducted exams and assessed student performance.
+                          </li>
+                          <li>
+                            Facilitated software development life cycle (SDLC)
+                            tutorials
+                          </li>
+                          <li>
+                            Managed and maintained the computer laboratory.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* New Content - Mobile Only */}
+              <div className="md:hidden mt-8 text-secondarytext w-full">
+                <div className="">
+                  <h3 className="text-xl font-semibold mb-4">Competition</h3>
+                  <Timeline
+                    className="text-secondarytext"
+                    items={[
+                      {
+                        color: "green",
+                        children: (
+                          <div>
+                            <p>GEMASTIK XV 2022</p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Quasi, tempora ut! Architecto
+                              eos reprehenderit atque, similique sequi
+                              recusandae culpa quae!
+                            </p>
+                          </div>
+                        ),
+                      },
+                      {
+                        color: "green",
+                        children: (
+                          <div>
+                            <p>Comfest Cyber Security CTF</p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Quasi, tempora ut! Architecto
+                              eos reprehenderit atque, similique sequi
+                              recusandae culpa quae!
+                            </p>
+                          </div>
+                        ),
+                      },
+                      {
+                        color: "green",
+                        children: (
+                          <div>
+                            <p>
+                              DINAMIK 18 computer programming competition (CP)
+                            </p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Quasi, tempora ut! Architecto
+                              eos reprehenderit atque, similique sequi
+                              recusandae culpa quae!
+                            </p>
+                          </div>
+                        ),
+                      },
+                      {
+                        color: "green",
+                        children: (
+                          <div>
+                            <p>Scavenger Hunt</p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Quasi, tempora ut! Architecto
+                              eos reprehenderit atque, similique sequi
+                              recusandae culpa quae!
+                            </p>
+                          </div>
+                        ),
+                      },
+                    ]}
+                  />
+                </div>
+                <div className="">
+                  <h3 className="text-xl font-semibold mb-4">Publication</h3>
+                  <Timeline
+                    className="text-secondarytext"
+                    items={[
+                      {
+                        color: "green",
+                        children: (
+                          <>
+                            <p>
+                              Implementation of Bayesian Knowledge Tracing in a
+                              TOEFL Learning Application Based on Gamification
+                              with The Octalysis Framework
+                            </p>
+                          </>
+                        ),
+                      },
+                      {
+                        color: "green",
+                        children: (
+                          <>
+                            <p>
+                              Analisis Pengaruh Metode Penjualan Terhadap
+                              Tingkat Penjualan Barang
+                            </p>
+                          </>
+                        ),
+                      },
+                    ]}
+                  />
+                </div>
+                <div
+                  className="p-6 rounded-xl border"
+                  style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                >
+                  <h3 className="text-xl font-semibold mb-4">Organization</h3>
+                  <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
+                    <li>
+                      Google Developer Student Club (GDSC) – Active member of
+                      the Indonesia student programmer community, collaborating
+                      on projects, attending workshops, and enhancing skills in
+                      web development and cloud computing.
+                    </li>
+                    <li>
+                      Ostric – Tutor for web development and cloud computing,
+                      mentoring students, providing hands-on guidance, and
+                      contributing to a collaborative learning environment.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Experience */}
-        {/* <div className="relative px-6 mt-28 min-h-screen">
+        <div className="relative px-6 mt-28 min-h-screen">
           <div className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20">
             EXPERIENCE
           </div>
@@ -590,7 +830,7 @@ export default function Home() {
               <span>Experience</span>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div className=""></div>
       </div>

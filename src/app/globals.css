@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Standard scrollbar for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.zinc.800') theme('colors.zinc.950');
+  }
+
+  /* WebKit Scrollbar (Chrome, Edge, Safari) */
+  *::-webkit-scrollbar {
+    width: 8px; /* Adjust width */
+  }
+
+  *::-webkit-scrollbar-track {
+    background: theme('colors.zinc.950'); /* Dark track */
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: theme('colors.zinc.800'); /* Dark thumb */
+    border-radius: 9999px;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

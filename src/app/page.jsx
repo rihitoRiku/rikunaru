@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
-import { Tooltip } from "antd";
+import { Tooltip, Tag } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
 import { Timeline } from "antd";
 import { GiGraduateCap } from "react-icons/gi";
@@ -77,6 +77,7 @@ export default function Home() {
               <button
                 onMouseMove={handleMouseMove}
                 className="flex relative px-6 py-3 border border-transparent text-white bg-none rounded-lg overflow-hidden"
+                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
               >
                 <span className="relative z-10">About Me</span>
                 <span
@@ -262,7 +263,7 @@ export default function Home() {
                   className="absolute p-6 left-0 bottom-0 w-[50%] h-[50%] flex items-center justify-center"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, delay: 2 }}
+                  transition={{ duration: 1, delay: 3 }}
                 >
                   <p className="text-white text-2xl font-semibold text-center">
                     Data Analyst
@@ -290,7 +291,7 @@ export default function Home() {
                   className="absolute p-6 right-0 top-0 w-[50%] h-[50%] flex items-center justify-center"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, delay: 3 }}
+                  transition={{ duration: 1, delay: 2 }}
                 >
                   <p className="text-white text-2xl font-semibold text-center">
                     Fullstack Developer
@@ -413,10 +414,10 @@ export default function Home() {
               className="border mt-12 rounded-xl mx-auto w-full max-w-screen-lg border-gray-400 flex flex-col md:flex-row justify-center items-center gap-8 p-12"
               style={{ borderColor: "rgba(107, 114, 128, 0.2)" }}
             >
-              <p className="text-xl font-semibold flex-[1]">
+              <p className="text-2xl font-semibold flex-[1]">
                 What I'm up to now
               </p>
-              <ul className="text-secondarytext space-y-1.5 list-disc list-inside flex-[2]">
+              <ul className="text-sm text-secondarytext space-y-1.5 list-disc list-inside flex-[2]">
                 <li>
                   Expertise in front-end development, building responsive and
                   dynamic web applications.
@@ -438,12 +439,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* REV */}
-
         {/* Education */}
         <div className="relative mt-28">
-          {/* Background Elements */}
-          <div className="relative">
+          <div className="relative -z-10">
             {/* Background Text */}
             <div
               className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold text-zinc-800/20"
@@ -455,7 +453,6 @@ export default function Home() {
             >
               EDUCATION
             </div>
-
             {/* Background Image */}
             <div className="absolute inset-0 flex justify-center items-start text-zinc-800/20 w-full">
               <Image
@@ -467,41 +464,40 @@ export default function Home() {
               />
             </div>
 
-            {/* Content Container - Changed from absolute to relative positioning */}
             <div className="relative pt-16 px-4 lg:px-8 flex flex-col items-start w-full">
               {/* Education Header */}
-              <div className="relative">
-                <div className="text-2xl lg:text-3xl font-semibold text-center">
+              <div className="relative -z-10">
+                <div className="text-xl lg:text-3xl font-semibold text-center">
                   <div
                     className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
                     style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
                   >
-                    <GiGraduateCap className="text-5xl lg:text-6xl" />
+                    <GiGraduateCap className="text-5xl" />
                   </div>
                   <span>Education</span>
                 </div>
               </div>
-
-              {/* Rest of the content - same as before but nested under the relative container */}
+              {/* New Content - Desktop */}
               <div className="relative mt-3 md:flex gap-8 w-full">
                 {/* Left Column */}
                 <div className="w-full md:max-w-[36rem]">
                   {/* Education Description */}
                   <div className="text-secondarytext text-justify md:text-left w-full md:max-w-[36rem]">
-                    <p>GPA: 3.85 of 4 (cumlaude) | Total Credit Hours: 144</p>
                     <p>
                       As a fresh graduate of Computer Science (S.Kom.) from
-                      Indonesia University of Education (UPI), I have developed
-                      a strong foundation in programming, covering algorithms,
-                      object-oriented programming (OOP), databases, and web
-                      development. Balancing academic coursework with hands-on
-                      experience, I took on the role of an assistant lecturer
-                      and actively collaborated on projects, enhancing both my
-                      technical expertise and teamwork skills.
+                      Indonesia University of Education (UPI) (2020 - 2024), I
+                      have developed a strong foundation in programming,
+                      covering algorithms, object-oriented programming (OOP),
+                      databases, and web development. Graduating with a GPA of
+                      3.85 out of 4.00 (Cumlaude), I balanced academic
+                      coursework with hands-on experience, taking on the role of
+                      an assistant lecturer and actively collaborating on
+                      projects. These experiences have enhanced both my
+                      technical expertise and teamwork skills, preparing me to
+                      contribute effectively in a professional setting.
                     </p>
                   </div>
 
-                  {/* Rest of the content remains the same */}
                   {/* New Content - Desktop Only */}
                   <div className="hidden md:block mt-8 text-secondarytext">
                     <div className="">
@@ -632,7 +628,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Assistant Lecturer Card - Changed positioning */}
+                {/* Assistant Lecturer Card */}
                 <div className="w-full flex justify-center md:mt-[-7rem]">
                   <div
                     className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border"
@@ -815,24 +811,103 @@ export default function Home() {
         </div>
 
         {/* Experience */}
-        <div className="relative px-6 mt-28 min-h-screen">
+        <div className="relative px-6 mt-28">
+          {/* Text Background */}
           <div className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20">
             EXPERIENCE
           </div>
-          <div className="relative z-10 pt-16">
-            <div className="ms-4 lg:ms-8 text-3xl flex flex-col items-center justify-center font-semibold text-center">
+          {/* Header */}
+          <div className="relative pt-16 -z-10">
+            <div className="ms-4 lg:ms-8 text-xl lg:text-3xl flex flex-col items-center justify-center font-semibold text-center">
               <div
                 className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
                 style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
               >
-                <MdOutlineWork className="text-5xl" />
+                <MdOutlineWork className="text-4xl" />
               </div>
               <span>Experience</span>
             </div>
           </div>
+          {/* Content */}
+          <div className="max-w-screen-lg mx-auto mt-16 flex flex-col gap-8 text-primarytext text-sm">
+            <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
+              <p className="text-secondarytext text-sm font-light mt-1">
+                SEP 2023 - DEC 2023
+              </p>
+              <div className="text-secondarytext">
+                <p className="text-2xl font-medium text-primarytext">
+                  System Analyst Intern
+                </p>
+                <p className="">Telkom Indonesia Tbk - Bandung, Indonesia</p>
+                <div className="mt-2">
+                  <p>
+                    Assist the development of Ingenium, an HR web application
+                    for managing employee processes like tenure tracking and
+                    recruitment. Built a Project Management & Proposal System to
+                    streamline project creation, approvals, and role
+                    assignments.{" "}
+                  </p>
+                  <ul className="text-secondarytext space-y-2 list-disc pl-5 mt-2">
+                    <li>
+                      Managed end-to-end HC project and processes, from
+                      analysis, design, to coding/development.
+                    </li>
+                    <li>
+                      Collaborated closely with development teams (project
+                      manager, front-end & back-end web developers, dev-ops, and
+                      data) to translate business needs into system features.
+                    </li>
+                    <li>
+                      Contributed to the development of user stories, use cases,
+                      system specifications, and design interfaces to guide the
+                      development process
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
+              <p className="text-secondarytext text-sm font-light mt-1">
+                SEP 2023 - DEC 2023
+              </p>
+              <div className="text-secondarytext">
+                <p className="text-2xl font-medium text-primarytext">
+                  Cloud Computing Cohort
+                </p>
+                <p className="">
+                  Bangkit Academy Led by Google, GoTo, & Traveloka - Remote
+                </p>
+                <div className="mt-2">
+                  <p>
+                    Completed several courses related to cloud and backend
+                    development. I have also undergone training in soft skills.
+                    In addition, I have successfully completed numerous
+                    projects, both individually and as part of a team. All of my
+                    classes and training were conducted entirely in English. I
+                    also graduated with distinction honored.
+                  </p>
+                  <ul className="text-secondarytext space-y-2 list-disc pl-5 mt-2">
+                    <li>
+                      Gained proficiency in web development fundamentals,
+                      JavaScript, creating back-end applications with Google
+                      Cloud, and becoming a Google Cloud Engineer.
+                    </li>
+                    <li>
+                      Completed several projects, such as creating responsive
+                      websites, UI/UX design, developing backend REST APIs, and
+                      deploying applications on the Google Cloud Platform.
+                    </li>
+                    <li>
+                      Successfully completed capstone project based as
+                      co-leader, overseeing cloud environment, backend app,
+                      data, and AI/machine learning.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className=""></div>
       </div>
     </>
   );

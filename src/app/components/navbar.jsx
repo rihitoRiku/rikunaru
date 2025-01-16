@@ -9,7 +9,7 @@ export const Navbar = () => {
             <a href="/" className="py-3 px-2 font-rethink transition-colors">
               Career
             </a>
-            <a href="/" className="py-3 px-2 font-rethink transition-colors">
+            <a href="/atelier" className="py-3 px-2 font-rethink transition-colors">
               Atelier
             </a>
             <a href="/" className="py-3 px-2 font-rethink transition-colors">

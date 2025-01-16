@@ -375,10 +375,10 @@ export default function Home() {
             >
               <p>
                 Hello! You can call me{" "}
-                <strong className="text-primarytext">Rafi</strong> . I am a
-                Software Engineer who works with the React ecosystem, dedicated
-                to staying updated in the ever-evolving tech landscape and
-                bringing innovative solutions to the table.
+                <strong className="text-primarytext">Rafi</strong> I am a
+                Software Engineer specializing in fullstack web development,
+                dedicated to staying updated in the ever-evolving tech landscape
+                and bringing innovative solutions to the table.
               </p>
               <p>
                 I was born in 2002 in Purwakarta, Indonesia. Recently graduated
@@ -480,7 +480,7 @@ export default function Home() {
             transition={{
               duration: 0.3,
               ease: "easeOut",
-              delay: 0.3,
+              delay: 0.4,
             }}
           >
             <div
@@ -519,7 +519,7 @@ export default function Home() {
             transition={{
               duration: 0.3,
               ease: "easeOut",
-              delay: 0.4,
+              delay: 0.5,
             }}
           >
             <p className="text-base">several tools I'm experienced with:</p>
@@ -777,7 +777,7 @@ export default function Home() {
           transition={{
             duration: 0.3,
             ease: "easeOut",
-            delay: 0.1,
+            delay: 0.2,
           }}
         >
           <div className="relative -z-10">
@@ -805,7 +805,7 @@ export default function Home() {
 
             <div className="relative pt-16 px-4 lg:px-8 flex flex-col items-start w-full">
               {/* Education Header */}
-              <div className="relative -z-10">
+              <div className="relative -z-10 text-white">
                 <div className="text-xl lg:text-3xl font-semibold text-center">
                   <div
                     className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
@@ -823,34 +823,46 @@ export default function Home() {
                   {/* Education Description */}
                   <div className="text-secondarytext text-justify md:text-left w-full md:max-w-[36rem]">
                     <p>
-                      As a fresh graduate of Computer Science (S.Kom.) from
-                      Indonesia University of Education (UPI) (2020 - 2024), I
-                      have developed a strong foundation in programming,
-                      covering algorithms, object-oriented programming (OOP),
-                      databases, and web development. Graduating with a GPA of
-                      3.85 out of 4.00 (Cumlaude), I balanced academic
-                      coursework with hands-on experience, taking on the role of
-                      an assistant lecturer and actively collaborating on
-                      projects. These experiences have enhanced both my
-                      technical expertise and teamwork skills, preparing me to
-                      contribute effectively in a professional setting.
+                      As a fresh graduate of{" "}
+                      <strong className="text-primarytext">
+                        Computer Science
+                      </strong>{" "}
+                      (S.Kom.) from{" "}
+                      <strong className="text-primarytext">
+                        Indonesia University of Education (UPI)
+                      </strong>{" "}
+                      (2020 - 2024), I have developed a strong foundation in
+                      programming, covering algorithms, object-oriented
+                      programming (OOP), databases, and web development.
+                      Graduating with a{" "}
+                      <strong className="text-primarytext">
+                        GPA of 3.85 out of 4.00
+                      </strong>{" "}
+                      (Cumlaude), I balanced academic coursework with hands-on
+                      experience, taking on the role of an assistant lecturer
+                      and actively collaborating on projects. These experiences
+                      have enhanced both my technical expertise and teamwork
+                      skills, preparing me to contribute effectively in a
+                      professional setting.
                     </p>
                   </div>
 
                   {/* New Content - Desktop Only */}
                   <div className="hidden md:block mt-8 text-secondarytext">
                     <div className="">
-                      <h3 className="text-xl font-semibold mb-4">
+                      <h3 className="text-xl font-semibold mb-4 text-primarytext">
                         Competition
                       </h3>
                       <Timeline
-                        className="text-secondarytext"
+                        className="text-secondarytext font-rethink"
                         items={[
                           {
                             color: "green",
                             children: (
                               <div>
-                                <p>GEMASTIK XV 2022</p>
+                                <p className="text-primarytext ">
+                                  GEMASTIK XV 2022
+                                </p>
                                 <p>
                                   Lorem ipsum dolor sit amet consectetur,
                                   adipisicing elit. Quasi, tempora ut!
@@ -864,7 +876,9 @@ export default function Home() {
                             color: "green",
                             children: (
                               <div>
-                                <p>Comfest Cyber Security CTF</p>
+                                <p className="text-primarytext">
+                                  Comfest Cyber Security CTF
+                                </p>
                                 <p>
                                   Lorem ipsum dolor sit amet consectetur,
                                   adipisicing elit. Quasi, tempora ut!
@@ -878,7 +892,7 @@ export default function Home() {
                             color: "green",
                             children: (
                               <div>
-                                <p>
+                                <p className="text-primarytext">
                                   DINAMIK 18 computer programming competition
                                   (CP)
                                 </p>
@@ -895,7 +909,9 @@ export default function Home() {
                             color: "green",
                             children: (
                               <div>
-                                <p>Scavenger Hunt</p>
+                                <p className="text-primarytext">
+                                  Scavenger Hunt
+                                </p>
                                 <p>
                                   Lorem ipsum dolor sit amet consectetur,
                                   adipisicing elit. Quasi, tempora ut!
@@ -909,17 +925,17 @@ export default function Home() {
                       />
                     </div>
                     <div className="">
-                      <h3 className="text-xl font-semibold mb-4">
+                      <h3 className="text-xl font-semibold mb-4 text-primarytext">
                         Publication
                       </h3>
                       <Timeline
-                        className="text-secondarytext"
+                        className="text-secondarytext font-rethink"
                         items={[
                           {
                             color: "green",
                             children: (
                               <>
-                                <p>
+                                <p className="text-primarytext">
                                   Implementation of Bayesian Knowledge Tracing
                                   in a TOEFL Learning Application Based on
                                   Gamification with The Octalysis Framework
@@ -931,7 +947,7 @@ export default function Home() {
                             color: "green",
                             children: (
                               <>
-                                <p>
+                                <p className="text-primarytext">
                                   Analisis Pengaruh Metode Penjualan Terhadap
                                   Tingkat Penjualan Barang
                                 </p>
@@ -945,22 +961,24 @@ export default function Home() {
                       className="p-6 rounded-xl border"
                       style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
                     >
-                      <h3 className="text-xl font-semibold mb-4">
+                      <h3 className="text-xl font-semibold mb-4 text-primarytext">
                         Organization
                       </h3>
                       <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
                         <li>
-                          Google Developer Student Club (GDSC) – Active member
-                          of the Indonesia student programmer community,
-                          collaborating on projects, attending workshops, and
-                          enhancing skills in web development and cloud
-                          computing.
+                          <span className="text-primarytext">
+                            Google Developer Student Club (GDSC)
+                          </span>{" "}
+                          - Active member of the Indonesia student programmer
+                          community, collaborating on projects, attending
+                          workshops, and enhancing skills in web development and
+                          cloud computing.
                         </li>
                         <li>
-                          Ostric – Tutor for web development and cloud
-                          computing, mentoring students, providing hands-on
-                          guidance, and contributing to a collaborative learning
-                          environment.
+                          <span className="text-primarytext">Ostric</span> –
+                          Tutor for web development and cloud computing,
+                          mentoring students, providing hands-on guidance, and
+                          contributing to a collaborative learning environment.
                         </li>
                       </ul>
                     </div>
@@ -1042,7 +1060,7 @@ export default function Home() {
                         color: "green",
                         children: (
                           <div>
-                            <p>GEMASTIK XV 2022</p>
+                            <p className="text-primarytext">GEMASTIK XV 2022</p>
                             <p>
                               Lorem ipsum dolor sit amet consectetur,
                               adipisicing elit. Quasi, tempora ut! Architecto
@@ -1056,7 +1074,9 @@ export default function Home() {
                         color: "green",
                         children: (
                           <div>
-                            <p>Comfest Cyber Security CTF</p>
+                            <p className="text-primarytext">
+                              Comfest Cyber Security CTF
+                            </p>
                             <p>
                               Lorem ipsum dolor sit amet consectetur,
                               adipisicing elit. Quasi, tempora ut! Architecto
@@ -1070,7 +1090,7 @@ export default function Home() {
                         color: "green",
                         children: (
                           <div>
-                            <p>
+                            <p className="text-primarytext">
                               DINAMIK 18 computer programming competition (CP)
                             </p>
                             <p>
@@ -1086,7 +1106,7 @@ export default function Home() {
                         color: "green",
                         children: (
                           <div>
-                            <p>Scavenger Hunt</p>
+                            <p className="text-primarytext">Scavenger Hunt</p>
                             <p>
                               Lorem ipsum dolor sit amet consectetur,
                               adipisicing elit. Quasi, tempora ut! Architecto
@@ -1108,7 +1128,7 @@ export default function Home() {
                         color: "green",
                         children: (
                           <>
-                            <p>
+                            <p className="text-primarytext">
                               Implementation of Bayesian Knowledge Tracing in a
                               TOEFL Learning Application Based on Gamification
                               with The Octalysis Framework
@@ -1120,7 +1140,7 @@ export default function Home() {
                         color: "green",
                         children: (
                           <>
-                            <p>
+                            <p className="text-primarytext">
                               Analisis Pengaruh Metode Penjualan Terhadap
                               Tingkat Penjualan Barang
                             </p>
@@ -1137,15 +1157,22 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-4">Organization</h3>
                   <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
                     <li>
-                      Google Developer Student Club (GDSC) – Active member of
-                      the Indonesia student programmer community, collaborating
-                      on projects, attending workshops, and enhancing skills in
-                      web development and cloud computing.
+                      {" "}
+                      <span className="text-primarytext">
+                        {" "}
+                        Google Developer Student Club (GDSC)
+                      </span>
+                      – Active member of the Indonesia student programmer
+                      community, collaborating on projects, attending workshops,
+                      and enhancing skills in web development and cloud
+                      computing.
                     </li>
                     <li>
-                      Ostric – Tutor for web development and cloud computing,
-                      mentoring students, providing hands-on guidance, and
-                      contributing to a collaborative learning environment.
+                      {" "}
+                      <span className="text-primarytext">Ostric</span>– Tutor
+                      for web development and cloud computing, mentoring
+                      students, providing hands-on guidance, and contributing to
+                      a collaborative learning environment.
                     </li>
                   </ul>
                 </div>
@@ -1163,7 +1190,7 @@ export default function Home() {
           transition={{
             duration: 0.3,
             ease: "easeOut",
-            delay: 0.1,
+            delay: 0.2,
           }}
         >
           {/* Text Background */}
@@ -1171,7 +1198,7 @@ export default function Home() {
             EXPERIENCE
           </div>
           {/* Header */}
-          <div className="relative pt-16 -z-10">
+          <div className="relative pt-16 -z-10 text-white">
             <div className="ms-4 lg:ms-8 text-xl lg:text-3xl flex flex-col items-center justify-center font-semibold text-center">
               <div
                 className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
@@ -1189,10 +1216,13 @@ export default function Home() {
                 SEP 2023 - DEC 2023
               </p>
               <div className="text-secondarytext">
-                <p className="text-2xl font-medium text-primarytext">
+                <p className="text-2xl font-medium text-white">
                   System Analyst Intern
                 </p>
-                <p className="">Telkom Indonesia Tbk - Bandung, Indonesia</p>
+                <p>
+                  <span className="text-primarytext">Telkom Indonesia Tbk</span>{" "}
+                  - Bandung, Indonesia
+                </p>
                 <div className="mt-2">
                   <p>
                     Assist the development of Ingenium, an HR web application
@@ -1225,11 +1255,14 @@ export default function Home() {
                 SEP 2023 - DEC 2023
               </p>
               <div className="text-secondarytext">
-                <p className="text-2xl font-medium text-primarytext">
+                <p className="text-2xl font-medium text-white">
                   Cloud Computing Cohort
                 </p>
-                <p className="">
-                  Bangkit Academy Led by Google, GoTo, & Traveloka - Remote
+                <p>
+                  <span className="text-primarytext">
+                    Bangkit Academy Led by Google, GoTo, & Traveloka
+                  </span>
+                  - Remote
                 </p>
                 <div className="mt-2">
                   <p>

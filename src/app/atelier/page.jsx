@@ -71,7 +71,7 @@ export default function page() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const username = "rihitoRiku";
-  const token = process.env.REACT_APP_GITHUB_TOKEN;
+  const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
   useEffect(() => {
     const fetchGitHubData = async () => {

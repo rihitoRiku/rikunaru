@@ -19,6 +19,7 @@ export default {
         foreground: "var(--foreground)",
         primarytext: '#e5e5e5',
         secondarytext: '#a3a3a3',
+        borderColorTransparent: 'rgba(107, 114, 128, 0.1)',
       },
       textStrokeWidth: {
         thin: '1px',

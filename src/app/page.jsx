@@ -105,8 +105,7 @@ export default function Home() {
             >
               <button
                 onMouseMove={handleMouseMove}
-                className="flex relative px-6 py-3 border border-transparent text-white bg-none rounded-lg overflow-hidden"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+                className="flex relative px-6 py-3 border text-white bg-none rounded-lg overflow-hidden border-borderColorTransparent"
               >
                 <span className="relative z-10">About Me</span>
                 <span
@@ -524,190 +523,97 @@ export default function Home() {
           >
             <p className="text-base">several tools I'm experienced with:</p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 HTML5
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 CSS3
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 SCSS
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 JavaScript ES6
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 TypeScript
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 PHP
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Python
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 React
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Next.js
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Vue
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Vite
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Rest API
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 MySQL
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 MongoDB
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Laravel
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Tailwind
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 MUI
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 AntD
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Bootstrap
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Framer Motion
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Git & GitHub
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Figma
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Cloudinary
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Miro
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Trello
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Vercel
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Google Cloud Platform
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Canva
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Firebase
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Agile Methodologies (Scrum)
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Ms.Office (Word, Powerpoint, Excel)
               </span>
             </div>
@@ -716,52 +622,28 @@ export default function Home() {
               some of the soft skills I've mastered:
             </p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Time Management
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Critical & Analytical Thinking
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Communication
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Problem Solving
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Adaptability
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Fast Learning
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Project Management
               </span>
-              <span
-                className="px-2 py-1 border rounded-md"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <span className="px-2 py-1 border rounded-md border-borderColorTransparent">
                 Leadership
               </span>
             </div>
@@ -807,10 +689,7 @@ export default function Home() {
               {/* Education Header */}
               <div className="relative -z-10 text-white">
                 <div className="text-xl lg:text-3xl font-semibold text-center">
-                  <div
-                    className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
-                    style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                  >
+                  <div className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950 border-borderColorTransparent">
                     <GiGraduateCap className="text-5xl" />
                   </div>
                   <span>Education</span>
@@ -957,10 +836,7 @@ export default function Home() {
                         ]}
                       />
                     </div>
-                    <div
-                      className="p-6 rounded-xl border"
-                      style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                    >
+                    <div className="p-6 rounded-xl border border-borderColorTransparent">
                       <h3 className="text-xl font-semibold mb-4 text-primarytext">
                         Organization
                       </h3>
@@ -987,10 +863,7 @@ export default function Home() {
 
                 {/* Assistant Lecturer Card */}
                 <div className="w-full flex justify-center md:mt-[-7rem]">
-                  <div
-                    className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border"
-                    style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                  >
+                  <div className="mt-8 md:mt-0 p-6 rounded-xl md:min-w-[24rem] md:max-w-[28rem] transition-colors cursor-pointer relative overflow-hidden h-[28rem] border border-borderColorTransparent">
                     {/* Card content remains the same */}
                     <div className="absolute -bottom-4 -right-2 text-[120px] font-bold text-white/5 select-none leading-none">
                       2022
@@ -1150,10 +1023,7 @@ export default function Home() {
                     ]}
                   />
                 </div>
-                <div
-                  className="p-6 rounded-xl border"
-                  style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-                >
+                <div className="p-6 rounded-xl border border-borderColorTransparent">
                   <h3 className="text-xl font-semibold mb-4">Organization</h3>
                   <ul className="text-secondarytext text-sm space-y-1 list-disc list-inside ms-2">
                     <li>
@@ -1200,10 +1070,7 @@ export default function Home() {
           {/* Header */}
           <div className="relative pt-16 -z-10 text-white">
             <div className="ms-4 lg:ms-8 text-xl lg:text-3xl flex flex-col items-center justify-center font-semibold text-center">
-              <div
-                className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
-                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-              >
+              <div className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950 border-borderColorTransparent">
                 <MdOutlineWork className="text-4xl" />
               </div>
               <span>Experience</span>

@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
               >
                 Atelier
               </Link>
-              <Link href="/" className="py-3 px-2 transition-colors">
+              <Link href="/caleidoscope" className="py-3 px-2 transition-colors">
                 Caleidoscope
               </Link>
             </ul>

@@ -252,7 +252,10 @@ export default function page() {
       <div className="max-w-screen-md mx-auto h-[620px] font-rethink ">
         <div className="w-full max-w-4xl mx-auto p-4 grid grid-cols-2 gap-4 h-[500px]">
           {/* Left column */}
-          <div className="relative overflow-hidden rounded-lg border border-borderColorTransparent h-[320px]">
+          <div
+            data-aos="zoom-in"
+            className="relative overflow-hidden rounded-lg border border-borderColorTransparent h-[320px]"
+          >
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-zinc-900 rounded-full" />
             <div className="relative h-full flex items-end justify-end px-4 pb-8 lg:px-8">
               <h2 className="text-2xl sm:text-3xl text-end font-bold">
@@ -266,12 +269,20 @@ export default function page() {
           {/* Right column */}
           <div className="grid grid-rows-2 gap-4 h-[320px]">
             {/* Image container */}
-            <div className="relative rounded-lg border border-borderColorTransparent bg-zinc-900 overflow-hidden">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              className="relative rounded-lg border border-borderColorTransparent bg-zinc-900 overflow-hidden"
+            >
               <div className="absolute inset-0 " />
             </div>
 
             {/* Clean Code & Design container */}
-            <div className="relative rounded-lg border border-borderColorTransparent">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              className="relative rounded-lg border border-borderColorTransparent"
+            >
               <div className="absolute inset-0 p-4 flex flex-col justify-between">
                 <h3 className="text-lg font-light">
                   Clean Code &<br />
@@ -286,7 +297,11 @@ export default function page() {
           </div>
 
           {/* Bottom row - full width */}
-          <div className="col-span-2 relative rounded-lg border border-borderColorTransparent overflow-hidden h-[240px]">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            className="col-span-2 relative rounded-lg border border-borderColorTransparent overflow-hidden h-[240px]"
+          >
             <div
               className="absolute top-0 right-0 w-1/2 h-full bg-zinc-900 clip-path-custom"
               style={{
@@ -309,7 +324,11 @@ export default function page() {
       </div>
 
       {/* Projects */}
-      <div className="font-rethink relative max-w-screen-md mx-auto h-full p-4">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="400"
+        className="font-rethink relative max-w-screen-md mx-auto h-full p-4"
+      >
         <div className="text-primarytext mb-8">
           <div className="flex justify-start items-center gap-2 text-3xl ">
             <RiArchiveDrawerFill className="mb-1" />
@@ -485,7 +504,7 @@ export default function page() {
       )}
 
       {/* Certificate Showcases */}
-      <div className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm">
+      <div data-aos="fade-up" className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm">
         {/* Text Background */}
         <div className="absolute inset-0 flex justify-center items-start text-5xl md:text-9xl font-bold -z-10 text-zinc-800/20">
           CERTIFICATE

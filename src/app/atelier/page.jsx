@@ -1,66 +1,131 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Marquee from "react-fast-marquee";
-import Loadercomponent from "../components/LoaderComponent";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { MdOutlineWork } from "react-icons/md";
-
 import { Image } from "antd";
-
-const cards = [
-  {
-    id: 1,
-    title: "Card Title",
-    description: "description...",
-    hasImage: true,
-    imagePosition: "top",
-  },
-  {
-    id: 2,
-    title: "Card Title",
-    description: "description...",
-    hasImage: false,
-  },
-  {
-    id: 3,
-    title: "Card Title",
-    description: "description...",
-    hasImage: true,
-    imagePosition: "top",
-  },
-  {
-    id: 4,
-    title: "Card Title",
-    description: "description...",
-    hasImage: false,
-  },
-  {
-    id: 5,
-    title: "Card Title",
-    description: "description...",
-    hasImage: true,
-    imagePosition: "top",
-  },
-  {
-    id: 6,
-    title: "Card Title",
-    description: "description...",
-    hasImage: false,
-  },
-];
+import Marquee from "react-fast-marquee";
+import AOS from "aos";
+import { MdOutlineWork } from "react-icons/md";
+import { FaAnglesDown, FaAnglesUp } from "react-icons/fa6";
+import { PiCertificateFill } from "react-icons/pi";
+import { RiArchiveDrawerFill } from "react-icons/ri";
+import Loadercomponent from "../components/LoaderComponent";
+import "aos/dist/aos.css";
 
 export default function page() {
-  const allCards = Array.from({ length: 12 }, (_, index) => ({
-    id: index + 1,
-    title: `Card Title ${index + 1}`,
-    description: "description...",
-    hasImage: index % 2 === 0,
-    imagePosition: "top",
-  }));
+  const projectItems = [
+    {
+      id: 1,
+      title: "Shiroplane Artworks Showcases",
+      description:
+        "A full-stack web app portfolio and client management platform featuring an animated UI/UX design with a paper-inspired theme for an interactive, artistic experience. The app is fully responsive across all devices, with an elegant layout and fonts for a visually engaging presentation. Optimized for fast performance, it offers smooth navigation and quick load times. Developed end-to-end, this solo project covered the complete SDLC,  from UI/UX design to deployment",
+      techStack:
+        "ReactJs, Tailwind, ExpressJs, MongoDB, Cloudinary, Google Captcha, Emailjs, SCSS, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/shiro.png",
+      link: "https://github.com/rihitoRiku/shiroplaneApp",
+    },
+    {
+      id: 2,
+      title: "OcToefl: Gamified Learning App with Bayesian Knowledge Tracing",
+      description:
+        "A dynamic full-stack learning app designed to make TOEFL preparation engaging and adaptive. Users build unique profiles by collecting stars, rank badges, and customizable avatars, while tracking their progress through milestones and quests. The app features interactive quizzes/exam, one adapt to the learner’s needs via Bayesian Knowledge Tracing, and a history of challenges to review past attempts. instant feedback, completion monitoring, leaderboards, customizable statuses, and a points-based store, OcToefl creates an immersive and personalized learning journey",
+      techStack:
+        "Next.js, React.js, Express.js, MongoDB, TailwindCSS, Zustand, Formik, ReactQuill, SCSS, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/motion.png",
+      link: "https://github.com/rihitoRiku/motionClient",
+    },
+    {
+      id: 3,
+      title: "AI Chatbot with Vue",
+      description:
+        "This project responsive web application powered by Cohere's Command-R-08-2024 language model, designed to provide intelligent, predefined responses to user queries. With a simple, clean interface and fast performance, the chatbot delivers a seamless experience across both desktop and mobile devices, making it easy for users to access information quickly and efficiently.",
+      techStack: "Vue.js, Vite.js, Tailwind, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/vue.png",
+      link: "https://github.com/rihitoRiku/vue-chatbotv2",
+    },
+    {
+      id: 4,
+      title: "Nutriast: Health Monitoring Mobile App",
+      description:
+        "A collaborative full-stack web app designed for health monitoring and cardiovascular disease prediction using machine learning. Developed by a team of six (3 full-stack/DevOps, 2 ML engineers, 1 mobile developer), Nutriast leverages Google Cloud and TensorFlow to integrate a predictive model trained on Kaggle data. The app includes extensive nutrition data, food intake tracking, and personalized health insights, offering users a robust tool for proactive health management.",
+      techStack:
+        "Express.js, Kotlin, Tensorflow.js Machine Learning, Google Collab, Python, Flask, Android Studio, Google Cloud Run, Google Cloud Bucket",
+      link: "https://github.com/C23-PC718",
+    },
+    {
+      id: 5,
+      title: "Nutriast: Health Monitoring Web-App",
+      description:
+        "Transformed a mobile app into a full-stack web app, integrating an existing deployed machine learning model. Handled all roles from UI/UX design to backend development, delivering a responsive interface and robust architecture, showcasing full-stack and ML integration expertise.",
+      techStack:
+        "Typescript, Next.js, React.js, TailwindCSS, Express.js, MongoDB, SCSS, HTML, CSS, JS",
+      // imgSrc: "project-image-4.jpg",
+      link: "https://github.com/rihitoRiku/NutriastApp",
+    },
+    {
+      id: 6,
+      title: "Bank Sampah Management & Information System",
+      description:
+        "Built a comprehensive Bank Sampah Management & Information System for city-wide waste tracking, including an admin system for managing users, waste databases, and price-per-weight configurations. Enabled CRUD operations, an interactive dashboard for trend visualization, and a wallet feature for redeeming rewards based on collected waste. This system enhances environmental sustainability by streamlining waste management and incentivizing recycling efforts.",
+      techStack:
+        "Typescript, Next.js, React.js, TailwindCSS, Google AppScript, ApexChart, SCSS, HTML, CSS, JS",
+      // imgSrc: "project-image-5.jpg",
+      link: "https://github.com/rihitoRiku/BankSampah",
+    },
+    {
+      id: 7,
+      title: "E-Commerce: Utami Bakery Store",
+      description:
+        " Led front-end development in a team project, designing UI/UX for a bakery web app with full e-commerce features, including product catalog, details page, cart, and checkout. Built an admin system for product management and integrated WhatsApp for customer communication. Collaborated closely with backend, data teams, and clients to ensure feature alignment and optimal user experience.",
+      techStack: "React.js, MUI, HTML, CSS, JS",
+      link: "https://github.com/rihitoRiku/UtamiBakery",
+    },
+    {
+      id: 8,
+      title: "Personal Profile",
+      description:
+        "Developed a personal portfolio website to showcase my bio, education, projects, and contact information. Designed a visually appealing, dark-mode interface and integrated GitHub contribution data using GraphQL. Focused on creating an engaging, modern user experience to highlight my background, skills, and professional journey.",
+      techStack: "React.js, Next.js, TailwindCSS, SCSS, HTML, CSS, JS",
+      // imgSrc: "project-image-7.jpg",
+      link: "https://github.com/rihitoRiku/perprof",
+    },
+    {
+      id: 9,
+      title: "Sales Admin Dashboard",
+      description:
+        "Developed a full-stack Sales Admin Dashboard for managing customers, products, and transactions. Implemented interactive charts and graphs for data visualization, pagination for data lists, and a dark mode option. This project streamlined sales administration by providing an intuitive, data-driven interface for efficient management and insights.",
+      techStack:
+        "React.js, Express.js, MongoDB, MUI, Redux, Nivo, SCSS, HTML, CSS, JS",
+      // imgSrc: "project-image-8.jpg",
+      link: "https://github.com/rihitoRiku/AdminDashboard",
+    },
+    {
+      id: 10,
+      title: "E-commerce: Metime Clothing",
+      description:
+        "Developed the front-end of a mobile app for an e-commerce clothing store in a team of five. Implemented product catalog displays, cart, and checkout features to create a seamless shopping experience for users. Focused on delivering a clean, responsive interface optimized for mobile use.",
+      techStack: "Flutter, Dart, Android Studio, GetX",
+      // imgSrc: "project-image-9.jpg",
+      link: "https://github.com/rihitoRiku/MeTimeStore",
+    },
+    {
+      id: 11,
+      title: "Random Meal Generator",
+      description:
+        "Developed a native PHP project to suggest random meals, utilizing a SQL database to store and retrieve food data. Designed and built both the front and backend with an MVP architecture, ensuring a structured, efficient, and user-friendly experience.",
+      techStack: "PHP, Bootsrap, MySQL",
+      // imgSrc: "project-image-10.jpg",
+      link: "https://github.com/rihitoRiku/RandomMealGenerator",
+    },
+    {
+      id: 12,
+      title: "Survival Hop 2D Java Game",
+      description:
+        "Created a 2D game using Java and Apache NetBeans, focusing on object-oriented principles. Connected to a MySQL database to track game progress and implemented user controls for movement, jumping, and point accumulation. Enhanced gameplay with interactive functions and database integration for a dynamic user experience.",
+      techStack: "Java, Apache Netbeans, MySQl",
+      link: "https://github.com/rihitoRiku/myHopGame_Java",
+    },
+  ];
 
   const [isExpanded, setIsExpanded] = useState(false);
-
   const toggleCards = () => {
     setIsExpanded(!isExpanded);
   };
@@ -73,6 +138,7 @@ export default function page() {
   const username = "rihitoRiku";
   const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
+  // Fetch Github Stats
   useEffect(() => {
     const fetchGitHubData = async () => {
       const contributionQuery = `
@@ -139,14 +205,12 @@ export default function page() {
 
     fetchGitHubData();
   }, [username, token]);
-
   const getColor = (count) => {
     if (count === 0) return "bg-zinc-900";
     if (count < 5) return "bg-green-600";
     if (count < 10) return "bg-green-400";
     return "bg-green-200";
   };
-
   const days = ["Mon", "Wed", "Fri"];
   const months = [
     "Jan",
@@ -162,11 +226,8 @@ export default function page() {
     "Nov",
     "Dec",
   ];
-
-  // Create month labels logic (only when the month changes)
   const monthLabels = [];
   let lastMonth = null;
-
   contributionData?.contributions.forEach((week, index) => {
     const firstDayOfWeek = new Date(week.contributionDays[0].date);
     const currentMonth = firstDayOfWeek.getMonth();
@@ -179,7 +240,6 @@ export default function page() {
       lastMonth = currentMonth;
     }
   });
-
   const badgeImages = Array.from({ length: 14 }, (_, i) => i + 1); // Creates an array [1, 2, 3, ..., 14]
 
   useEffect(() => {
@@ -189,17 +249,16 @@ export default function page() {
   return (
     <>
       {/* Project Section */}
-
-      <div className="max-w-screen-md mx-auto h-[620px] font-rethink">
+      <div className="max-w-screen-md mx-auto h-[620px] font-rethink ">
         <div className="w-full max-w-4xl mx-auto p-4 grid grid-cols-2 gap-4 h-[500px]">
           {/* Left column */}
           <div className="relative overflow-hidden rounded-lg border border-borderColorTransparent h-[320px]">
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-zinc-900 rounded-full" />
             <div className="relative h-full flex items-end justify-end px-4 pb-8 lg:px-8">
-              <h2 className="text-3xl text-end font-bold">
+              <h2 className="text-2xl sm:text-3xl text-end font-bold">
                 Professional
                 <br />
-                Project
+                Standard
               </h2>
             </div>
           </div>
@@ -218,7 +277,10 @@ export default function page() {
                   Clean Code &<br />
                   Design
                 </h3>
-                <p className="text-gray-600 text-sm">also text here</p>
+                <p className="text-gray-600 text-sm">
+                  Focused on clean, maintainable code and efficient, scalable
+                  design.
+                </p>
               </div>
             </div>
           </div>
@@ -231,39 +293,76 @@ export default function page() {
                 clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)",
               }}
             />
-            <div className="relative p-8 flex flex-col h-full justify-between">
+            <div className="relative p-8 flex flex-col h-full justify-between max-w-[25rem]">
               <h3 className="text-2xl font-light">
                 User Experience
                 <br />
                 Centric
               </h3>
-              <p className="text-gray-600 text-sm">also text here</p>
+              <p className="text-gray-600 text-sm">
+                Delivering scalable solutions user-first design and a focus on
+                client satisfaction and exceptional user experience.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Projects */}
       <div className="font-rethink relative max-w-screen-md mx-auto h-full p-4">
+        <div className="text-primarytext mb-8">
+          <div className="flex justify-start items-center gap-2 text-3xl ">
+            <RiArchiveDrawerFill className="mb-1" />
+            <h1 className="font-medium mb-2">Latest Project</h1>
+          </div>
+
+          <p className="text-base">
+            Explore a collection of my projects. Each project includes a brief
+            description, the technologies and tools used, and a link to the
+            GitHub repository for further exploration. Some projects have been
+            deployed and are accessible to the public.
+          </p>
+        </div>
         <div
           className={`${isExpanded ? "h-auto" : "h-[600px]"} overflow-hidden`}
         >
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full relative">
-            {allCards.slice(0, isExpanded ? allCards.length : 9).map((card) => (
-              <div
-                key={card.id}
-                className="w-full aspect-square border border-borderColorTransparent rounded-xl overflow-hidden"
-              >
-                {card.hasImage && (
-                  <div className="w-full h-1/2 bg-zinc-900 flex items-center justify-center">
-                    <span className="text-gray-600 font-medium">IMAGE</span>
+            {projectItems
+              .slice(0, isExpanded ? projectItems.length : 9)
+              .map((card) => (
+                <a
+                  href={card.link}
+                  target="_blank"
+                  key={card.id}
+                  className="w-full aspect-square border border-borderColorTransparent rounded-xl overflow-hidden"
+                >
+                  {card.imgSrc && (
+                    <Image
+                      src={card.imgSrc}
+                      alt={card.title}
+                      className="w-full h-1/2 object-cover"
+                    />
+                  )}
+                  <div
+                    className={`flex flex-col justify-between p-4 ${
+                      card.imgSrc ? "h-1/2" : "h-full"
+                    }`}
+                  >
+                    <div className="">
+                      <h3 className="text-base font-semibold mb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 line-clamp-2">
+                        {card.description}
+                      </p>
+                    </div>
+
+                    <p className="text-sm text-gray-600 line-clamp-1 mt-4">
+                      {card.techStack}
+                    </p>
                   </div>
-                )}
-                <div className={`p-4 ${card.hasImage ? "h-1/2" : "h-full"}`}>
-                  <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-                  <p className="text-sm text-gray-600">{card.description}</p>
-                </div>
-              </div>
-            ))}
+                </a>
+              ))}
           </div>
         </div>
 
@@ -273,8 +372,9 @@ export default function page() {
             <div className="absolute inset-x-0 bottom-0 flex justify-center items-end h-[30%] bg-gradient-to-t from-zinc-950 to-transparent">
               <button
                 onClick={toggleCards}
-                className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-400"
+                className="w-full flex justify-center items-center gap-2 px-6 py-2 text-primarytext rounded-lg"
               >
+                <FaAnglesDown className="animate-bounce" />
                 Show More
               </button>
             </div>
@@ -285,14 +385,16 @@ export default function page() {
           <div className="flex justify-center mt-4">
             <button
               onClick={toggleCards}
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-400"
+              className="w-full flex justify-center items-center gap-2 px-6 py-2 text-primarytext rounded-lg"
             >
+              <FaAnglesUp />
               Show Less
             </button>
           </div>
         )}
       </div>
 
+      {/* Github Calendar */}
       {loading ? (
         <div className="mt-32 w-full h-64 flex justify-center items-center">
           <Loadercomponent />
@@ -304,7 +406,6 @@ export default function page() {
       ) : (
         <div className="mt-32 pt-8 flex flex-col justify-center items-center">
           <div className="relative max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm"></div>
-          {/* Github Calendar */}
           <div className="text-xl font-rethink mb-4">
             My Github Contribution Calendar
           </div>
@@ -324,7 +425,7 @@ export default function page() {
               /> */}
             </div>
 
-            <div className="overflow-hidden max-w-max font-rethink">
+            <div className="overflow-scroll max-w-max font-rethink">
               <div className="flex flex-col bg-black rounded mt-2 w-max">
                 <div className="flex w-[60rem]">
                   <div className="flex flex-col justify-evenly mr-2 text-xs text-secondarytext">
@@ -386,7 +487,7 @@ export default function page() {
       {/* Certificate Showcases */}
       <div className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm">
         {/* Text Background */}
-        <div className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20">
+        <div className="absolute inset-0 flex justify-center items-start text-5xl md:text-9xl font-bold -z-10 text-zinc-800/20">
           CERTIFICATE
         </div>
         {/* Header */}
@@ -396,16 +497,16 @@ export default function page() {
               className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
               style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
             >
-              <MdOutlineWork className="text-4xl" />
+              <PiCertificateFill className="text-4xl" />
             </div>
             <span>Certificate</span>
           </div>
         </div>
         <div className="text-base text-center mt-4 px-4 text-primarytext">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
-          officiis quidem itaque aliquid debitis consequuntur nobis rerum
-          dolores obcaecati repudiandae provident voluptates voluptatum odio
-          totam ducimus voluptas reprehenderit veniam. Quaerat.
+          A collection of certifications earned through completing courses and
+          hands-on projects on Dicoding, Coursera, and Google Cloud. These
+          certifications highlight my expertise in IT Support, Web Development,
+          Backend Development, and Cloud Engineering.
         </div>
         <div className="">
           <div
@@ -425,8 +526,11 @@ export default function page() {
                 Google Cloud Certified Associate Cloud Engineer
               </div>
               <p className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda doloremque dolore, iure aliquam nulla quo.
+                A prestigious certification proving expertise in deploying and
+                managing Google Cloud solutions. Highly valued in the industry,
+                it requires hands-on experience and a solid understanding of
+                cloud operations, with a challenging exam to validate these
+                skills.
               </p>
             </div>
           </div>
@@ -440,8 +544,11 @@ export default function page() {
                 Bangkit Academy: Distincion Graduate
               </div>
               <p className="text-base text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda doloremque dolore, iure aliquam nulla quo.
+                Awarded to top-performing graduates of Bangkit Academy,
+                recognizing exceptional achievement in its intensive program.
+                This distinction highlights expertise in technology, innovation,
+                and professional development, achieved through rigorous learning
+                and real-world project experience.
               </p>
             </div>
 
@@ -455,14 +562,19 @@ export default function page() {
             </div>
           </div>
 
-          <div data-aos="fade-up" className="mt-28 text-center px-4 md:px-0">
+          <div
+            data-aos="fade-up"
+            className="mt-28 text-center px-4 md:px-0 max-w-screen-md mx-auto"
+          >
             {" "}
             <div className="mb-4 text-2xl text-white">
               23 Google Cloud Badges
             </div>
             <p className="text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-              obcaecati natus a eveniet aut odio.
+              Showcasing achievements through Google Cloud skill badges, earned
+              by completing hands-on labs and projects. Validate my expertise in
+              cloud computing, infrastructure, and solutions using Google Cloud
+              technologies.
             </p>
           </div>
 
@@ -487,8 +599,8 @@ export default function page() {
             {" "}
             <div className="mb-4 text-2xl text-white">Other Certificates</div>
             <p className="text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-              obcaecati natus a eveniet aut odio.
+              A collection of certifications in IT Support, Web Development,
+              Backend Development, and Cloud Engineering.
             </p>
           </div>
 

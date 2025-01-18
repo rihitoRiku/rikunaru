@@ -1,14 +1,11 @@
 "use client";
 import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
-import { Tooltip, Tag } from "antd";
+import { motion, useInView } from "framer-motion";
+import { Tooltip, Timeline, Tag } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
-import { Timeline } from "antd";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineWork } from "react-icons/md";
-
-import { motion, useInView } from "framer-motion";
-
 import MySvg from "./../../public/myname.svg";
 import meshBackground from "@/app/styles/background.module.css";
 
@@ -51,14 +48,13 @@ export default function Home() {
   }, [arrow]);
 
   const customStyles = {
-    borderLeft: "2px solid #52c41a", // Change to your desired color
+    borderLeft: "2px solid #52c41a",
   };
 
   useEffect(() => {
-    // Ensure the document is available (client-side)
     if (typeof document !== "undefined") {
       document.querySelectorAll(".ant-timeline-item-tail").forEach((el) => {
-        el.style.borderLeft = "2px solid #52c41a"; // Change vertical line color
+        el.style.borderLeft = "2px solid #52c41a";
       });
     }
   }, []);
@@ -1064,7 +1060,7 @@ export default function Home() {
           }}
         >
           {/* Text Background */}
-          <div className="absolute inset-0 flex justify-center items-start text-7xl md:text-9xl font-bold -z-10 text-zinc-800/20">
+          <div className="absolute inset-0 flex justify-center items-start text-5xl md:text-9xl font-bold -z-10 text-zinc-800/20">
             EXPERIENCE
           </div>
           {/* Header */}

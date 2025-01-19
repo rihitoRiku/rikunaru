@@ -504,7 +504,11 @@ export default function page() {
       )}
 
       {/* Certificate Showcases */}
-      <div data-aos="fade-up" className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm">
+      <div
+        id="certificate"
+        data-aos="fade-up"
+        className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm"
+      >
         {/* Text Background */}
         <div className="absolute inset-0 flex justify-center items-start text-5xl md:text-9xl font-bold -z-10 text-zinc-800/20">
           CERTIFICATE
@@ -527,8 +531,10 @@ export default function page() {
           certifications highlight my expertise in IT Support, Web Development,
           Backend Development, and Cloud Engineering.
         </div>
-        <div className="">
-          <div
+        <div>
+          <a
+            href="https://google.accredible.com/7e70edef-eaf4-4887-bc47-9f764d9afc70#acc.0ljbU6zR"
+            target="_blank"
             data-aos="zoom-in"
             className="mt-20 w-full flex flex-col gap-6 md:gap-8 md:flex-row justify-center items-center px-4 md:px-0"
           >
@@ -552,7 +558,7 @@ export default function page() {
                 skills.
               </p>
             </div>
-          </div>
+          </a>
 
           <div
             data-aos="zoom-in"

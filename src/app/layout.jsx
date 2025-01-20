@@ -7,8 +7,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-// import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
@@ -43,6 +41,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${rethinkSans.variable} ${passionsConflict.variable} antialiased`}
       >
+        {/* Top Loader */}
         <NextTopLoader
           color="#16a34a"
           initialPosition={0.08}
@@ -54,27 +53,30 @@ export default function RootLayout({ children }) {
           speed={200}
         />
         {/* <Navbar /> */}
-        <div className="fixed top-0 left-0 w-full z-50">
-          <div className="relative mx-auto w-fit bg-neutral-800/60 backdrop-blur-sm rounded-lg mt-8 px-3 text-sm md:text-base">
+        <div className="fixed left-0 top-0 z-50 w-full">
+          <div className="relative mx-auto mt-8 w-fit rounded-lg bg-neutral-800/60 px-3 text-sm backdrop-blur-sm md:text-base">
             <ul className="flex items-center gap-4 font-rethink">
-              <Link prefetch href="/" className="py-3 px-2 transition-colors">
+              <Link prefetch href="/" className="px-2 py-3 transition-colors">
                 Career
               </Link>
               <Link
                 prefetch
                 href="/atelier"
-                className="py-3 px-2 transition-colors"
+                className="px-2 py-3 transition-colors"
               >
                 Atelier
               </Link>
-              <Link href="/caleidoscope" className="py-3 px-2 transition-colors">
+              <Link
+                href="/caleidoscope"
+                className="px-2 py-3 transition-colors"
+              >
                 Caleidoscope
               </Link>
             </ul>
           </div>
         </div>
+        {/* Outlet */}
         {children}
-        <Footer />
       </body>
     </html>
   );

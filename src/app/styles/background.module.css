@@ -2,7 +2,8 @@
   --_mesh-gradient-blur: 100px;
   --_mesh-gradient-blend-mode: normal;
 
-  background: radial-gradient(
+  background:
+    radial-gradient(
       at 22.740841248303933% 56.63265306122449%,
       #0a0a0a 0px,
       transparent 50%
@@ -14,5 +15,4 @@
       )
       #0a0a0a;
   mix-blend-mode: var(--_mesh-gradient-blend-mode);
-  /* filter: blur(var(--_mesh-gradient-blur)); */
 }

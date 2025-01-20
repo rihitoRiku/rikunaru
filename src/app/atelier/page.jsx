@@ -249,449 +249,477 @@ export default function page() {
   return (
     <>
       {/* Project Section */}
-      <div className="max-w-screen-md mx-auto h-[620px] font-rethink ">
-        <div className="w-full max-w-4xl mx-auto p-4 grid grid-cols-2 gap-4 h-[500px]">
-          {/* Left column */}
-          <div
-            data-aos="zoom-in"
-            className="relative overflow-hidden rounded-lg border border-borderColorTransparent h-[320px]"
-          >
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-zinc-900 rounded-full" />
-            <div className="relative h-full flex items-end justify-end px-4 pb-8 lg:px-8">
-              <h2 className="text-2xl sm:text-3xl text-end font-bold">
-                Professional
-                <br />
-                Standard
-              </h2>
-            </div>
-          </div>
-
-          {/* Right column */}
-          <div className="grid grid-rows-2 gap-4 h-[320px]">
-            {/* Image container */}
+      <div className="w-full bg-zinc-950 font-rethink">
+        <div className="mx-auto h-[620px] max-w-screen-md">
+          <div className="mx-auto grid h-[500px] w-full max-w-4xl grid-cols-2 gap-4 p-4">
+            {/* Left column */}
             <div
               data-aos="zoom-in"
-              data-aos-delay="100"
-              className="relative rounded-lg border border-borderColorTransparent bg-zinc-900 overflow-hidden"
+              className="relative h-[320px] overflow-hidden rounded-lg border border-borderColorTransparent"
             >
-              <div className="absolute inset-0 " />
+              <div
+                className="absolute -left-20 -top-20 h-96 w-96 rounded-full border border-borderColorTransparent"
+                style={{
+                  backgroundImage: "url('/paper.jpg')", // Replace with the image path
+                  backgroundSize: "cover", // Ensures the image covers the entire div
+                  backgroundPosition: "top", // Centers the image within the div
+                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                }}
+              />
+              <div className="relative flex h-full items-end justify-end px-4 pb-8 lg:px-8">
+                <h2 className="text-end text-2xl font-bold sm:text-3xl">
+                  Professional
+                  <br />
+                  Standard
+                </h2>
+              </div>
             </div>
 
-            {/* Clean Code & Design container */}
+            {/* Right column */}
+            <div className="grid h-[320px] grid-rows-2 gap-4">
+              {/* Image container */}
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="100"
+                className="relative overflow-hidden rounded-lg border border-borderColorTransparent"
+                style={{
+                  backgroundImage: "url('/color.jpg')", // Replace with the path to your image
+                  backgroundSize: "cover", // Ensures the image covers the entire div
+                  backgroundPosition: "center", // Centers the image within the div
+                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                }}
+              >
+                <div className="absolute inset-0" />
+              </div>
+
+              {/* Clean Code & Design container */}
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                className="relative rounded-lg border border-borderColorTransparent"
+              >
+                <div className="absolute inset-0 flex flex-col justify-between p-4">
+                  <h3 className="text-lg font-light">
+                    Clean Code &<br />
+                    Design
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Focused on clean, maintainable code and efficient, scalable
+                    design.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row - full width */}
             <div
               data-aos="zoom-in"
-              data-aos-delay="200"
-              className="relative rounded-lg border border-borderColorTransparent"
+              data-aos-delay="300"
+              className="relative col-span-2 h-[240px] overflow-hidden rounded-lg border border-borderColorTransparent"
             >
-              <div className="absolute inset-0 p-4 flex flex-col justify-between">
-                <h3 className="text-lg font-light">
-                  Clean Code &<br />
-                  Design
+              <div
+                className="clip-path-custom absolute right-0 top-0 h-full w-1/2"
+                style={{
+                  clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)",
+                  backgroundImage: "url('/neuron.jpg')", // Replace with your image path
+                  backgroundSize: "cover", // Ensures the image covers the entire div
+                  backgroundPosition: "center", // Centers the image
+                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                }}
+              />
+              <div className="relative flex h-full max-w-[25rem] flex-col justify-between p-8">
+                <h3 className="text-2xl font-light">
+                  User Experience
+                  <br />
+                  Centric
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  Focused on clean, maintainable code and efficient, scalable
-                  design.
+                <p className="text-sm text-gray-600">
+                  Delivering scalable solutions user-first design and a focus on
+                  client satisfaction and exceptional user experience.
                 </p>
               </div>
             </div>
           </div>
-
-          {/* Bottom row - full width */}
-          <div
-            data-aos="zoom-in"
-            data-aos-delay="300"
-            className="col-span-2 relative rounded-lg border border-borderColorTransparent overflow-hidden h-[240px]"
-          >
-            <div
-              className="absolute top-0 right-0 w-1/2 h-full bg-zinc-900 clip-path-custom"
-              style={{
-                clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)",
-              }}
-            />
-            <div className="relative p-8 flex flex-col h-full justify-between max-w-[25rem]">
-              <h3 className="text-2xl font-light">
-                User Experience
-                <br />
-                Centric
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Delivering scalable solutions user-first design and a focus on
-                client satisfaction and exceptional user experience.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
 
-      {/* Projects */}
-      <div
-        data-aos="fade-up"
-        data-aos-delay="400"
-        className="font-rethink relative max-w-screen-md mx-auto h-full p-4"
-      >
-        <div className="text-primarytext mb-8">
-          <div className="flex justify-start items-center gap-2 text-3xl ">
-            <RiArchiveDrawerFill className="mb-1" />
-            <h1 className="font-medium mb-2">Latest Project</h1>
-          </div>
-
-          <p className="text-base">
-            Explore a collection of my projects. Each project includes a brief
-            description, the technologies and tools used, and a link to the
-            GitHub repository for further exploration. Some projects have been
-            deployed and are accessible to the public.
-          </p>
-        </div>
+        {/* Projects */}
         <div
-          className={`${isExpanded ? "h-auto" : "h-[600px]"} overflow-hidden`}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="relative mx-auto h-full max-w-screen-md p-4 font-rethink"
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full relative">
-            {projectItems
-              .slice(0, isExpanded ? projectItems.length : 9)
-              .map((card) => (
-                <a
-                  href={card.link}
-                  target="_blank"
-                  key={card.id}
-                  className="w-full aspect-square border border-borderColorTransparent rounded-xl overflow-hidden"
-                >
-                  {card.imgSrc && (
-                    <Image
-                      src={card.imgSrc}
-                      alt={card.title}
-                      className="w-full h-1/2 object-cover"
-                    />
-                  )}
-                  <div
-                    className={`flex flex-col justify-between p-4 ${
-                      card.imgSrc ? "h-1/2" : "h-full"
-                    }`}
+          <div className="mb-8 text-primarytext">
+            <div className="flex items-center justify-start gap-2 text-3xl">
+              <RiArchiveDrawerFill className="mb-1" />
+              <h1 className="mb-2 font-medium">Latest Project</h1>
+            </div>
+
+            <p className="text-base">
+              Explore a collection of my projects. Each project includes a brief
+              description, the technologies and tools used, and a link to the
+              GitHub repository for further exploration. Some projects have been
+              deployed and are accessible to the public.
+            </p>
+          </div>
+          <div
+            className={`${isExpanded ? "h-auto" : "h-[600px]"} overflow-hidden`}
+          >
+            <div className="relative grid w-full grid-cols-2 gap-4 md:grid-cols-3">
+              {projectItems
+                .slice(0, isExpanded ? projectItems.length : 9)
+                .map((card) => (
+                  <a
+                    href={card.link}
+                    target="_blank"
+                    key={card.id}
+                    className="aspect-square w-full overflow-hidden rounded-xl border border-borderColorTransparent"
                   >
-                    <div className="">
-                      <h3 className="text-base font-semibold mb-2">
-                        {card.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 line-clamp-2">
-                        {card.description}
+                    {card.imgSrc && (
+                      <Image
+                        src={card.imgSrc}
+                        alt={card.title}
+                        className="h-1/2 w-full object-cover"
+                      />
+                    )}
+                    <div
+                      className={`flex flex-col justify-between p-4 ${
+                        card.imgSrc ? "h-1/2" : "h-full"
+                      }`}
+                    >
+                      <div className="">
+                        <h3 className="mb-2 text-base font-semibold">
+                          {card.title}
+                        </h3>
+                        <p className="line-clamp-2 text-sm text-gray-600">
+                          {card.description}
+                        </p>
+                      </div>
+
+                      <p className="mt-4 line-clamp-1 text-sm text-gray-600">
+                        {card.techStack}
                       </p>
                     </div>
-
-                    <p className="text-sm text-gray-600 line-clamp-1 mt-4">
-                      {card.techStack}
-                    </p>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                ))}
+            </div>
           </div>
-        </div>
 
-        {!isExpanded && (
-          <>
-            <div className="absolute inset-x-0 bottom-0 flex justify-center items-end h-[20%] bg-gradient-to-t from-zinc-950 to-transparent"></div>
-            <div className="absolute inset-x-0 bottom-0 flex justify-center items-end h-[30%] bg-gradient-to-t from-zinc-950 to-transparent">
+          {!isExpanded && (
+            <>
+              <div className="absolute inset-x-0 bottom-0 flex h-[20%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent">
+                <button
+                  onClick={toggleCards}
+                  className="flex w-full items-center justify-center gap-2 rounded-lg px-6 py-2 text-primarytext"
+                >
+                  <FaAnglesDown className="animate-bounce" />
+                  Show More
+                </button>
+              </div>
+            </>
+          )}
+
+          {isExpanded && (
+            <div className="mt-4 flex justify-center">
               <button
                 onClick={toggleCards}
-                className="w-full flex justify-center items-center gap-2 px-6 py-2 text-primarytext rounded-lg"
+                className="flex w-full items-center justify-center gap-2 rounded-lg px-6 py-2 text-primarytext"
               >
-                <FaAnglesDown className="animate-bounce" />
-                Show More
+                <FaAnglesUp />
+                Show Less
               </button>
             </div>
-          </>
-        )}
-
-        {isExpanded && (
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={toggleCards}
-              className="w-full flex justify-center items-center gap-2 px-6 py-2 text-primarytext rounded-lg"
-            >
-              <FaAnglesUp />
-              Show Less
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Github Calendar */}
-      {loading ? (
-        <div className="mt-32 w-full h-64 flex justify-center items-center">
-          <Loadercomponent />
+          )}
         </div>
-      ) : error ? (
-        <div className="w-full h-64 flex justify-center items-center text-red-500">
-          Error: {error}
-        </div>
-      ) : (
-        <div className="mt-32 pt-8 flex flex-col justify-center items-center">
-          <div className="relative max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm"></div>
-          <div className="text-xl font-rethink mb-4">
-            My Github Contribution Calendar
+
+        {/* Github Calendar */}
+        {loading ? (
+          <div className="mt-32 flex h-64 w-full items-center justify-center">
+            <Loadercomponent />
           </div>
-          <div className="flex flex-col border rounded-md py-4 px-6 justify-center w-full lg:w-[60rem] border-borderColorTransparent">
-            <div className="flex justify-between items-center">
-              <div className="text-primarytext text-sm font-semibold mb-2">
-                {contributionData.totalContributions} contributions in the last
-                year
-              </div>
-              <div className="text-primarytext text-sm font-semibold mb-2">
-                {profileData.totalRepositories} total repositories
-              </div>
-              {/* <img
+        ) : error ? (
+          <div className="flex h-64 w-full items-center justify-center text-red-500">
+            Error: {error}
+          </div>
+        ) : (
+          <div className="mt-32 flex flex-col items-center justify-center pt-8">
+            <div className="relative mx-auto max-w-screen-lg font-rethink text-sm text-secondarytext"></div>
+            <div className="mb-4 font-rethink text-xl">
+              My Github Contribution Calendar
+            </div>
+            <div className="flex w-full flex-col justify-center rounded-md border border-borderColorTransparent bg-black px-6 py-4 lg:w-[60rem]">
+              <div className="flex items-center justify-between">
+                <div className="mb-2 text-sm font-semibold text-primarytext">
+                  {contributionData.totalContributions} contributions in the
+                  last year
+                </div>
+                <div className="mb-2 text-sm font-semibold text-primarytext">
+                  {profileData.totalRepositories} total repositories
+                </div>
+                {/* <img
                 src={`https://komarev.com/ghpvc/?username=rihitoRiku&color=black`}
                 alt="Profile views"
                 className="h-6"
               /> */}
-            </div>
+              </div>
 
-            <div className="overflow-scroll max-w-max font-rethink">
-              <div className="flex flex-col bg-black rounded mt-2 w-max">
-                <div className="flex w-[60rem]">
-                  <div className="flex flex-col justify-evenly mr-2 text-xs text-secondarytext">
-                    {days.map((day) => (
-                      <div key={day}>{day}</div>
-                    ))}
-                  </div>
-                  <div className="w-full">
-                    <div
-                      className="grid gap-y-1 gap-x-0.5"
-                      style={{
-                        gridTemplateColumns: `repeat(${contributionData.contributions.length}, minmax(0, 1fr))`,
-                        gridTemplateRows: "repeat(7, minmax(0, 1fr))",
-                      }}
-                    >
-                      {contributionData.contributions.map((week, weekIndex) =>
-                        week.contributionDays.map((day, dayIndex) => (
-                          <div
-                            key={`${weekIndex}-${dayIndex}`}
-                            className={`w-3 h-3 ${getColor(
-                              day.contributionCount
-                            )} rounded-sm`}
-                            style={{
-                              gridRow: dayIndex + 1,
-                              gridColumn: weekIndex + 1,
-                            }}
-                            title={`${day.contributionCount} contributions on ${day.date}`}
-                          />
-                        ))
-                      )}
-                    </div>
-                    <div className="flex justify-between text-xs mt-2 text-secondarytext">
-                      {monthLabels.map(({ label, index }) => (
-                        <div key={index} className="text-center">
-                          {label}
-                        </div>
+              <div className="max-w-max overflow-scroll font-rethink">
+                <div className="mt-2 flex w-max flex-col rounded">
+                  <div className="flex w-[60rem]">
+                    <div className="mr-2 flex flex-col justify-evenly text-xs text-secondarytext">
+                      {days.map((day) => (
+                        <div key={day}>{day}</div>
                       ))}
                     </div>
+                    <div className="w-full">
+                      <div
+                        className="grid gap-x-0.5 gap-y-1"
+                        style={{
+                          gridTemplateColumns: `repeat(${contributionData.contributions.length}, minmax(0, 1fr))`,
+                          gridTemplateRows: "repeat(7, minmax(0, 1fr))",
+                        }}
+                      >
+                        {contributionData.contributions.map((week, weekIndex) =>
+                          week.contributionDays.map((day, dayIndex) => (
+                            <div
+                              key={`${weekIndex}-${dayIndex}`}
+                              className={`h-3 w-3 ${getColor(
+                                day.contributionCount,
+                              )} rounded-sm`}
+                              style={{
+                                gridRow: dayIndex + 1,
+                                gridColumn: weekIndex + 1,
+                              }}
+                              title={`${day.contributionCount} contributions on ${day.date}`}
+                            />
+                          )),
+                        )}
+                      </div>
+                      <div className="mt-2 flex justify-between text-xs text-secondarytext">
+                        {monthLabels.map(({ label, index }) => (
+                          <div key={index} className="text-center">
+                            {label}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-end items-center mt-2 text-xs text-secondarytext">
-              <span className="me-1">Less</span>
-              <div className="flex gap-1 ml-1">
-                {[0, 4, 9, 15].map((count) => (
-                  <div
-                    key={count}
-                    className={`w-3 h-3 ${getColor(count)} rounded-sm`}
-                  />
-                ))}
+              <div className="mt-2 flex items-center justify-end text-xs text-secondarytext">
+                <span className="me-1">Less</span>
+                <div className="ml-1 flex gap-1">
+                  {[0, 4, 9, 15].map((count) => (
+                    <div
+                      key={count}
+                      className={`h-3 w-3 ${getColor(count)} rounded-sm`}
+                    />
+                  ))}
+                </div>
+                <span className="ms-1">More</span>
               </div>
-              <span className="ms-1">More</span>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Certificate Showcases */}
-      <div
-        id="certificate"
-        data-aos="fade-up"
-        className="relative mt-24 max-w-screen-lg mx-auto text-secondarytext font-rethink text-sm"
-      >
-        {/* Text Background */}
-        <div className="absolute inset-0 flex justify-center items-start text-5xl md:text-9xl font-bold -z-10 text-zinc-800/20">
-          CERTIFICATE
-        </div>
-        {/* Header */}
-        <div className="relative pt-16 -z-10 text-white">
-          <div className="ms-4 lg:ms-8 text-xl lg:text-3xl flex flex-col items-center justify-center font-semibold text-center">
-            <div
-              className="border rounded-xl p-2 mb-2 w-fit bg-zinc-950"
-              style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
-            >
-              <PiCertificateFill className="text-4xl" />
-            </div>
-            <span>Certificate</span>
+        {/* Certificate Showcases */}
+        <div
+          id="certificate"
+          data-aos="fade-up"
+          className="relative mx-auto mt-24 max-w-screen-lg font-rethink text-sm text-secondarytext"
+        >
+          {/* Text Background */}
+          <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-zinc-800/20 md:text-9xl">
+            CERTIFICATE
           </div>
-        </div>
-        <div className="text-base text-center mt-4 px-4 text-primarytext">
-          A collection of certifications earned through completing courses and
-          hands-on projects on Dicoding, Coursera, and Google Cloud. These
-          certifications highlight my expertise in IT Support, Web Development,
-          Backend Development, and Cloud Engineering.
-        </div>
-        <div>
-          <a
-            href="https://google.accredible.com/7e70edef-eaf4-4887-bc47-9f764d9afc70#acc.0ljbU6zR"
-            target="_blank"
-            data-aos="zoom-in"
-            className="mt-20 w-full flex flex-col gap-6 md:gap-8 md:flex-row justify-center items-center px-4 md:px-0"
-          >
-            <div className="w-full max-w-[24rem] rounded-lg ">
-              <Image
-                className="inset-0 object-contain rounded-lg border"
-                src="./Certificates/b.png"
-                alt="Cert"
-                preview={{ src: "./Certificates/b.png" }}
-              />
+          {/* Header */}
+          <div className="relative -z-10 pt-16 text-white">
+            <div className="ms-4 flex flex-col items-center justify-center text-center text-xl font-semibold lg:ms-8 lg:text-3xl">
+              <div
+                className="mb-2 w-fit rounded-xl border bg-zinc-950 p-2"
+                style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
+              >
+                <PiCertificateFill className="text-4xl" />
+              </div>
+              <span>Certificate</span>
             </div>
-            <div className="md:max-w-[26rem] w-full text-center md:text-left">
-              <div className="text-5xl mb-4 text-white font-passionsConflict">
-                Google Cloud Certified Associate Cloud Engineer
+          </div>
+          <div className="mt-4 px-4 text-center text-base text-primarytext">
+            A collection of certifications earned through completing courses and
+            hands-on projects on Dicoding, Coursera, and Google Cloud. These
+            certifications highlight my expertise in IT Support, Web
+            Development, Backend Development, and Cloud Engineering.
+          </div>
+          <div>
+            <a
+              href="https://google.accredible.com/7e70edef-eaf4-4887-bc47-9f764d9afc70#acc.0ljbU6zR"
+              target="_blank"
+              data-aos="zoom-in"
+              className="mt-20 flex w-full flex-col items-center justify-center gap-6 px-4 md:flex-row md:gap-8 md:px-0"
+            >
+              <div className="w-full max-w-[24rem] rounded-lg">
+                <Image
+                  className="inset-0 rounded-lg border object-contain"
+                  src="./Certificates/b.png"
+                  alt="Cert"
+                  preview={{ src: "./Certificates/b.png" }}
+                />
+              </div>
+              <div className="w-full text-center md:max-w-[26rem] md:text-left">
+                <div className="mb-4 font-passionsConflict text-5xl text-white">
+                  Google Cloud Certified Associate Cloud Engineer
+                </div>
+                <p className="text-base">
+                  A prestigious certification proving expertise in deploying and
+                  managing Google Cloud solutions. Highly valued in the
+                  industry, it requires hands-on experience and a solid
+                  understanding of cloud operations, with a challenging exam to
+                  validate these skills.
+                </p>
+              </div>
+            </a>
+
+            <div
+              data-aos="zoom-in"
+              className="mt-28 flex w-full flex-col items-center justify-center gap-6 px-4 md:gap-8 md:px-0"
+            >
+              <div className="order-2 w-full text-center md:order-1 md:max-w-[36rem] md:text-left">
+                <div className="mb-4 text-center font-passionsConflict text-5xl text-white">
+                  Bangkit Academy: Distincion Graduate
+                </div>
+                <p className="text-center text-base">
+                  Awarded to top-performing graduates of Bangkit Academy,
+                  recognizing exceptional achievement in its intensive program.
+                  This distinction highlights expertise in technology,
+                  innovation, and professional development, achieved through
+                  rigorous learning and real-world project experience.
+                </p>
+              </div>
+
+              <div className="w-full max-w-[24rem] rounded-lg">
+                <Image
+                  className="inset-0 rounded-lg border object-contain"
+                  src="./Certificates/bangkit.png"
+                  alt="Cert"
+                  preview={{ src: "./Certificates/bangkit.png" }}
+                />
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              className="mx-auto mt-28 max-w-screen-md px-4 text-center md:px-0"
+            >
+              {" "}
+              <div className="mb-4 text-2xl text-white">
+                23 Google Cloud Badges
               </div>
               <p className="text-base">
-                A prestigious certification proving expertise in deploying and
-                managing Google Cloud solutions. Highly valued in the industry,
-                it requires hands-on experience and a solid understanding of
-                cloud operations, with a challenging exam to validate these
-                skills.
-              </p>
-            </div>
-          </a>
-
-          <div
-            data-aos="zoom-in"
-            className="mt-28 w-full flex flex-col gap-6 md:gap-8 justify-center items-center px-4 md:px-0"
-          >
-            <div className="md:max-w-[36rem] w-full text-center md:text-left md:order-1 order-2">
-              <div className="text-5xl mb-4 text-white font-passionsConflict text-center">
-                Bangkit Academy: Distincion Graduate
-              </div>
-              <p className="text-base text-center">
-                Awarded to top-performing graduates of Bangkit Academy,
-                recognizing exceptional achievement in its intensive program.
-                This distinction highlights expertise in technology, innovation,
-                and professional development, achieved through rigorous learning
-                and real-world project experience.
+                Showcasing achievements through Google Cloud skill badges,
+                earned by completing hands-on labs and projects. Validate my
+                expertise in cloud computing, infrastructure, and solutions
+                using Google Cloud technologies.
               </p>
             </div>
 
-            <div className="w-full max-w-[24rem] rounded-lg">
-              <Image
-                className="inset-0 object-contain rounded-lg border"
-                src="./Certificates/bangkit.png"
-                alt="Cert"
-                preview={{ src: "./Certificates/bangkit.png" }}
-              />
-            </div>
-          </div>
-
-          <div
-            data-aos="fade-up"
-            className="mt-28 text-center px-4 md:px-0 max-w-screen-md mx-auto"
-          >
-            {" "}
-            <div className="mb-4 text-2xl text-white">
-              23 Google Cloud Badges
-            </div>
-            <p className="text-base">
-              Showcasing achievements through Google Cloud skill badges, earned
-              by completing hands-on labs and projects. Validate my expertise in
-              cloud computing, infrastructure, and solutions using Google Cloud
-              technologies.
-            </p>
-          </div>
-
-          <div data-aos="fade-up" className="px-4 md:px-0">
-            <Marquee pauseOnHover>
-              <div className="h-36 md:h-36 flex space-x-1 md:space-x-2 mt-6 md:mt-8 me-2 overflow-x-auto">
-                {badgeImages.map((num) => (
-                  <Image
-                    key={num}
-                    className="inset-0 h-full w-auto hover:scale-105 rounded-lg border object-contain cursor-pointer"
-                    src={`./Certificates/Badges/${num}.png`}
-                    alt={`Badge ${num}`}
-                    preview={{ src: `./Certificates/Badges/${num}.png` }}
-                    style={{ width: "150px", height: "auto" }}
-                  />
-                ))}
-              </div>
-            </Marquee>
-          </div>
-
-          <div className="mt-16 text-center px-4 md:px-0">
-            {" "}
-            <div className="mb-4 text-2xl text-white">Other Certificates</div>
-            <p className="text-base">
-              A collection of certifications in IT Support, Web Development,
-              Backend Development, and Cloud Engineering.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-8 max-w-screen-xl h-auto flex justify-center items-start flex-wrap gap-4 ">
-            {[
-              {
-                src: "./Certificates/0.png",
-                title: "Operating Systems and You: Becoming a Power User",
-              },
-              {
-                src: "./Certificates/1.png",
-                title: "Operating Systems and You: Becoming a Power User",
-              },
-              {
-                src: "./Certificates/2.png",
-                title: "The Bits and Bytes of Computer Networking",
-              },
-              {
-                src: "./Certificates/3.png",
-                title: "System Administration and IT Infrastructure Services",
-              },
-              {
-                src: "./Certificates/4.png",
-                title: "IT Security: Defense against the digital dark arts",
-              },
-              {
-                src: "./Certificates/5.png",
-                title: "Technical Support Fundamentals",
-              },
-              {
-                src: "./Certificates/6.png",
-                title: "Belajar Dasar Pemrograman Web",
-              },
-              {
-                src: "./Certificates/7.png",
-                title: "Menjadi Cloud Engineer",
-              },
-              {
-                src: "./Certificates/8.png",
-                title: "Belajar Dasar Pemrograman Javascript",
-              },
-              {
-                src: "./Certificates/9.png",
-                title:
-                  "Belahar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="rounded-md flex flex-col items-center gap-2 lg:w-[20%] md:w-[25%] w-[40%]"
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-              >
-                <Image
-                  src={item.src}
-                  alt="Placeholder"
-                  className="rounded-md"
-                  style={{ aspectRatio: 4 / 3 }}
-                  preview={{ src: item.src }}
-                />
-                <div className="text-center">
-                  <div className=" mb-1">{item.title}</div>
-                  <p className="text-gray-600"></p>
+            <div data-aos="fade-up" className="px-4 md:px-0">
+              <Marquee pauseOnHover>
+                <div className="me-2 mt-6 flex h-36 space-x-1 overflow-x-auto md:mt-8 md:h-36 md:space-x-2">
+                  {badgeImages.map((num) => (
+                    <Image
+                      key={num}
+                      className="inset-0 h-full w-auto cursor-pointer rounded-lg border object-contain hover:scale-105"
+                      src={`./Certificates/Badges/${num}.png`}
+                      alt={`Badge ${num}`}
+                      preview={{ src: `./Certificates/Badges/${num}.png` }}
+                      style={{ width: "150px", height: "auto" }}
+                    />
+                  ))}
                 </div>
-              </div>
-            ))}
+              </Marquee>
+            </div>
+
+            <div className="mt-16 px-4 text-center md:px-0">
+              {" "}
+              <div className="mb-4 text-2xl text-white">Other Certificates</div>
+              <p className="text-base">
+                A collection of certifications in IT Support, Web Development,
+                Backend Development, and Cloud Engineering.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-8 flex h-auto max-w-screen-xl flex-wrap items-start justify-center gap-4">
+              {[
+                {
+                  src: "./Certificates/0.png",
+                  title: "Operating Systems and You: Becoming a Power User",
+                },
+                {
+                  src: "./Certificates/1.png",
+                  title: "Operating Systems and You: Becoming a Power User",
+                },
+                {
+                  src: "./Certificates/2.png",
+                  title: "The Bits and Bytes of Computer Networking",
+                },
+                {
+                  src: "./Certificates/3.png",
+                  title: "System Administration and IT Infrastructure Services",
+                },
+                {
+                  src: "./Certificates/4.png",
+                  title: "IT Security: Defense against the digital dark arts",
+                },
+                {
+                  src: "./Certificates/5.png",
+                  title: "Technical Support Fundamentals",
+                },
+                {
+                  src: "./Certificates/6.png",
+                  title: "Belajar Dasar Pemrograman Web",
+                },
+                {
+                  src: "./Certificates/7.png",
+                  title: "Menjadi Cloud Engineer",
+                },
+                {
+                  src: "./Certificates/8.png",
+                  title: "Belajar Dasar Pemrograman Javascript",
+                },
+                {
+                  src: "./Certificates/9.png",
+                  title:
+                    "Belahar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex w-[40%] flex-col items-center gap-2 rounded-md md:w-[25%] lg:w-[20%]"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
+                >
+                  <Image
+                    src={item.src}
+                    alt="Placeholder"
+                    className="rounded-md"
+                    style={{ aspectRatio: 4 / 3 }}
+                    preview={{ src: item.src }}
+                  />
+                  <div className="text-center">
+                    <div className="mb-1">{item.title}</div>
+                    <p className="text-gray-600"></p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Footer */}
+        <div className="border-zinc-950 pb-12 pt-24">
+          <div className="4 mb-8 h-[1px] w-full shrink-0 bg-gradient-to-r from-[#171717] via-[#525252] to-[#171717]"></div>
+          <div className="mb-12 text-center font-rethink text-sm text-neutral-500">
+            Copyright © 2025 Muhammad Rafi Shidiq.
+            <span className="block sm:inline"> All rights reserved.</span>
           </div>
         </div>
       </div>

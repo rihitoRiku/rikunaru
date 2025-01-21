@@ -49,14 +49,10 @@ export default function Home() {
     };
   }, [arrow]);
 
-  const customStyles = {
-    borderLeft: "2px solid #52c41a",
-  };
-
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.querySelectorAll(".ant-timeline-item-tail").forEach((el) => {
-        el.style.borderLeft = "2px solid #52c41a";
+        el.style.borderLeft = "1px solid #16a34a";
       });
     }
   }, []);
@@ -343,7 +339,8 @@ export default function Home() {
                   >
                     <div className="absolute bottom-0 right-0 h-16 w-16 rounded-tl-full border-l-2 border-t-2 border-dashed border-transparent border-white opacity-40"></div>
                   </motion.div>
-                  <motion.div ref={lineRef}
+                  <motion.div
+                    ref={lineRef}
                     className="absolute right-0 top-0 flex h-[50%] w-[50%] items-center justify-center p-6"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isLineRefInView ? { opacity: 1, scale: 1 } : {}}
@@ -718,22 +715,27 @@ export default function Home() {
                   {/* Left Column */}
                   <div className="w-full md:max-w-[36rem]">
                     {/* Education Description */}
-                    <div className="w-full text-justify text-secondarytext md:max-w-[36rem] md:text-left">
+                    <div className="w-full text-justify font-light text-secondarytext md:max-w-[36rem]">
                       <p>
                         As a fresh graduate of{" "}
                         <strong className="text-primarytext">
                           Computer Science
                         </strong>{" "}
                         (S.Kom.) from{" "}
-                        <strong className="text-primarytext">
-                          Indonesia University of Education (UPI)
+                        <strong className="text-primarytext hover:text-white">
+                          <a
+                            target="_blank"
+                            href="https://www.topuniversities.com/universities/universitas-pendidikan-indonesia"
+                          >
+                            Indonesia University of Education (UPI)
+                          </a>
                         </strong>{" "}
                         (2020 - 2024), I have developed a strong foundation in
                         programming, covering algorithms, object-oriented
                         programming (OOP), databases, and web development.
                         Graduating with a{" "}
                         <strong className="text-primarytext">
-                          GPA of 3.85 out of 4.00
+                          GPA 3.85 of 4.00
                         </strong>{" "}
                         (Cumlaude), I balanced academic coursework with hands-on
                         experience, taking on the role of an assistant lecturer
@@ -754,39 +756,46 @@ export default function Home() {
                           className="font-rethink text-secondarytext"
                           items={[
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
-                                <div>
-                                  <p className="text-primarytext">
+                                <a href="https://www.figma.com/design/O6dXWBa8XhMsblbsY4FqwR/SCS%3A-Student-Science-Club?node-id=0-1&t=y1RgObO6YfG1mPBz-1">
+                                  <p className="text-primarytext underline hover:text-white">
                                     GEMASTIK XV 2022
                                   </p>
-                                  <p>
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quasi, tempora ut!
-                                    Architecto eos reprehenderit atque,
-                                    similique sequi recusandae culpa quae!
+                                  <p className="text-secondarytext">
+                                    Our team tackled SDG 4 (Quality Education)
+                                    by designing the Student Collaboration
+                                    System (SCS) through Figma. SCS is a
+                                    platform for students and lecturers to build
+                                    profiles, manage portfolios, upload
+                                    certificates, connect across faculties or
+                                    universities, and collaborate on academic
+                                    projects.
                                   </p>
-                                </div>
+                                </a>
                               ),
                             },
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
                                 <div>
                                   <p className="text-primarytext">
                                     Comfest Cyber Security CTF
                                   </p>
                                   <p>
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quasi, tempora ut!
-                                    Architecto eos reprehenderit atque,
-                                    similique sequi recusandae culpa quae!
+                                    Our team engaged in solving complex
+                                    cybersecurity challenges, including
+                                    cryptography, reverse engineering, web
+                                    exploitation, and forensic analysis. The
+                                    competition tested our technical skills,
+                                    critical thinking, and teamwork as we raced
+                                    to uncover hidden flags and secure points.
                                   </p>
                                 </div>
                               ),
                             },
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
                                 <div>
                                   <p className="text-primarytext">
@@ -794,26 +803,33 @@ export default function Home() {
                                     (CP)
                                   </p>
                                   <p>
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quasi, tempora ut!
-                                    Architecto eos reprehenderit atque,
-                                    similique sequi recusandae culpa quae!
+                                    Participated in tackling algorithmic
+                                    challenges, solving problems in areas such
+                                    as data structures, OOP, dynamic
+                                    programming, and graph theory. The
+                                    competition tested our coding skills,
+                                    problem-solving abilities, and time
+                                    management under pressure
                                   </p>
                                 </div>
                               ),
                             },
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
                                 <div>
                                   <p className="text-primarytext">
                                     Scavenger Hunt
                                   </p>
                                   <p>
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quasi, tempora ut!
-                                    Architecto eos reprehenderit atque,
-                                    similique sequi recusandae culpa quae!
+                                    In the Scavenger Hunt, we combined adventure
+                                    with intellect by solving coding and
+                                    algorithmic challenges alongside traditional
+                                    riddles and tasks. The event tested our
+                                    programming skills, problem-solving
+                                    abilities, and teamwork as we deciphered
+                                    clues and tackled technical puzzles to
+                                    progress.
                                   </p>
                                 </div>
                               ),
@@ -829,26 +845,59 @@ export default function Home() {
                           className="font-rethink text-secondarytext"
                           items={[
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
                                 <>
-                                  <p className="text-primarytext">
+                                  <a
+                                    href="http://repository.upi.edu/id/eprint/124309"
+                                    className="text-primarytext underline hover:text-white hover:underline"
+                                  >
                                     Implementation of Bayesian Knowledge Tracing
                                     in a TOEFL Learning Application Based on
                                     Gamification with The Octalysis Framework
+                                  </a>
+                                  <p>
+                                    Acknowledge{" "}
+                                    <a
+                                      target="_blank"
+                                      className="text-blue-400 hover:text-blue-300"
+                                      href="https://scholar.google.com/citations?user=aUezWxYAAAAJ&hl=id&oi=ao"
+                                    >
+                                      Prof. Dr. Munir, M.IT.
+                                    </a>{" "}
+                                    and{" "}
+                                    <a
+                                      target="_blank"
+                                      className="text-blue-400 hover:text-blue-300"
+                                      href="https://scholar.google.com/citations?user=noUN9GIAAAAJ&hl=id&oi=ao"
+                                    >
+                                      Dr. Rasim, M.T.
+                                    </a>{" "}
+                                    and as a contributor
                                   </p>
                                 </>
                               ),
                             },
                             {
-                              color: "green",
+                              color: "#16a34a",
                               children: (
-                                <>
-                                  <p className="text-primarytext">
-                                    Analisis Pengaruh Metode Penjualan Terhadap
-                                    Tingkat Penjualan Barang
-                                  </p>
-                                </>
+                                <a
+                                  target="_blank"
+                                  href="https://jurnal.mdp.ac.id/index.php/forbiswira/article/view/3822"
+                                  className="text-primarytext underline hover:text-white hover:underline"
+                                >
+                                  Analisis Pengaruh Metode Penjualan Terhadap
+                                  Tingkat Penjualan Barang
+                                </a>
+                              ),
+                            },
+                            {
+                              color: "#16a34a",
+                              children: (
+                                <p className="text-primarytext">
+                                  Nutriast: Aplikasi Monitoring Gizi dan
+                                  Prediksi Penyakit Cardiovaskular
+                                </p>
                               ),
                             },
                           ]}
@@ -946,66 +995,77 @@ export default function Home() {
                   <div className="">
                     <h3 className="mb-4 text-xl font-semibold">Competition</h3>
                     <Timeline
-                      className="text-secondarytext"
+                      className="font-rethink text-secondarytext"
                       items={[
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
-                            <div>
-                              <p className="text-primarytext">
+                            <a href="https://www.figma.com/design/O6dXWBa8XhMsblbsY4FqwR/SCS%3A-Student-Science-Club?node-id=0-1&t=y1RgObO6YfG1mPBz-1">
+                              <p className="text-primarytext underline hover:text-white">
                                 GEMASTIK XV 2022
                               </p>
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Quasi, tempora ut! Architecto
-                                eos reprehenderit atque, similique sequi
-                                recusandae culpa quae!
+                              <p className="text-secondarytext">
+                                Our team tackled SDG 4 (Quality Education) by
+                                designing the Student Collaboration System (SCS)
+                                through Figma. SCS is a platform for students
+                                and lecturers to build profiles, manage
+                                portfolios, upload certificates, connect across
+                                faculties or universities, and collaborate on
+                                academic projects.
                               </p>
-                            </div>
+                            </a>
                           ),
                         },
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
                             <div>
                               <p className="text-primarytext">
                                 Comfest Cyber Security CTF
                               </p>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Quasi, tempora ut! Architecto
-                                eos reprehenderit atque, similique sequi
-                                recusandae culpa quae!
+                                Our team engaged in solving complex
+                                cybersecurity challenges, including
+                                cryptography, reverse engineering, web
+                                exploitation, and forensic analysis. The
+                                competition tested our technical skills,
+                                critical thinking, and teamwork as we raced to
+                                uncover hidden flags and secure points.
                               </p>
                             </div>
                           ),
                         },
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
                             <div>
                               <p className="text-primarytext">
                                 DINAMIK 18 computer programming competition (CP)
                               </p>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Quasi, tempora ut! Architecto
-                                eos reprehenderit atque, similique sequi
-                                recusandae culpa quae!
+                                Participated in tackling algorithmic challenges,
+                                solving problems in areas such as data
+                                structures, OOP, dynamic programming, and graph
+                                theory. The competition tested our coding
+                                skills, problem-solving abilities, and time
+                                management under pressure
                               </p>
                             </div>
                           ),
                         },
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
                             <div>
                               <p className="text-primarytext">Scavenger Hunt</p>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Quasi, tempora ut! Architecto
-                                eos reprehenderit atque, similique sequi
-                                recusandae culpa quae!
+                                In the Scavenger Hunt, we combined adventure
+                                with intellect by solving coding and algorithmic
+                                challenges alongside traditional riddles and
+                                tasks. The event tested our programming skills,
+                                problem-solving abilities, and teamwork as we
+                                deciphered clues and tackled technical puzzles
+                                to progress.
                               </p>
                             </div>
                           ),
@@ -1016,29 +1076,62 @@ export default function Home() {
                   <div className="">
                     <h3 className="mb-4 text-xl font-semibold">Publication</h3>
                     <Timeline
-                      className="text-secondarytext"
+                      className="font-rethink text-secondarytext"
                       items={[
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
                             <>
-                              <p className="text-primarytext">
+                              <a
+                                href="http://repository.upi.edu/id/eprint/124309"
+                                className="text-primarytext underline hover:text-white hover:underline"
+                              >
                                 Implementation of Bayesian Knowledge Tracing in
                                 a TOEFL Learning Application Based on
                                 Gamification with The Octalysis Framework
+                              </a>
+                              <p>
+                                Acknowledge{" "}
+                                <a
+                                  target="_blank"
+                                  className="text-blue-400 hover:text-blue-300"
+                                  href="https://scholar.google.com/citations?user=aUezWxYAAAAJ&hl=id&oi=ao"
+                                >
+                                  Prof. Dr. Munir, M.IT.
+                                </a>{" "}
+                                and{" "}
+                                <a
+                                  target="_blank"
+                                  className="text-blue-400 hover:text-blue-300"
+                                  href="https://scholar.google.com/citations?user=noUN9GIAAAAJ&hl=id&oi=ao"
+                                >
+                                  Dr. Rasim, M.T.
+                                </a>{" "}
+                                and as a contributor
                               </p>
                             </>
                           ),
                         },
                         {
-                          color: "green",
+                          color: "#16a34a",
                           children: (
-                            <>
-                              <p className="text-primarytext">
-                                Analisis Pengaruh Metode Penjualan Terhadap
-                                Tingkat Penjualan Barang
-                              </p>
-                            </>
+                            <a
+                              target="_blank"
+                              href="https://jurnal.mdp.ac.id/index.php/forbiswira/article/view/3822"
+                              className="text-primarytext underline hover:text-white hover:underline"
+                            >
+                              Analisis Pengaruh Metode Penjualan Terhadap
+                              Tingkat Penjualan Barang
+                            </a>
+                          ),
+                        },
+                        {
+                          color: "#16a34a",
+                          children: (
+                            <p className="text-primarytext">
+                              Nutriast: Aplikasi Monitoring Gizi dan Prediksi
+                              Penyakit Cardiovaskular
+                            </p>
                           ),
                         },
                       ]}

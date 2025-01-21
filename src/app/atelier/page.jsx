@@ -304,8 +304,7 @@ export default function page() {
                     Design
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Focused on clean, maintainable code and efficient, scalable
-                    design.
+                    Focused on clean, maintainable code & scalable design.
                   </p>
                 </div>
               </div>
@@ -406,7 +405,6 @@ export default function page() {
 
           {!isExpanded && (
             <>
-              <div className="absolute inset-x-0 bottom-0 flex h-[20%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent"></div>
               <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent">
                 <button
                   onClick={toggleCards}
@@ -447,7 +445,7 @@ export default function page() {
             <div className="mb-4 font-rethink text-xl">
               My Github Contribution Calendar
             </div>
-            <div className="flex w-full flex-col justify-center rounded-md border border-borderColorTransparent bg-black px-6 py-4 lg:w-[60rem]">
+            <div className="flex w-full flex-col justify-center rounded-md border border-borderColorTransparent px-6 py-4 lg:w-[60rem]">
               <div className="flex items-center justify-between">
                 <div className="mb-2 text-sm font-semibold text-primarytext">
                   {contributionData.totalContributions} contributions in the
@@ -551,9 +549,7 @@ export default function page() {
             Development, Backend Development, and Cloud Engineering.
           </div>
           <div>
-            <a
-              href="https://google.accredible.com/7e70edef-eaf4-4887-bc47-9f764d9afc70#acc.0ljbU6zR"
-              target="_blank"
+            <div
               data-aos="zoom-in"
               className="mt-20 flex w-full flex-col items-center justify-center gap-6 px-4 md:flex-row md:gap-8 md:px-0"
             >
@@ -565,7 +561,11 @@ export default function page() {
                   preview={{ src: "./Certificates/b.png" }}
                 />
               </div>
-              <div className="w-full text-center md:max-w-[26rem] md:text-left">
+              <a
+                href="https://google.accredible.com/7e70edef-eaf4-4887-bc47-9f764d9afc70#acc.0ljbU6zR"
+                target="_blank"
+                className="w-full text-center md:max-w-[26rem] md:text-left"
+              >
                 <div className="mb-4 font-passionsConflict text-5xl text-white">
                   Google Cloud Certified Associate Cloud Engineer
                 </div>
@@ -576,8 +576,8 @@ export default function page() {
                   understanding of cloud operations, with a challenging exam to
                   validate these skills.
                 </p>
-              </div>
-            </a>
+              </a>
+            </div>
 
             <div
               data-aos="zoom-in"

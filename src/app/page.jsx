@@ -2,6 +2,7 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { IconCloud } from "@/components/ui/icon-cloud";
 import { Tooltip, Timeline, Tag } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
 import { GiGraduateCap } from "react-icons/gi";
@@ -10,6 +11,44 @@ import MySvg from "./../../public/myname.svg";
 import meshBackground from "@/app/styles/background.module.css";
 
 export default function Home() {
+  const slugs = [
+    "html5",
+    "css3",
+    "sass", // SCSS is represented as 'sass'
+    "javascript", // JavaScript ES6 can use the default 'javascript' slug
+    "typescript",
+    "php",
+    "python",
+    "react",
+    "nextdotjs", // Next.js
+    "vuejs", // Vue
+    "vite",
+    "restapi", // Custom icon for Rest API if supported, otherwise use 'api'
+    "mysql",
+    "mongodb",
+    "laravel",
+    "tailwindcss", // Tailwind
+    "mui", // Material-UI
+    "antdesign", // Ant Design
+    "bootstrap",
+    "framermotion", // Framer Motion
+    "git", // Git & GitHub can use 'git'
+    "figma",
+    "cloudinary",
+    "miro",
+    "trello",
+    "vercel",
+    "googlecloud", // Google Cloud Platform
+    "canva",
+    "firebase",
+    "agile", // Agile Methodologies, if supported
+    "microsoftoffice", // MS Office
+  ];
+
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
+
   const svgRef = useRef(null);
   const lineRef = useRef(null);
   const textRef = useRef(null);
@@ -525,6 +564,7 @@ export default function Home() {
               </div>
             </motion.div>
             {/* Skills */}
+
             <motion.div
               className="mt-12 flex flex-col items-center text-secondarytext"
               ref={textRef3}
@@ -537,7 +577,12 @@ export default function Home() {
               }}
             >
               <p className="text-base">several tools I'm experienced with:</p>
-              <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
+              <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden">
+                <div style={{ transform: "scale(1.3)" }}>
+                  <IconCloud images={images} />
+                </div>
+              </div>
+              {/* <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
                 <span className="rounded-md border border-borderColorTransparent px-2 py-1">
                   HTML5
                 </span>
@@ -631,7 +676,7 @@ export default function Home() {
                 <span className="rounded-md border border-borderColorTransparent px-2 py-1">
                   Ms.Office (Word, Powerpoint, Excel)
                 </span>
-              </div>
+              </div> */}
 
               <p className="mt-6 text-base">
                 some of the soft skills I've mastered:

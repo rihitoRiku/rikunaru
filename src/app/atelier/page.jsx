@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Image } from "antd";
+import { Image, Modal } from "antd";
+import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import AOS from "aos";
 import { MdOutlineWork } from "react-icons/md";
@@ -11,6 +12,7 @@ import Loadercomponent from "../components/LoaderComponent";
 import "aos/dist/aos.css";
 
 export default function page() {
+  // Project items
   const projectItems = [
     {
       id: 1,
@@ -26,7 +28,7 @@ export default function page() {
       id: 2,
       title: "OcToefl: Gamified Learning App with Bayesian Knowledge Tracing",
       description:
-        "A dynamic full-stack learning app designed to make TOEFL preparation engaging and adaptive. Users build unique profiles by collecting stars, rank badges, and customizable avatars, while tracking their progress through milestones and quests. The app features interactive quizzes/exam, one adapt to the learner’s needs via Bayesian Knowledge Tracing, and a history of challenges to review past attempts. instant feedback, completion monitoring, leaderboards, customizable statuses, and a points-based store, OcToefl creates an immersive and personalized learning journey",
+        "A dynamic full-stack learning app designed to make TOEFL preparation engaging and adaptive. Users build unique profiles by collecting stars, rank badges, and customizable avatars, while tracking their progress through milestones and quests. The app features interactive quizzes/exam, one adapt to the learner's needs via Bayesian Knowledge Tracing, and a history of challenges to review past attempts. instant feedback, completion monitoring, leaderboards, customizable statuses, and a points-based store, OcToefl creates an immersive and personalized learning journey",
       techStack:
         "Next.js, React.js, Express.js, MongoDB, TailwindCSS, Zustand, Formik, ReactQuill, SCSS, HTML, CSS, JS",
       // imgSrc: "./Assets/Projects/motion.png",
@@ -125,9 +127,24 @@ export default function page() {
     },
   ];
 
+  // Project items show more
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleCards = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  // Project Modal
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const showModal = (project) => {
+    setSelectedProject(project);
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+    setSelectedProject(null);
   };
 
   // State untuk kalender GitHub
@@ -240,8 +257,9 @@ export default function page() {
       lastMonth = currentMonth;
     }
   });
-  const badgeImages = Array.from({ length: 14 }, (_, i) => i + 1); // Creates an array [1, 2, 3, ..., 14]
+  const badgeImages = Array.from({ length: 14 }, (_, i) => i + 1);
 
+  // AOS initalize
   useEffect(() => {
     AOS.init({ once: true, mirror: false });
   }, []);
@@ -260,10 +278,10 @@ export default function page() {
               <div
                 className="absolute -left-20 -top-20 h-96 w-96 rounded-full border border-borderColorTransparent"
                 style={{
-                  backgroundImage: "url('/paper.jpg')", // Replace with the image path
-                  backgroundSize: "cover", // Ensures the image covers the entire div
-                  backgroundPosition: "top", // Centers the image within the div
-                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                  backgroundImage: "url('/paper.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
                 }}
               />
               <div className="relative flex h-full items-end justify-end px-4 pb-8 lg:px-8">
@@ -283,10 +301,10 @@ export default function page() {
                 data-aos-delay="100"
                 className="relative overflow-hidden rounded-lg border border-borderColorTransparent"
                 style={{
-                  backgroundImage: "url('/color.jpg')", // Replace with the path to your image
-                  backgroundSize: "cover", // Ensures the image covers the entire div
-                  backgroundPosition: "center", // Centers the image within the div
-                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                  backgroundImage: "url('/color.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
                 <div className="absolute inset-0" />
@@ -320,10 +338,10 @@ export default function page() {
                 className="clip-path-custom absolute right-0 top-0 h-full w-1/2"
                 style={{
                   clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)",
-                  backgroundImage: "url('/neuron.jpg')", // Replace with your image path
-                  backgroundSize: "cover", // Ensures the image covers the entire div
-                  backgroundPosition: "center", // Centers the image
-                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                  backgroundImage: "url('/neuron.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               />
               <div className="relative flex h-full max-w-[25rem] flex-col justify-between p-8">
@@ -341,6 +359,7 @@ export default function page() {
           </div>
         </div>
 
+        {/* Projects */}
         {/* Projects */}
         <div
           data-aos="fade-up"
@@ -360,61 +379,66 @@ export default function page() {
               deployed and are accessible to the public.
             </p>
           </div>
-          <div
-            className={`${isExpanded ? "h-auto" : "h-[600px]"} overflow-hidden`}
-          >
-            <div className="relative grid w-full grid-cols-2 gap-4 md:grid-cols-3">
-              {projectItems
-                .slice(0, isExpanded ? projectItems.length : 9)
-                .map((card) => (
-                  <a
-                    href={card.link}
-                    target="_blank"
-                    key={card.id}
-                    className="aspect-square w-full overflow-hidden rounded-xl border border-borderColorTransparent"
-                  >
-                    {card.imgSrc && (
-                      <Image
-                        src={card.imgSrc}
-                        alt={card.title}
-                        className="h-1/2 w-full object-cover"
-                      />
-                    )}
-                    <div
-                      className={`flex flex-col justify-between p-4 ${
-                        card.imgSrc ? "h-1/2" : "h-full"
-                      }`}
-                    >
-                      <div className="">
-                        <h3 className="mb-2 text-base font-semibold">
-                          {card.title}
-                        </h3>
-                        <p className="line-clamp-2 text-sm text-gray-600">
-                          {card.description}
-                        </p>
-                      </div>
 
-                      <p className="mt-4 line-clamp-1 text-sm text-gray-600">
-                        {card.techStack}
+          {/* Project Grid */}
+          <div className="relative grid w-full grid-cols-2 gap-4 md:grid-cols-3">
+            {projectItems.map((card, index) => {
+              // Ensure only reveal up to 9 items if not expanded
+              const isVisible = isExpanded || index < 6;
+
+              return (
+                <motion.div
+                  onClick={() => showModal(card)}
+                  key={card.id}
+                  className="aspect-square w-full overflow-hidden rounded-xl border border-borderColorTransparent"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  style={{ display: isVisible ? "block" : "none" }}
+                >
+                  {card.imgSrc && (
+                    <Image
+                      src={card.imgSrc}
+                      alt={card.title}
+                      className="h-1/2 w-full object-cover"
+                    />
+                  )}
+                  <div
+                    className={`flex flex-col justify-between p-4 ${
+                      card.imgSrc ? "h-1/2" : "h-full"
+                    }`}
+                  >
+                    <div>
+                      <h3 className="mb-2 text-base font-semibold">
+                        {card.title}
+                      </h3>
+                      <p className="line-clamp-2 text-sm text-gray-600">
+                        {card.description}
                       </p>
                     </div>
-                  </a>
-                ))}
-            </div>
+
+                    <p className="mt-4 line-clamp-1 text-sm text-gray-600">
+                      {card.techStack}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
+          {/* Buttons */}
           {!isExpanded && (
-            <>
-              <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent">
-                <button
-                  onClick={toggleCards}
-                  className="flex w-full items-center justify-center gap-2 rounded-lg px-6 py-2 text-primarytext"
-                >
-                  <FaAnglesDown className="animate-bounce" />
-                  Show More
-                </button>
-              </div>
-            </>
+            <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-zinc-950 to-transparent">
+              <button
+                onClick={toggleCards}
+                className="flex w-full items-center justify-center gap-2 rounded-lg px-6 py-2 text-primarytext"
+              >
+                <FaAnglesDown className="animate-bounce" />
+                Show More
+              </button>
+            </div>
           )}
 
           {isExpanded && (
@@ -454,11 +478,6 @@ export default function page() {
                 <div className="mb-2 text-sm font-semibold text-primarytext">
                   {profileData.totalRepositories} total repositories
                 </div>
-                {/* <img
-                src={`https://komarev.com/ghpvc/?username=rihitoRiku&color=black`}
-                alt="Profile views"
-                className="h-6"
-              /> */}
               </div>
 
               <div className="max-w-max overflow-scroll font-rethink">
@@ -723,6 +742,77 @@ export default function page() {
           </div>
         </div>
       </div>
+
+      {/* Modal untuk menampilkan detail proyek */}
+      <Modal
+        title={
+          <div className="max-w-[28rem] text-xl text-white">
+            {selectedProject?.title}
+          </div>
+        }
+        open={isModalVisible}
+        onCancel={handleCancel}
+        footer={null}
+        width={700}
+        closeIcon={
+          <div
+            style={{
+              fontSize: "50px",
+              backgroundColor: "transparent",
+              color: "white",
+              height: "fit",
+              width: "fit",
+            }}
+          >
+            ×
+          </div>
+        }
+        centered
+        styles={{
+          mask: {
+            backdropFilter: "blur(10px)",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          },
+          body: {
+            backgroundColor: "#09090b",
+            color: "#fff",
+            // maxHeight: '80vh',
+            overflowY: "auto",
+          },
+          content: {
+            backgroundColor: "#09090b",
+            color: "#fff",
+            padding: "2rem",
+            margin: "1rem",
+            border: "1px solid rgba(107, 114, 128, 0.1)",
+          },
+          header: { backgroundColor: "#09090b", color: "#fff" },
+          footer: { backgroundColor: "#09090b", color: "#fff" },
+        }}
+      >
+        {selectedProject && (
+          <div>
+            <img
+              src={selectedProject.imgSrc || "default-image.jpg"}
+              alt={selectedProject.title}
+              className="mb-4 h-auto w-full"
+            />
+            <p className="text-secondarytext">{selectedProject.description}</p>
+            <p className="mb-8 mt-8 font-semibold text-secondarytext">
+              <span className="text-primarytext">Tech Stack:</span>{" "}
+              {selectedProject.techStack}
+            </p>
+            <a
+              href={selectedProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500"
+            >
+              View Project
+            </a>
+          </div>
+        )}
+      </Modal>
     </>
   );
 }

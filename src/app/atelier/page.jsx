@@ -8,7 +8,7 @@ import { MdOutlineWork } from "react-icons/md";
 import { FaAnglesDown, FaAnglesUp } from "react-icons/fa6";
 import { PiCertificateFill } from "react-icons/pi";
 import { RiArchiveDrawerFill } from "react-icons/ri";
-import Loadercomponent from "../components/LoaderComponent";
+import Loadercomponent from "../../components/ui/loader-component";
 import "aos/dist/aos.css";
 
 export default function page() {

@@ -9,6 +9,8 @@ import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineWork } from "react-icons/md";
 import MySvg from "./../../public/myname.svg";
 import meshBackground from "@/app/styles/background.module.css";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { WordRotate } from "@/components/ui/word-rotate";
 
 export default function Home() {
   const slugs = [
@@ -109,12 +111,16 @@ export default function Home() {
             <div className="flex h-screen w-fit flex-col justify-center gap-12 px-6">
               <div className="w-full sm:w-[30rem]">
                 <motion.h1
-                  className="mb-4 text-6xl font-semibold sm:text-7xl"
+                  className="mb-4 text-6xl font-semibold sm:text-7xl flex  items-center"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, ease: "easeOut" }}
                 >
-                  I'm Rafi
+                  I'm
+                  <WordRotate
+                    className="ms-4"
+                    words={["Rafi", "Riku"]}
+                  />
                 </motion.h1>
                 <motion.p
                   className="text-base text-gray-300"
@@ -681,7 +687,37 @@ export default function Home() {
               <p className="mt-6 text-base">
                 some of the soft skills I've mastered:
               </p>
-              <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
+              <section id="header">
+                <BlurFade delay={0.25 * 2} inView direction="right">
+                  <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Time Management
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Critical & Analytical Thinking
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Communication
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Problem Solving
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Adaptability
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Fast Learning
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Project Management
+                    </span>
+                    <span className="rounded-md border border-borderColorTransparent px-2 py-1">
+                      Leadership
+                    </span>
+                  </div>
+                </BlurFade>
+              </section>
+              {/* <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
                 <span className="rounded-md border border-borderColorTransparent px-2 py-1">
                   Time Management
                 </span>
@@ -706,7 +742,7 @@ export default function Home() {
                 <span className="rounded-md border border-borderColorTransparent px-2 py-1">
                   Leadership
                 </span>
-              </div>
+              </div> */}
             </motion.div>
           </div>
 

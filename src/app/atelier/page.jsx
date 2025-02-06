@@ -23,6 +23,7 @@ export default function page() {
         "ReactJs, Tailwind, ExpressJs, MongoDB, Cloudinary, Google Captcha, Emailjs, SCSS, HTML, CSS, JS",
       // imgSrc: "./Assets/Projects/shiro.png",
       link: "https://github.com/rihitoRiku/shiroplaneApp",
+      demo: "https://shiroplaneproject.vercel.app/",
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ export default function page() {
         "Next.js, React.js, Express.js, MongoDB, TailwindCSS, Zustand, Formik, ReactQuill, SCSS, HTML, CSS, JS",
       // imgSrc: "./Assets/Projects/motion.png",
       link: "https://github.com/rihitoRiku/motionClient",
+      demo: "https://motion-client.vercel.app/",
     },
     {
       id: 3,
@@ -42,9 +44,20 @@ export default function page() {
       techStack: "Vue.js, Vite.js, Tailwind, HTML, CSS, JS",
       // imgSrc: "./Assets/Projects/vue.png",
       link: "https://github.com/rihitoRiku/vue-chatbotv2",
+      demo: "https://vue-chatbotv2.vercel.app/",
     },
     {
       id: 4,
+      title: "E-Commerce: Rikustore",
+      description: "",
+      techStack:
+        "Typescript, Next.js, React.js, Express.js, Supabase, Postgree, Tailwind, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/vue.png",
+      link: "https://github.com/rihitoRiku/riku-store",
+      demo: "https://riku-store.vercel.app/",
+    },
+    {
+      id: 5,
       title: "Nutriast: Health Monitoring Mobile App",
       description:
         "A collaborative full-stack web app designed for health monitoring and cardiovascular disease prediction using machine learning. Developed by a team of six (3 full-stack/DevOps, 2 ML engineers, 1 mobile developer), Nutriast leverages Google Cloud and TensorFlow to integrate a predictive model trained on Kaggle data. The app includes extensive nutrition data, food intake tracking, and personalized health insights, offering users a robust tool for proactive health management.",
@@ -53,7 +66,7 @@ export default function page() {
       link: "https://github.com/C23-PC718",
     },
     {
-      id: 5,
+      id: 6,
       title: "Nutriast: Health Monitoring Web-App",
       description:
         "Transformed a mobile app into a full-stack web app, integrating an existing deployed machine learning model. Handled all roles from UI/UX design to backend development, delivering a responsive interface and robust architecture, showcasing full-stack and ML integration expertise.",
@@ -63,7 +76,7 @@ export default function page() {
       link: "https://github.com/rihitoRiku/NutriastApp",
     },
     {
-      id: 6,
+      id: 7,
       title: "Bank Sampah Management & Information System",
       description:
         "Built a comprehensive Bank Sampah Management & Information System for city-wide waste tracking, including an admin system for managing users, waste databases, and price-per-weight configurations. Enabled CRUD operations, an interactive dashboard for trend visualization, and a wallet feature for redeeming rewards based on collected waste. This system enhances environmental sustainability by streamlining waste management and incentivizing recycling efforts.",
@@ -73,7 +86,7 @@ export default function page() {
       link: "https://github.com/rihitoRiku/BankSampah",
     },
     {
-      id: 7,
+      id: 8,
       title: "E-Commerce: Utami Bakery Store",
       description:
         " Led front-end development in a team project, designing UI/UX for a bakery web app with full e-commerce features, including product catalog, details page, cart, and checkout. Built an admin system for product management and integrated WhatsApp for customer communication. Collaborated closely with backend, data teams, and clients to ensure feature alignment and optimal user experience.",
@@ -81,16 +94,17 @@ export default function page() {
       link: "https://github.com/rihitoRiku/UtamiBakery",
     },
     {
-      id: 8,
+      id: 9,
       title: "Personal Profile",
       description:
         "Developed a personal portfolio website to showcase my bio, education, projects, and contact information. Designed a visually appealing, dark-mode interface and integrated GitHub contribution data using GraphQL. Focused on creating an engaging, modern user experience to highlight my background, skills, and professional journey.",
       techStack: "React.js, Next.js, TailwindCSS, SCSS, HTML, CSS, JS",
       // imgSrc: "project-image-7.jpg",
       link: "https://github.com/rihitoRiku/perprof",
+      link: "https://rihitorihiro.vercel.app/",
     },
     {
-      id: 9,
+      id: 10,
       title: "Sales Admin Dashboard",
       description:
         "Developed a full-stack Sales Admin Dashboard for managing customers, products, and transactions. Implemented interactive charts and graphs for data visualization, pagination for data lists, and a dark mode option. This project streamlined sales administration by providing an intuitive, data-driven interface for efficient management and insights.",
@@ -100,7 +114,7 @@ export default function page() {
       link: "https://github.com/rihitoRiku/AdminDashboard",
     },
     {
-      id: 10,
+      id: 11,
       title: "E-commerce: Metime Clothing",
       description:
         "Developed the front-end of a mobile app for an e-commerce clothing store in a team of five. Implemented product catalog displays, cart, and checkout features to create a seamless shopping experience for users. Focused on delivering a clean, responsive interface optimized for mobile use.",
@@ -109,7 +123,7 @@ export default function page() {
       link: "https://github.com/rihitoRiku/MeTimeStore",
     },
     {
-      id: 11,
+      id: 12,
       title: "Random Meal Generator",
       description:
         "Developed a native PHP project to suggest random meals, utilizing a SQL database to store and retrieve food data. Designed and built both the front and backend with an MVP architecture, ensuring a structured, efficient, and user-friendly experience.",
@@ -118,7 +132,7 @@ export default function page() {
       link: "https://github.com/rihitoRiku/RandomMealGenerator",
     },
     {
-      id: 12,
+      id: 13,
       title: "Survival Hop 2D Java Game",
       description:
         "Created a 2D game using Java and Apache NetBeans, focusing on object-oriented principles. Connected to a MySQL database to track game progress and implemented user controls for movement, jumping, and point accumulation. Enhanced gameplay with interactive functions and database integration for a dynamic user experience.",
@@ -264,6 +278,8 @@ export default function page() {
     AOS.init({ once: true, mirror: false });
   }, []);
 
+  const [isHovered, setIsHovered] = useState(null);
+
   return (
     <>
       {/* Project Section */}
@@ -390,13 +406,20 @@ export default function page() {
                 <motion.div
                   onClick={() => showModal(card)}
                   key={card.id}
-                  className="aspect-square w-full overflow-hidden rounded-xl border border-borderColorTransparent"
+                  className="aspect-square w-full cursor-pointer overflow-hidden rounded-xl border border-borderColorTransparent"
                   initial={{ opacity: 0, y: 20 }}
                   animate={
                     isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                   }
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   style={{ display: isVisible ? "block" : "none" }}
+                  whileHover={{
+                    rotate: 1,
+                    scale: 1.02,
+                    borderColor: "rgba(107, 114, 128, 0.5)",
+                  }}
+                  onHoverStart={() => setIsHovered(card.id)}
+                  onHoverEnd={() => setIsHovered(null)}
                 >
                   {card.imgSrc && (
                     <Image
@@ -411,9 +434,17 @@ export default function page() {
                     }`}
                   >
                     <div>
-                      <h3 className="mb-2 text-base font-semibold">
+                      <motion.h2
+                        className="title"
+                        initial={{ textDecoration: "none" }}
+                        animate={{
+                          textDecoration:
+                            isHovered === card.id ? "underline" : "none",
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
                         {card.title}
-                      </h3>
+                      </motion.h2>
                       <p className="line-clamp-2 text-sm text-gray-600">
                         {card.description}
                       </p>
@@ -806,10 +837,29 @@ export default function page() {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500"
+              className="text-green-500 hover:text-green-400"
             >
-              View Project
+              Repository
             </a>
+            {selectedProject.demo ? (
+              <>
+                <a
+                  href={selectedProject.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ms-4 text-green-500 hover:text-green-400"
+                >
+                  Live Demo
+                </a>
+              </>
+            ) : (
+              <>
+                <p>
+                  The demo is currently unavailable due to hosting budget
+                  limitations.
+                </p>
+              </>
+            )}
           </div>
         )}
       </Modal>

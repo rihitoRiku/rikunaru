@@ -98,6 +98,12 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Kode yang bergantung pada window
+    }
+  }, []);
+
   return (
     <>
       {/* Background */}
@@ -802,7 +808,7 @@ export default function Home() {
                     {/* Left Column */}
                     <div className="w-full md:max-w-[36rem]">
                       {/* Education Description */}
-                      <div className="w-full text-justify font-light text-secondarytext md:max-w-[36rem]">
+                      <div className="w-full text-justify text-sm font-light text-secondarytext md:max-w-[36rem]">
                         <p>
                           As a fresh graduate of{" "}
                           <strong className="text-primarytext">

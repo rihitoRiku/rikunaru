@@ -854,7 +854,7 @@ export default function page() {
               </>
             ) : (
               <>
-                <p>
+                <p className="text-secondarytext">
                   The demo is currently unavailable due to hosting budget
                   limitations.
                 </p>

@@ -333,6 +333,38 @@ export default function Home() {
                       </svg>
                     </a>
                   </Tooltip>
+                  <Tooltip
+                    styles={{ body: { color: "white" } }}
+                    color="#1e293b"
+                    placement="bottom"
+                    title="Shop"
+                    arrow={mergedArrow}
+                  >
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://rikustore.vercel.app/"
+                      data-state="closed"
+                      className="cursor-newtab flex items-center justify-center rounded-sm p-0.5 text-neutral-500 transition-colors hover:text-neutral-400"
+                    >
+                      <span className="sr-only">Shop</span>
+                      <svg
+                        stroke="currentColor"
+                        fill="none"
+                        strokeWidth="1"
+                        viewBox="0 0 24 24"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        height="20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                    </a>
+                  </Tooltip>
                 </motion.div>
               </div>
               {/* Framermotion Grid */}

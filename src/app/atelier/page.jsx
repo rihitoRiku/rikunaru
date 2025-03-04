@@ -16,6 +16,28 @@ export default function page() {
   const projectItems = [
     {
       id: 1,
+      title: "E-Commerce: Rikustore",
+      description:
+        ":A full-stack personal store web app for selling website development services, featuring Google OAuth 2.0, a dashboard, payment gateway, and AI integration. Built with React.js, Next.js, Tailwind, Express, and Supabase. Currently in development.",
+      techStack:
+        "Typescript, Next.js, React.js, Express.js, Supabase, Postgree, Tailwind, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/vue.png",
+      link: "https://github.com/rihitoRiku/riku-store",
+      demo: "https://rikustore.vercel.app/",
+    },
+    ,
+    {
+      id: 2,
+      title: "AI Chatbot with Vue",
+      description:
+        "This project responsive web application powered by Cohere's Command-R-08-2024 language model, designed to provide intelligent, predefined responses to user queries. With a simple, clean interface and fast performance, the chatbot delivers a seamless experience across both desktop and mobile devices, making it easy for users to access information quickly and efficiently.",
+      techStack: "Vue.js, Vite.js, Tailwind, HTML, CSS, JS",
+      // imgSrc: "./Assets/Projects/vue.png",
+      link: "https://github.com/rihitoRiku/vue-chatbotv2",
+      demo: "https://vue-chatbotv2.vercel.app/",
+    },
+    {
+      id: 3,
       title: "Shiroplane Artworks Showcases",
       description:
         "A full-stack web app portfolio and client management platform featuring an animated UI/UX design with a paper-inspired theme for an interactive, artistic experience. The app is fully responsive across all devices, with an elegant layout and fonts for a visually engaging presentation. Optimized for fast performance, it offers smooth navigation and quick load times. Developed end-to-end, this solo project covered the complete SDLC,  from UI/UX design to deployment",
@@ -26,7 +48,7 @@ export default function page() {
       demo: "https://shiroplaneproject.vercel.app/",
     },
     {
-      id: 2,
+      id: 4,
       title: "OcToefl: Gamified Learning App with Bayesian Knowledge Tracing",
       description:
         "A dynamic full-stack learning app designed to make TOEFL preparation engaging and adaptive. Users build unique profiles by collecting stars, rank badges, and customizable avatars, while tracking their progress through milestones and quests. The app features interactive quizzes/exam, one adapt to the learner's needs via Bayesian Knowledge Tracing, and a history of challenges to review past attempts. instant feedback, completion monitoring, leaderboards, customizable statuses, and a points-based store, OcToefl creates an immersive and personalized learning journey",
@@ -35,26 +57,6 @@ export default function page() {
       // imgSrc: "./Assets/Projects/motion.png",
       link: "https://github.com/rihitoRiku/motionClient",
       demo: "https://motion-client.vercel.app/",
-    },
-    {
-      id: 3,
-      title: "AI Chatbot with Vue",
-      description:
-        "This project responsive web application powered by Cohere's Command-R-08-2024 language model, designed to provide intelligent, predefined responses to user queries. With a simple, clean interface and fast performance, the chatbot delivers a seamless experience across both desktop and mobile devices, making it easy for users to access information quickly and efficiently.",
-      techStack: "Vue.js, Vite.js, Tailwind, HTML, CSS, JS",
-      // imgSrc: "./Assets/Projects/vue.png",
-      link: "https://github.com/rihitoRiku/vue-chatbotv2",
-      demo: "https://vue-chatbotv2.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "E-Commerce: Rikustore",
-      description: "",
-      techStack:
-        "Typescript, Next.js, React.js, Express.js, Supabase, Postgree, Tailwind, HTML, CSS, JS",
-      // imgSrc: "./Assets/Projects/vue.png",
-      link: "https://github.com/rihitoRiku/riku-store",
-      demo: "https://riku-store.vercel.app/",
     },
     {
       id: 5,
@@ -67,16 +69,6 @@ export default function page() {
     },
     {
       id: 6,
-      title: "Nutriast: Health Monitoring Web-App",
-      description:
-        "Transformed a mobile app into a full-stack web app, integrating an existing deployed machine learning model. Handled all roles from UI/UX design to backend development, delivering a responsive interface and robust architecture, showcasing full-stack and ML integration expertise.",
-      techStack:
-        "Typescript, Next.js, React.js, TailwindCSS, Express.js, MongoDB, SCSS, HTML, CSS, JS",
-      // imgSrc: "project-image-4.jpg",
-      link: "https://github.com/rihitoRiku/NutriastApp",
-    },
-    {
-      id: 7,
       title: "Bank Sampah Management & Information System",
       description:
         "Built a comprehensive Bank Sampah Management & Information System for city-wide waste tracking, including an admin system for managing users, waste databases, and price-per-weight configurations. Enabled CRUD operations, an interactive dashboard for trend visualization, and a wallet feature for redeeming rewards based on collected waste. This system enhances environmental sustainability by streamlining waste management and incentivizing recycling efforts.",
@@ -84,6 +76,16 @@ export default function page() {
         "Typescript, Next.js, React.js, TailwindCSS, Google AppScript, ApexChart, SCSS, HTML, CSS, JS",
       // imgSrc: "project-image-5.jpg",
       link: "https://github.com/rihitoRiku/BankSampah",
+    },
+    {
+      id: 7,
+      title: "Nutriast: Health Monitoring Web-App",
+      description:
+        "Transformed a mobile app into a full-stack web app, integrating an existing deployed machine learning model. Handled all roles from UI/UX design to backend development, delivering a responsive interface and robust architecture, showcasing full-stack and ML integration expertise.",
+      techStack:
+        "Typescript, Next.js, React.js, TailwindCSS, Express.js, MongoDB, SCSS, HTML, CSS, JS",
+      // imgSrc: "project-image-4.jpg",
+      link: "https://github.com/rihitoRiku/NutriastApp",
     },
     {
       id: 8,

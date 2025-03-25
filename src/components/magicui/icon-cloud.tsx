@@ -1,26 +1,46 @@
-"use client";;
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { renderToString } from "react-dom/server";
 
-function easeOutCubic(t) {
+interface Icon {
+  x: number;
+  y: number;
+  z: number;
+  scale: number;
+  opacity: number;
+  id: number;
+}
+
+interface IconCloudProps {
+  icons?: React.ReactNode[];
+  images?: string[];
+}
+
+function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export function IconCloud({
-  icons,
-  images
-}) {
-  const canvasRef = useRef(null);
-  const [iconPositions, setIconPositions] = useState([]);
+export function IconCloud({ icons, images }: IconCloudProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [iconPositions, setIconPositions] = useState<Icon[]>([]);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [targetRotation, setTargetRotation] = useState(null);
-  const animationFrameRef = useRef();
+  const [targetRotation, setTargetRotation] = useState<{
+    x: number;
+    y: number;
+    startX: number;
+    startY: number;
+    distance: number;
+    startTime: number;
+    duration: number;
+  } | null>(null);
+  const animationFrameRef = useRef<number>();
   const rotationRef = useRef(rotation);
-  const iconCanvasesRef = useRef([]);
-  const imagesLoadedRef = useRef([]);
+  const iconCanvasesRef = useRef<HTMLCanvasElement[]>([]);
+  const imagesLoadedRef = useRef<boolean[]>([]);
 
   // Create icon canvases once when icons/images change
   useEffect(() => {
@@ -40,7 +60,7 @@ export function IconCloud({
           // Handle image URLs directly
           const img = new Image();
           img.crossOrigin = "anonymous";
-          img.src = items[index];
+          img.src = items[index] as string;
           img.onload = () => {
             offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
 
@@ -58,7 +78,7 @@ export function IconCloud({
         } else {
           // Handle SVG icons
           offCtx.scale(0.4, 0.4);
-          const svgString = renderToString(item);
+          const svgString = renderToString(item as React.ReactElement);
           const img = new Image();
           img.src = "data:image/svg+xml;base64," + btoa(svgString);
           img.onload = () => {
@@ -77,7 +97,7 @@ export function IconCloud({
   // Generate initial icon positions on a sphere
   useEffect(() => {
     const items = icons || images || [];
-    const newIcons = [];
+    const newIcons: Icon[] = [];
     const numIcons = items.length || 20;
 
     // Fibonacci sphere parameters
@@ -105,7 +125,7 @@ export function IconCloud({
   }, [icons, images]);
 
   // Handle mouse events
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
     if (!rect || !canvasRef.current) return;
 
@@ -125,8 +145,8 @@ export function IconCloud({
       const rotatedZ = icon.x * sinY + icon.z * cosY;
       const rotatedY = icon.y * cosX + rotatedZ * sinX;
 
-      const screenX = canvasRef.current.width / 2 + rotatedX;
-      const screenY = canvasRef.current.height / 2 + rotatedY;
+      const screenX = canvasRef.current!.width / 2 + rotatedX;
+      const screenY = canvasRef.current!.height / 2 + rotatedY;
 
       const scale = (rotatedZ + 200) / 300;
       const radius = 20 * scale;
@@ -134,12 +154,17 @@ export function IconCloud({
       const dy = y - screenY;
 
       if (dx * dx + dy * dy < radius * radius) {
-        const targetX = -Math.atan2(icon.y, Math.sqrt(icon.x * icon.x + icon.z * icon.z));
+        const targetX = -Math.atan2(
+          icon.y,
+          Math.sqrt(icon.x * icon.x + icon.z * icon.z),
+        );
         const targetY = Math.atan2(icon.x, icon.z);
 
         const currentX = rotationRef.current.x;
         const currentY = rotationRef.current.y;
-        const distance = Math.sqrt(Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2));
+        const distance = Math.sqrt(
+          Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2),
+        );
 
         const duration = Math.min(2000, Math.max(800, distance * 1000));
 
@@ -160,7 +185,7 @@ export function IconCloud({
     setLastMousePos({ x: e.clientX, y: e.clientY });
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
     if (rect) {
       const x = e.clientX - rect.left;
@@ -240,7 +265,10 @@ export function IconCloud({
         const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150) / 200));
 
         ctx.save();
-        ctx.translate(canvas.width / 2 + rotatedX, canvas.height / 2 + rotatedY);
+        ctx.translate(
+          canvas.width / 2 + rotatedX,
+          canvas.height / 2 + rotatedY,
+        );
         ctx.scale(scale, scale);
         ctx.globalAlpha = opacity;
 
@@ -280,7 +308,7 @@ export function IconCloud({
   }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
 
   return (
-    (<canvas
+    <canvas
       ref={canvasRef}
       width={400}
       height={400}
@@ -290,6 +318,7 @@ export function IconCloud({
       onMouseLeave={handleMouseUp}
       className="rounded-lg"
       aria-label="Interactive 3D Icon Cloud"
-      role="img" />)
+      role="img"
+    />
   );
 }

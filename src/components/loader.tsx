@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React from "react";
-import Loaderstyle from "./../../styles/loadercomponent.module.css";
+import Loaderstyle from "@/styles/loader.module.css";
 
 export default function Loadercomponent() {
   return (

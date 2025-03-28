@@ -23,7 +23,7 @@ export default function AtelierBento() {
             className="border-trsp relative h-[320px] overflow-hidden rounded-lg border"
           >
             <div
-              className="border-trsp absolute -top-20 -left-20 h-96 w-96 rounded-full border"
+              className="border-trsp animate-breathe absolute -top-20 -left-20 h-96 w-96 rounded-full border"
               style={{
                 backgroundImage: "url('/assets/paper.jpg')",
                 backgroundSize: "cover",
@@ -33,7 +33,7 @@ export default function AtelierBento() {
             >
               {/* Placeholder */}
               {!imageLoaded.paper && (
-                <div className="absolute inset-0 shimmer opacity-75" />
+                <div className="shimmer absolute inset-0 opacity-75" />
               )}
             </div>
             {/* Hidden img tag to detect loading */}
@@ -67,7 +67,7 @@ export default function AtelierBento() {
               }}
             >
               {!imageLoaded.color && (
-                <div className="absolute inset-0 shimmer opacity-75" />
+                <div className="shimmer absolute inset-0 opacity-75" />
               )}
               <img
                 src="/assets/color.jpg"
@@ -103,7 +103,7 @@ export default function AtelierBento() {
             className="border-trsp relative col-span-2 h-[240px] overflow-hidden rounded-lg border"
           >
             <div
-              className="clip-path-custom absolute top-0 right-0 h-full w-1/2"
+              className="clip-path-custom animate-breathe absolute top-0 right-0 h-full w-1/2"
               style={{
                 clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)",
                 backgroundImage: "url('/assets/neuron.jpg')",
@@ -113,7 +113,7 @@ export default function AtelierBento() {
               }}
             >
               {!imageLoaded.neuron && (
-                <div className="absolute inset-0 shimmer opacity-75" />
+                <div className="shimmer absolute inset-0 opacity-75" />
               )}
             </div>
             {/* Hidden img tag to detect loading */}

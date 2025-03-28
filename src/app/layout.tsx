@@ -1,9 +1,9 @@
-import { inter, rethinkSans } from "@/lib/fonts";
+import { rethinkSans } from "@/lib/fonts";
 import "./globals.css";
-import NextTopLoader from "nextjs-toploader";
 import { AOSInitializer } from "@/components/providers/AOSProvider";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import TopLoaderWrapper from "@/components/providers/TopLoaderWrapper";
 
 export { metadata } from "@/lib/metadata";
 
@@ -19,20 +19,12 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body className={`${rethinkSans.className} antialiased`}>
-        <NextTopLoader
-          color="#16a34a"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={false}
-          easing="ease"
-          speed={200}
-        />
         <AOSInitializer />
-        <Navbar />
-        {children}
-        <Footer />
+        <TopLoaderWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+        </TopLoaderWrapper>
       </body>
     </html>
   );

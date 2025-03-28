@@ -1,26 +1,45 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { PiCertificateFill } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 
 export default function CertificateSection() {
+  
+
+  const badgeImages = Array.from({ length: 13 }, (_, i) => i + 1);
+  const getRandomDelay = () => {
+    const delays = ["delay-0", "delay-1", "delay-2", "delay-3", "delay-4"];
+    return delays[Math.floor(Math.random() * delays.length)];
+  };
+
+  // modal image preview
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
-
   const openPreview = (src: string) => {
     setPreviewImage(src);
   };
-
   const closePreview = () => {
     setPreviewImage(null);
   };
-
   const handleImageLoad = (src: string) => {
     setLoadedImages((prev) => ({ ...prev, [src]: true }));
   };
 
-  const badgeImages = Array.from({ length: 13 }, (_, i) => i + 1);
+  // modal preview image animation
+  const [isExiting, setIsExiting] = useState(false);
+  const handleClosePreview = () => {
+    setIsExiting(true);
+  };
+  useEffect(() => {
+    if (isExiting && previewImage) {
+      const timer = setTimeout(() => {
+        closePreview(); // Your original close function
+        setIsExiting(false);
+      }, 300); // Match animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [isExiting, previewImage]);
 
   return (
     <div>
@@ -53,12 +72,12 @@ export default function CertificateSection() {
         >
           <div className="relative w-full max-w-[24rem] rounded-lg">
             {!loadedImages["/assets/certificates/b.png"] && (
-              <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+              <div className="shimmer absolute inset-0 rounded-lg opacity-75" />
             )}
             <Image
               width={500}
               height={300}
-              className="inset-0 cursor-pointer rounded-lg border object-contain"
+              className="animate-breathe inset-0 cursor-pointer rounded-lg border object-contain"
               src="/assets/certificates/b.png"
               alt="Cert"
               onClick={() => openPreview("/assets/certificates/b.png")}
@@ -103,12 +122,12 @@ export default function CertificateSection() {
 
           <div className="relative w-full max-w-[24rem] rounded-lg">
             {!loadedImages["/assets/certificates/bangkit.png"] && (
-              <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+              <div className="shimmer absolute inset-0 rounded-lg opacity-75" />
             )}
             <Image
               width={500}
               height={300}
-              className="inset-0 cursor-pointer rounded-lg border object-contain"
+              className="animate-breathe inset-0 cursor-pointer rounded-lg border object-contain"
               src="/assets/certificates/bangkit.png"
               alt="Cert"
               onClick={() => openPreview("/assets/certificates/bangkit.png")}
@@ -133,19 +152,42 @@ export default function CertificateSection() {
         </div>
 
         <div data-aos="fade-up" className="relative overflow-hidden">
-          <Marquee pauseOnHover>
-            <div className="flex h-[12rem] items-center space-x-2 overflow-x-auto ps-1 pe-1 md:mt-8 md:h-[12rem] md:space-x-4">
+          {/* <Marquee pauseOnHover>
+            <div className="flex h-[12rem] items-center space-x-2 overflow-x-auto ps-1 pe-1 md:pe-3 md:mt-8 md:h-[12rem] md:space-x-4">
               {badgeImages.map((num) => {
-                const src = `/assets/certificates/badges/${num + 1}.png`;
+                const src = `/assets/certificates/cloudbadges/${num}.png`;
                 return (
                   <div key={num} className="relative h-36 w-auto">
                     {!loadedImages[src] && (
-                      <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+                      <div className="shimmer absolute inset-0 rounded-lg opacity-75" />
                     )}
                     <Image
-                      className="h-36 w-auto cursor-pointer rounded-lg object-contain transition-transform hover:scale-105"
+                      className="h-36 w-auto rounded-lg object-contain transition-transform hover:scale-105"
                       src={src}
-                      alt={`Badge ${num + 1}`}
+                      alt={`Badge ${num}`}
+                      width={150}
+                      height={150}
+                      onLoadingComplete={() => handleImageLoad(src)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </Marquee> */}
+          <Marquee pauseOnHover>
+            <div className="flex h-[12rem] items-center space-x-2 overflow-x-auto ps-1 pe-1 md:mt-8 md:h-[12rem] md:space-x-4 md:pe-3">
+              {badgeImages.map((num) => {
+                const src = `/assets/certificates/cloudbadges/${num}.png`;
+                const randomDelay = getRandomDelay();
+                return (
+                  <div key={num} className="relative h-36 w-auto">
+                    {!loadedImages[src] && (
+                      <div className="shimmer absolute inset-0 rounded-lg opacity-75" />
+                    )}
+                    <Image
+                      className={`animate-breathe h-36 w-auto rounded-lg object-contain transition-transform hover:scale-105 ${randomDelay}`}
+                      src={src}
+                      alt={`Badge ${num}`}
                       width={150}
                       height={150}
                       onLoadingComplete={() => handleImageLoad(src)}
@@ -202,21 +244,21 @@ export default function CertificateSection() {
             { src: "/assets/certificates/9.png", title: "Backend Development" },
           ].map((item, index) => (
             <div
-              key={index}
+              key={item.src}
               className="flex w-[40%] flex-col items-center gap-2 rounded-md md:w-[25%] lg:w-[20%]"
               data-aos="zoom-in"
               data-aos-delay={index * 100}
             >
               <div className="relative w-full">
                 {!loadedImages[item.src] && (
-                  <div className="absolute inset-0 shimmer rounded-md  opacity-75" />
+                  <div className="shimmer absolute inset-0 rounded-md opacity-75" />
                 )}
                 <Image
                   src={item.src}
                   alt={item.title}
                   width={200}
                   height={150}
-                  className="cursor-pointer rounded-md"
+                  className={`animate-breathe cursor-pointer rounded-md ${getRandomDelay()}`}
                   onClick={() => openPreview(item.src)}
                   onLoadingComplete={() => handleImageLoad(item.src)}
                 />
@@ -233,10 +275,12 @@ export default function CertificateSection() {
       {previewImage && (
         <div
           className="bg-opacity-75 fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={closePreview}
+          onClick={handleClosePreview}
         >
           <div
-            className="relative max-w-3xl p-4"
+            className={`relative max-w-3xl p-4 ${
+              isExiting ? "animate-popup-exit" : "animate-popup-enter"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <Image

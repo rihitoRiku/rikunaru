@@ -182,7 +182,7 @@ export default function GithubCalendarSection() {
                             key={`${weekIndex}-${dayIndex}`}
                             className={`h-3 w-3 ${getColor(
                               day.contributionCount,
-                            )} rounded-xs`}
+                            )} rounded-[3px]`}
                             style={{
                               gridRow: dayIndex + 1,
                               gridColumn: weekIndex + 1,
@@ -209,7 +209,7 @@ export default function GithubCalendarSection() {
                 {[0, 4, 9, 15].map((count) => (
                   <div
                     key={count}
-                    className={`h-3 w-3 ${getColor(count)} rounded-sm`}
+                    className={`h-3 w-3 ${getColor(count)} rounded-[3px]`}
                   />
                 ))}
               </div>

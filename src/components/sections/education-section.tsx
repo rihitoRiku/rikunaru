@@ -52,18 +52,20 @@ export default function EducationSection() {
               </div>
               <div className="relative text-neutral-100">
                 <div className="text-xl font-semibold lg:text-3xl">
-                  <div className="border-trsp bg-neutral-900 mb-2 w-fit rounded-xl border p-2">
+                  <div className="border-trsp mb-2 w-fit rounded-xl border bg-neutral-900 p-2">
                     <GiGraduateCap className="text-5xl" />
                   </div>
                   <span>Education</span>
                 </div>
               </div>
-              <div className="text-neutral-200 z-10 mt-8 w-full max-w-[44rem] text-base font">
+              <div className="z-10 mt-8 w-full max-w-[44rem] text-base font-light text-neutral-200">
                 <p>
                   As a fresh graduate of{" "}
-                  <strong className="text-neutral-100">Computer Science</strong>{" "}
+                  <strong className="font-medium text-emerald-200">
+                    Computer Science
+                  </strong>{" "}
                   (S.Kom.) from{" "}
-                  <strong className="text-neutral-100 hover:text-white">
+                  <strong className="font-medium text-emerald-200 hover:text-emerald-100">
                     <a
                       target="_blank"
                       href="https://www.topuniversities.com/universities/universitas-pendidikan-indonesia"
@@ -74,17 +76,22 @@ export default function EducationSection() {
                   (2020 - 2024), I have developed a strong foundation in
                   programming, covering algorithms, object-oriented programming
                   (OOP), databases, and web development. Graduating with a{" "}
-                  <strong className="text-neutral-100">GPA 3.85 of 4.00</strong>{" "}
-                  (Cumlaude), I balanced academic coursework with hands-on
-                  experience, taking on the role of an assistant lecturer and
-                  actively collaborating on projects.
+                  <strong className="font-medium text-emerald-200">
+                    GPA 3.85 of 4.00
+                  </strong>{" "}
+                  , I balanced academic coursework with hands-on experience,
+                  taking on the role of an assistant lecturer and actively
+                  collaborating on projects.
                 </p>
                 {/* Competition */}
                 <div className="">
-                  <h3 className="text-neutral-100 mt-8 text-xl font-semibold">
+                  <h3 className="mt-8 text-xl font-semibold text-neutral-100">
                     Competition
                   </h3>
-                  <Accordion type="multiple" className="mt-3 w-full text-neutral-200">
+                  <Accordion
+                    type="multiple"
+                    className="mt-3 w-full text-neutral-200"
+                  >
                     <AccordionItem value="item-1">
                       <AccordionTrigger className="cursor-pointer">
                         GEMASTIK XV 2022 UI/UX Design
@@ -149,14 +156,14 @@ export default function EducationSection() {
           {/* Card */}
           <div>
             <div className="size-full rounded-lg px-4 text-xl lg:mt-24">
-              <div className="border-trsp bg-neutral-900 relative min-w-[24rem] rounded-xl border p-6 transition-colors md:max-w-[28rem] md:min-w-[24rem]">
+              <div className="border-trsp relative min-w-[24rem] rounded-xl border bg-neutral-900 p-6 transition-colors md:max-w-[28rem] md:min-w-[24rem]">
                 <div className="absolute right-0 -bottom-4 text-[120px] leading-none font-bold text-white/5 select-none">
                   2022
                 </div>
 
                 <div className="relative z-10">
                   <div className="mb-4 flex items-center justify-between">
-                    <div className="text-neutral-200 flex items-center text-sm">
+                    <div className="flex items-center text-sm text-neutral-200">
                       <span>College Experience</span>
                     </div>
                     <div className="rounded-full bg-green-500/10 px-2 py-1 text-xs text-emerald-200">
@@ -177,12 +184,12 @@ export default function EducationSection() {
                     <h2 className="text-2xl font-semibold text-neutral-100">
                       Assistant Lecturer
                     </h2>
-                    <p className="text-neutral-200 text-sm">
+                    <p className="text-sm text-neutral-200">
                       I have experience in curriculum design, teaching over 50
                       students, and laboratory management. My responsibilities
                       have included:
                     </p>
-                    <ul className="text-neutral-200 ms-2 list-inside list-disc space-y-1 text-sm">
+                    <ul className="ms-2 list-inside list-disc space-y-1 text-sm text-neutral-200">
                       <li>
                         Developed lesson plans, modules, and exam materials of
                         computer networking and RPL.
@@ -206,11 +213,11 @@ export default function EducationSection() {
         </div>
         {/* Publication */}
         <div className="p-6">
-          <h3 className="text-neutral-100 mt-8 text-xl font-semibold">
+          <h3 className="mt-8 text-xl font-semibold text-neutral-100">
             Publication
           </h3>
           <div className="mt-4 flex flex-wrap gap-6">
-            <div className="border-trsp bg-neutral-900 h-fit rounded-lg border p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
               <a
                 href="http://repository.upi.edu/id/eprint/124309"
                 className="text-neutral-100 hover:text-white"
@@ -238,7 +245,7 @@ export default function EducationSection() {
                 and as a contributor
               </p>
             </div>
-            <div className="border-trsp bg-neutral-900 h-fit rounded-lg border p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
               <a
                 href="http://repository.upi.edu/id/eprint/124309"
                 className="text-neutral-100 hover:text-white"
@@ -247,7 +254,7 @@ export default function EducationSection() {
                 Barang
               </a>
             </div>
-            <div className="border-trsp bg-neutral-900 h-fit rounded-lg border p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
               <a
                 target="_blank"
                 href="https://jurnal.mdp.ac.id/index.php/forbiswira/article/view/3822"

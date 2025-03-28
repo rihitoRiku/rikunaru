@@ -55,7 +55,7 @@ export default function SignatureSection() {
             <p>
               I was born in October 2002 in Purwakarta, Indonesia. Recently graduated
               with a degree in Computer Science from the University of
-              Pendidikan Indonesia (UPI)
+              Pendidikan Indonesia (UPI).
             </p>
             <p>here are my current favorite tech stacks:</p>
             {/* Techstacks */}

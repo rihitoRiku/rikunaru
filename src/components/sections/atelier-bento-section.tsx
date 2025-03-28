@@ -1,11 +1,22 @@
-"use client"
-import React from 'react'
+"use client";
+import React, { useState } from "react";
 
 export default function AtelierBento() {
+  const [imageLoaded, setImageLoaded] = useState({
+    paper: false,
+    color: false,
+    neuron: false,
+  });
+
+  // Handler to update loading state when an image loads
+  const handleImageLoad = (key: keyof typeof imageLoaded) => {
+    setImageLoaded((prev) => ({ ...prev, [key]: true }));
+  };
+
   return (
     <div>
       <div className="mx-auto h-[620px] max-w-screen-md p-4">
-        <div className="mx-auto grid h-[500px] w-full max-w-4xl grid-cols-2 gap-4 mt-4">
+        <div className="mx-auto mt-4 grid h-[500px] w-full max-w-4xl grid-cols-2 gap-4">
           {/* Left column */}
           <div
             data-aos="zoom-in"
@@ -19,6 +30,18 @@ export default function AtelierBento() {
                 backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
+            >
+              {/* Placeholder */}
+              {!imageLoaded.paper && (
+                <div className="absolute inset-0 shimmer opacity-75" />
+              )}
+            </div>
+            {/* Hidden img tag to detect loading */}
+            <img
+              src="/assets/paper.jpg"
+              alt="preload"
+              className="hidden"
+              onLoad={() => handleImageLoad("paper")}
             />
             <div className="relative flex h-full items-end justify-end px-4 pb-8 lg:px-8">
               <h2 className="text-end text-2xl font-bold sm:text-3xl">
@@ -43,6 +66,15 @@ export default function AtelierBento() {
                 backgroundRepeat: "no-repeat",
               }}
             >
+              {!imageLoaded.color && (
+                <div className="absolute inset-0 shimmer opacity-75" />
+              )}
+              <img
+                src="/assets/color.jpg"
+                alt="preload"
+                className="hidden"
+                onLoad={() => handleImageLoad("color")}
+              />
               <div className="absolute inset-0" />
             </div>
 
@@ -79,6 +111,17 @@ export default function AtelierBento() {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
+            >
+              {!imageLoaded.neuron && (
+                <div className="absolute inset-0 shimmer opacity-75" />
+              )}
+            </div>
+            {/* Hidden img tag to detect loading */}
+            <img
+              src="/assets/neuron.jpg"
+              alt="preload"
+              className="hidden"
+              onLoad={() => handleImageLoad("neuron")}
             />
             <div className="relative flex h-full max-w-[25rem] flex-col justify-between p-8">
               <h3 className="text-2xl text-neutral-100">

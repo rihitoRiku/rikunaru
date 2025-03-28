@@ -5,10 +5,10 @@ import { PiCertificateFill } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 
 export default function CertificateSection() {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
-  const [previewImage, setPreviewImage] = useState(null);
-
-  const openPreview = (src: any) => {
+  const openPreview = (src: string) => {
     setPreviewImage(src);
   };
 
@@ -16,7 +16,11 @@ export default function CertificateSection() {
     setPreviewImage(null);
   };
 
-  const badgeImages = Array.from({ length: 14 }, (_, i) => i + 1);
+  const handleImageLoad = (src: string) => {
+    setLoadedImages((prev) => ({ ...prev, [src]: true }));
+  };
+
+  const badgeImages = Array.from({ length: 13 }, (_, i) => i + 1);
 
   return (
     <div>
@@ -47,7 +51,10 @@ export default function CertificateSection() {
           data-aos="zoom-in"
           className="mt-20 flex w-full flex-col items-center justify-center gap-6 px-4 md:flex-row md:gap-8 md:px-0"
         >
-          <div className="w-full max-w-[24rem] rounded-lg">
+          <div className="relative w-full max-w-[24rem] rounded-lg">
+            {!loadedImages["/assets/certificates/b.png"] && (
+              <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+            )}
             <Image
               width={500}
               height={300}
@@ -55,6 +62,9 @@ export default function CertificateSection() {
               src="/assets/certificates/b.png"
               alt="Cert"
               onClick={() => openPreview("/assets/certificates/b.png")}
+              onLoadingComplete={() =>
+                handleImageLoad("/assets/certificates/b.png")
+              }
             />
           </div>
           <a
@@ -91,7 +101,10 @@ export default function CertificateSection() {
             </p>
           </div>
 
-          <div className="w-full max-w-[24rem] rounded-lg">
+          <div className="relative w-full max-w-[24rem] rounded-lg">
+            {!loadedImages["/assets/certificates/bangkit.png"] && (
+              <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+            )}
             <Image
               width={500}
               height={300}
@@ -99,6 +112,9 @@ export default function CertificateSection() {
               src="/assets/certificates/bangkit.png"
               alt="Cert"
               onClick={() => openPreview("/assets/certificates/bangkit.png")}
+              onLoadingComplete={() =>
+                handleImageLoad("/assets/certificates/bangkit.png")
+              }
             />
           </div>
         </div>
@@ -107,7 +123,6 @@ export default function CertificateSection() {
           data-aos="fade-up"
           className="mx-auto mt-28 max-w-screen-md px-4 text-center md:px-0"
         >
-          {" "}
           <div className="mb-4 text-2xl text-neutral-100">
             23 Google Cloud Badges
           </div>
@@ -120,16 +135,24 @@ export default function CertificateSection() {
         <div data-aos="fade-up" className="relative overflow-hidden">
           <Marquee pauseOnHover>
             <div className="flex h-[12rem] items-center space-x-2 overflow-x-auto ps-1 pe-1 md:mt-8 md:h-[12rem] md:space-x-4">
-              {badgeImages.map((num) => (
-                <Image
-                  key={num}
-                  className="h-36 w-auto cursor-pointer rounded-lg object-contain transition-transform hover:scale-105"
-                  src={`/assets/certificates/badges/${num}.png`}
-                  alt={`Badge ${num}`}
-                  width={150}
-                  height={150}
-                />
-              ))}
+              {badgeImages.map((num) => {
+                const src = `/assets/certificates/badges/${num + 1}.png`;
+                return (
+                  <div key={num} className="relative h-36 w-auto">
+                    {!loadedImages[src] && (
+                      <div className="absolute inset-0 shimmer rounded-lg  opacity-75" />
+                    )}
+                    <Image
+                      className="h-36 w-auto cursor-pointer rounded-lg object-contain transition-transform hover:scale-105"
+                      src={src}
+                      alt={`Badge ${num + 1}`}
+                      width={150}
+                      height={150}
+                      onLoadingComplete={() => handleImageLoad(src)}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </Marquee>
 
@@ -141,7 +164,6 @@ export default function CertificateSection() {
         </div>
 
         <div className="mt-16 px-4 text-center md:px-0">
-          {" "}
           <div className="mb-4 text-2xl text-neutral-100">
             Other Certificates
           </div>
@@ -185,14 +207,20 @@ export default function CertificateSection() {
               data-aos="zoom-in"
               data-aos-delay={index * 100}
             >
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={200}
-                height={150}
-                className="cursor-pointer rounded-md"
-                onClick={() => openPreview(item.src)}
-              />
+              <div className="relative w-full">
+                {!loadedImages[item.src] && (
+                  <div className="absolute inset-0 shimmer rounded-md  opacity-75" />
+                )}
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={200}
+                  height={150}
+                  className="cursor-pointer rounded-md"
+                  onClick={() => openPreview(item.src)}
+                  onLoadingComplete={() => handleImageLoad(item.src)}
+                />
+              </div>
               <div className="text-center">
                 <div className="mb-1 text-neutral-400">{item.title}</div>
               </div>
@@ -218,12 +246,6 @@ export default function CertificateSection() {
               height={400}
               className="rounded-lg"
             />
-            {/* <button
-              onClick={closePreview}
-              className="absolute top-2 right-2 rounded-full bg-white p-2"
-            >
-              X
-            </button> */}
           </div>
         </div>
       )}

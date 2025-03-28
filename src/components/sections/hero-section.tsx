@@ -129,7 +129,7 @@ export default function HeroSection() {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://www.linkedin.com/in/mrfshidiq/"
+                      href="https://www.linkedin.com/in/muhammadrafishidiq/"
                       data-state="closed"
                       className="cursor-newtab flex items-center justify-center rounded-sm p-0.5 text-neutral-500 transition-colors hover:text-neutral-400"
                     >
@@ -306,7 +306,7 @@ export default function HeroSection() {
                   transition={{ duration: 1, delay: 3 }}
                 >
                   <p className="text-center text-2xl font-semibold text-white">
-                    Data Analyst
+                    Fullstack Developer
                   </p>
                 </motion.div>
                 <motion.div
@@ -335,7 +335,7 @@ export default function HeroSection() {
                   transition={{ duration: 1, delay: 2 }}
                 >
                   <p className="text-center text-2xl font-semibold text-white">
-                    Fullstack Developer
+                    Front End Developer
                   </p>
                 </motion.div>
               </div>

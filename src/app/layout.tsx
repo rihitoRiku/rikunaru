@@ -14,6 +14,10 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+      </head>
       <body className={`${rethinkSans.className} antialiased`}>
         <NextTopLoader
           color="#16a34a"

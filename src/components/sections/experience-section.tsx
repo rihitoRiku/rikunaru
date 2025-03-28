@@ -1,11 +1,12 @@
-"use client"
-import React, {useRef} from 'react'
+"use client";
+import React, { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { MdOutlineWork } from "react-icons/md";
 
 export default function ExperienceSection() {
-    const experienceRef = useRef(null);
-    const isExperienceInView2 = useInView(experienceRef, { once: true });
+  const experienceRef = useRef(null);
+  const isExperienceInView2 = useInView(experienceRef, { once: true });
   return (
     <div>
       {/* Experience */}
@@ -35,19 +36,31 @@ export default function ExperienceSection() {
             </div>
           </div>
           {/* Content */}
-          <div className="mx-auto mt-8 flex max-w-screen-lg flex-col gap-8 ">
+          <div className="mx-auto mt-8 flex max-w-screen-lg flex-col gap-8">
             <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
-              <p className="text-neutral-400 mt-1 text-sm font-light">
+              <p className="mt-1 text-sm font-light text-neutral-400">
                 SEP 2023 - DEC 2023
               </p>
               <div className="">
                 <p className="text-2xl font-medium text-neutral-100">
                   System Analyst Intern
                 </p>
-                <p>
-                  <span className="text-neutral-200">Telkom Indonesia Tbk</span>{" "}
-                  - Bandung, Indonesia
-                </p>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/assets/telkom.png"
+                    className="rounded-[3px]"
+                    alt="telkom-icon"
+                    width={20}
+                    height={20}
+                  />
+                  <p>
+                    <span className="text-neutral-200">
+                      Telkom Indonesia Tbk
+                    </span>{" "}
+                    - Bandung, Indonesia
+                  </p>
+                </div>
+
                 <div className="mt-2">
                   <p>
                     Assist the development of Ingenium, an HR web application
@@ -56,7 +69,7 @@ export default function ExperienceSection() {
                     streamline project creation, approvals, and role
                     assignments.{" "}
                   </p>
-                  <ul className="text-neutral-400 mt-2 list-disc space-y-2 pl-5">
+                  <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-400">
                     <li>
                       Managed end-to-end HC project and processes, from
                       analysis, design, to coding/development.
@@ -76,19 +89,29 @@ export default function ExperienceSection() {
               </div>
             </div>
             <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
-              <p className="text-neutral-400 mt-1 text-sm font-light">
-                SEP 2023 - DEC 2023
+              <p className="mt-1 text-sm font-light text-neutral-400">
+                FEB 2023 - JUL 2023
               </p>
               <div className="">
                 <p className="text-2xl font-medium text-neutral-100">
                   Cloud Computing Cohort
                 </p>
-                <p>
-                  <span className="text-neutral-200">
-                    Bangkit Academy Led by Google, GoTo, & Traveloka
-                  </span>
-                  - Remote
-                </p>
+
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/assets/bangkit.png"
+                    className="rounded-[3px]"
+                    alt="bangkit-icon"
+                    width={16}
+                    height={16}
+                  />
+                  <p>
+                    <span className="text-neutral-200">
+                      Bangkit Academy Led by Google, GoTo, & Traveloka
+                    </span>
+                    - Remote
+                  </p>
+                </div>
                 <div className="mt-2">
                   <p>
                     Completed several courses related to cloud and backend
@@ -98,7 +121,7 @@ export default function ExperienceSection() {
                     classes and training were conducted entirely in English. I
                     also graduated with distinction honored.
                   </p>
-                  <ul className="text-neutral-400 mt-2 list-disc space-y-2 pl-5">
+                  <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-400">
                     <li>
                       Gained proficiency in web development fundamentals,
                       JavaScript, creating back-end applications with Google

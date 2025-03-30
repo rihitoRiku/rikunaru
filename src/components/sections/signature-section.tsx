@@ -47,7 +47,7 @@ export default function SignatureSection() {
           >
             <p>
               Hello! You can call me{" "}
-              <strong className="text-neutral-100">Rafi</strong>. I am a Software
+              <strong className="text-emerald-200">Rafi</strong>. I am a Software
               Engineer specializing in fullstack web development, dedicated to
               staying updated in the ever-evolving tech landscape and bringing
               innovative solutions to the table.

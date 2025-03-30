@@ -1,17 +1,17 @@
-import EducationSection from "@/components/sections/education-section";
-import ExperienceSection from "@/components/sections/experience-section";
-import HeroSection from "@/components/sections/hero-section";
-import SignatureSection from "@/components/sections/signature-section";
-import TechstacksSection from "@/components/sections/techstacks-section";
+"üse client";
+import React from "react";
+import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div>
-      <HeroSection />
-      <SignatureSection />
-      <TechstacksSection />
-      <EducationSection />
-      <ExperienceSection />
+    <div className="min-h-screen">
+      <div className="flex h-[70vh] w-full flex-col items-center justify-center gap-8">
+        <p>Still in Development Desuwa!</p>
+        <Image src="/assets/seeya.gif" width={250} height={250} alt="SeeYa" />
+        <p>Latest Update: 3/30/25</p>
+      </div>
+      
     </div>
+    // <div className="min-h-screen"></div>
   );
 }

@@ -23,12 +23,12 @@ export default function ExperienceSection() {
           }}
         >
           {/* Text Background */}
-          <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-neutral-800/50 md:text-9xl">
+          <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-neutral-800/50 blur-xs md:text-9xl">
             EXPERIENCE
           </div>
           {/* Header */}
-          <div className="relative z-0 pt-16 text-neutral-100">
-            <div className="ms-4 flex flex-col items-center justify-center text-center text-xl font-semibold lg:ms-8 lg:text-3xl">
+          <div className="relative z-0 mb-8 pt-16 text-neutral-100">
+            <div className="flex flex-col items-center justify-center text-center text-xl font-semibold lg:text-3xl">
               <div className="border-trsp mb-2 w-fit rounded-xl border p-2">
                 <MdOutlineWork className="text-4xl" />
               </div>
@@ -37,21 +37,21 @@ export default function ExperienceSection() {
           </div>
           {/* Content */}
           <div className="mx-auto mt-8 flex max-w-screen-lg flex-col gap-8">
-            <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
-              <p className="mt-1 text-sm font-light text-neutral-400">
+            <div className="grid gap-4 md:grid-cols-[250px,1fr]">
+              <p className="mt-1 text-end text-sm font-light text-neutral-400">
                 SEP 2023 - DEC 2023
               </p>
               <div className="">
                 <p className="text-2xl font-medium text-neutral-100">
                   System Analyst Intern
                 </p>
-                <div className="flex items-center gap-2">
+                <div className="flex items-start gap-2">
                   <Image
                     src="/assets/telkom.png"
-                    className="rounded-[3px]"
+                    className="mt-1 rounded-[3px]"
                     alt="telkom-icon"
-                    width={20}
-                    height={20}
+                    width={16}
+                    height={16}
                   />
                   <p>
                     <span className="text-neutral-200">
@@ -63,11 +63,11 @@ export default function ExperienceSection() {
 
                 <div className="mt-2">
                   <p>
-                    Assist the development of Ingenium, an HR web application
-                    for managing employee processes like tenure tracking and
-                    recruitment. Built a Project Management & Proposal System to
-                    streamline project creation, approvals, and role
-                    assignments.{" "}
+                    Assisted in the development of two projects: an HR web
+                    application for managing employee processes, such as tenure
+                    tracking and recruitment, and a Project Management &
+                    Proposal System to streamline project creation, approvals,
+                    and role assignments.
                   </p>
                   <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-400">
                     <li>
@@ -88,8 +88,8 @@ export default function ExperienceSection() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-4 md:grid-cols-[250px,1fr] md:gap-8">
-              <p className="mt-1 text-sm font-light text-neutral-400">
+            <div className="grid gap-4 md:grid-cols-[250px,1fr]">
+              <p className="mt-1 text-end text-sm font-light text-neutral-400">
                 FEB 2023 - JUL 2023
               </p>
               <div className="">
@@ -97,10 +97,10 @@ export default function ExperienceSection() {
                   Cloud Computing Cohort
                 </p>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-start gap-2">
                   <Image
                     src="/assets/bangkit.png"
-                    className="rounded-[3px]"
+                    className="mt-1 rounded-[3px]"
                     alt="bangkit-icon"
                     width={16}
                     height={16}

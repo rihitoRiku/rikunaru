@@ -98,7 +98,7 @@ export default function GithubCalendarSection() {
   }, [username, token]);
 
   const getColor = (count: number): string => {
-    if (count === 0) return "bg-neutral-800";
+    if (count === 0) return "bg-neutral-900";
     if (count < 5) return "bg-green-800";
     if (count < 10) return "bg-green-600";
     return "bg-green-400";
@@ -145,25 +145,25 @@ export default function GithubCalendarSection() {
         </div>
       ) : (
         <div className="mt-20 flex flex-col items-center justify-center pt-8 px-6">
-          <div className="font-rethink text-secondarytext relative mx-auto max-w-screen-lg text-sm"></div>
-          <div className="font-rethink mb-4 text-xl">
+          <div className=" text-neutral-300 relative mx-auto max-w-screen-lg text-sm"></div>
+          <div className=" mb-4 text-xl">
             My Github Contribution Calendar
           </div>
           <div className="border-trsp flex w-full flex-col justify-center rounded-md border px-6 py-4 lg:w-[60rem]">
             <div className="flex items-center justify-between">
-              <div className="text-primarytext mb-2 text-sm font-semibold">
+              <div className="text-neutral-200 text-start mb-2 text-sm font-semibold">
                 {contributionData?.totalContributions} contributions in the last
                 year
               </div>
-              <div className="text-primarytext mb-2 text-sm font-semibold">
+              <div className="text-neutral-200 text-end mb-2 text-sm font-semibold">
                 {profileData?.totalRepositories} total repositories
               </div>
             </div>
 
-            <div className="font-rethink max-w-max overflow-scroll">
+            <div className=" max-w-max overflow-x-scroll overflow-y-hidden">
               <div className="mt-2 flex w-max flex-col rounded">
                 <div className="flex w-[60rem]">
-                  <div className="text-secondarytext mr-2 flex flex-col justify-evenly text-xs">
+                  <div className=" mr-2 flex flex-col justify-evenly text-xs">
                     {days.map((day) => (
                       <div key={day}>{day}</div>
                     ))}
@@ -192,7 +192,7 @@ export default function GithubCalendarSection() {
                         )),
                       )}
                     </div>
-                    <div className="text-secondarytext mt-2 flex justify-between text-xs">
+                    <div className=" mt-2 flex justify-between text-xs">
                       {monthLabels.map(({ label, index }) => (
                         <div key={index} className="text-center">
                           {label}
@@ -203,7 +203,7 @@ export default function GithubCalendarSection() {
                 </div>
               </div>
             </div>
-            <div className="text-secondarytext mt-2 flex items-center justify-end text-xs">
+            <div className=" mt-2 flex items-center justify-end text-xs">
               <span className="me-1">Less</span>
               <div className="ml-1 flex gap-1">
                 {[0, 4, 9, 15].map((count) => (

@@ -142,7 +142,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-900 text-neutral-200;
+    @apply bg-neutral-950 text-neutral-200;
   }
 
   /* General scrollbar properties */
@@ -215,7 +215,7 @@
   @keyframes breathe {
     0%,
     100% {
-      filter: grayscale(100%);
+      filter: grayscale(50%);
       /* transform: scale(0.98); */
     }
     50% {

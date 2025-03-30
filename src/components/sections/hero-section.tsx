@@ -28,7 +28,7 @@ export default function HeroSection() {
           <div className="flex h-screen w-fit flex-col justify-center gap-12 px-6">
             <div className="w-full sm:w-[30rem]">
               <motion.h1
-                className="mb-4 flex items-center text-6xl font-semibold text-neutral-100 sm:text-7xl"
+                className="mb-4 flex items-center text-6xl font-semibold text-emerald-100 sm:text-7xl"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}

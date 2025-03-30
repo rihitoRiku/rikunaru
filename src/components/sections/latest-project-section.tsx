@@ -161,8 +161,8 @@ export default function LatestProjectSection() {
         data-aos-delay="400"
         className="relative mx-auto max-w-screen-md p-4"
       >
-        <div className="mb-8 text-neutral-100">
-          <div className="flex items-center justify-start gap-2 text-3xl">
+        <div className="mb-8">
+          <div className="flex items-center justify-start gap-2 text-3xl text-emerald-100">
             <RiArchiveDrawerFill className="mb-1" />
             <h1 className="mb-2 font-medium">Latest Project</h1>
           </div>
@@ -236,7 +236,7 @@ export default function LatestProjectSection() {
         </div>
         {/* Buttons */}
         {!isExpanded && (
-          <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-neutral-900 to-transparent">
+          <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-neutral-950 to-transparent">
             <button
               onClick={toggleCards}
               className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-6 py-2 text-neutral-100"
@@ -264,7 +264,7 @@ export default function LatestProjectSection() {
           open={!!selectedProject}
           onOpenChange={() => setSelectedProject(null)}
         >
-          <DialogContent className="border-none bg-neutral-900">
+          <DialogContent className="border-none bg-neutral-950">
             <DialogHeader>
               <DialogTitle className="mt-8 text-xl">
                 {selectedProject.title}

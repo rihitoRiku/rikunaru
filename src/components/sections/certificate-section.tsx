@@ -4,14 +4,49 @@ import Image from "next/image";
 import { PiCertificateFill } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 
-export default function CertificateSection() {
-  
 
+const certificates = [
+  { src: "/assets/certificates/0.png", title: "Operating Systems and You" },
+  { src: "/assets/certificates/1.png", title: "Operating Systems and You" },
+  { src: "/assets/certificates/2.png", title: "Computer Networking" },
+  { src: "/assets/certificates/3.png", title: "System Administration" },
+  { src: "/assets/certificates/4.png", title: "IT Security" },
+  {
+    src: "/assets/certificates/5.png",
+    title: "Technical Support Fundamentals",
+  },
+  { src: "/assets/certificates/6.png", title: "Web Programming Basics" },
+  { src: "/assets/certificates/7.png", title: "Cloud Engineer" },
+  { src: "/assets/certificates/8.png", title: "JavaScript Basics" },
+  { src: "/assets/certificates/9.png", title: "Backend Development" },
+];
+
+
+export default function CertificateSection() {
   const badgeImages = Array.from({ length: 13 }, (_, i) => i + 1);
-  const getRandomDelay = () => {
-    const delays = ["delay-0", "delay-1", "delay-2", "delay-3", "delay-4"];
-    return delays[Math.floor(Math.random() * delays.length)];
-  };
+  
+  const [delays, setDelays] = useState<string[]>([]);
+  const [randomDelays, setRandomDelays] = useState<string[]>([]);
+
+  useEffect(() => {
+    const possibleDelays = [
+      "delay-0",
+      "delay-1",
+      "delay-2",
+      "delay-3",
+      "delay-4",
+    ];
+    setDelays(
+      certificates.map(
+        () => possibleDelays[Math.floor(Math.random() * possibleDelays.length)],
+      ),
+    );
+    setRandomDelays(
+      badgeImages.map(
+        () => possibleDelays[Math.floor(Math.random() * delays.length)],
+      ),
+    );
+  }, []);
 
   // modal image preview
   const [previewImage, setPreviewImage] = useState<string | null>(null);
@@ -47,7 +82,7 @@ export default function CertificateSection() {
         id="certificate"
         className="relative mx-auto mt-20 max-w-screen-lg text-sm"
       >
-        <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-neutral-800/40 md:text-9xl">
+        <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-neutral-800/40 blur-xs md:text-9xl">
           CERTIFICATE
         </div>
         <div className="relative -z-10 pt-16 text-neutral-100">
@@ -176,21 +211,20 @@ export default function CertificateSection() {
           </Marquee> */}
           <Marquee pauseOnHover>
             <div className="flex h-[12rem] items-center space-x-2 overflow-x-auto ps-1 pe-1 md:mt-8 md:h-[12rem] md:space-x-4 md:pe-3">
-              {badgeImages.map((num) => {
+              {badgeImages.map((num, index) => {
                 const src = `/assets/certificates/cloudbadges/${num}.png`;
-                const randomDelay = getRandomDelay();
+                const delayClass = randomDelays[index] || "delay-0"; // Ensure no mismatch
                 return (
-                  <div key={num} className="relative h-36 w-auto">
-                    {!loadedImages[src] && (
-                      <div className="shimmer absolute inset-0 rounded-lg opacity-75" />
-                    )}
+                  <div
+                    key={num}
+                    className={`relative h-36 w-auto ${delayClass}`}
+                  >
                     <Image
-                      className={`animate-breathe h-36 w-auto rounded-lg object-contain transition-transform hover:scale-105 ${randomDelay}`}
+                      className="h-36 w-auto rounded-lg object-contain transition-transform hover:scale-105"
                       src={src}
                       alt={`Badge ${num}`}
                       width={150}
                       height={150}
-                      onLoadingComplete={() => handleImageLoad(src)}
                     />
                   </div>
                 );
@@ -216,33 +250,7 @@ export default function CertificateSection() {
         </div>
 
         <div className="mx-auto mt-8 flex h-auto max-w-screen-xl flex-wrap items-start justify-center gap-4">
-          {[
-            {
-              src: "/assets/certificates/0.png",
-              title: "Operating Systems and You",
-            },
-            {
-              src: "/assets/certificates/1.png",
-              title: "Operating Systems and You",
-            },
-            { src: "/assets/certificates/2.png", title: "Computer Networking" },
-            {
-              src: "/assets/certificates/3.png",
-              title: "System Administration",
-            },
-            { src: "/assets/certificates/4.png", title: "IT Security" },
-            {
-              src: "/assets/certificates/5.png",
-              title: "Technical Support Fundamentals",
-            },
-            {
-              src: "/assets/certificates/6.png",
-              title: "Web Programming Basics",
-            },
-            { src: "/assets/certificates/7.png", title: "Cloud Engineer" },
-            { src: "/assets/certificates/8.png", title: "JavaScript Basics" },
-            { src: "/assets/certificates/9.png", title: "Backend Development" },
-          ].map((item, index) => (
+          {certificates.map((item, index) => (
             <div
               key={item.src}
               className="flex w-[40%] flex-col items-center gap-2 rounded-md md:w-[25%] lg:w-[20%]"
@@ -258,9 +266,11 @@ export default function CertificateSection() {
                   alt={item.title}
                   width={200}
                   height={150}
-                  className={`animate-breathe cursor-pointer rounded-md ${getRandomDelay()}`}
-                  onClick={() => openPreview(item.src)}
-                  onLoadingComplete={() => handleImageLoad(item.src)}
+                  className={`animate-breathe cursor-pointer rounded-md ${delays[index] || ""}`}
+                  onClick={() => setPreviewImage(item.src)}
+                  onLoadingComplete={() =>
+                    setLoadedImages((prev) => ({ ...prev, [item.src]: true }))
+                  }
                 />
               </div>
               <div className="text-center">

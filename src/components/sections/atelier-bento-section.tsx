@@ -23,7 +23,7 @@ export default function AtelierBento() {
             className="border-trsp relative h-[320px] overflow-hidden rounded-lg border"
           >
             <div
-              className="border-trsp animate-breathe absolute -top-20 -left-20 h-96 w-96 rounded-full border"
+              className="border-trsp absolute -top-20 -left-20 h-96 w-96 rounded-full border"
               style={{
                 backgroundImage: "url('/assets/paper.jpg')",
                 backgroundSize: "cover",

@@ -31,7 +31,7 @@ export default function EducationSection() {
           <div className="">
             <div className="relative size-full rounded-lg p-8 text-xl">
               <div
-                className="absolute top-0 -z-10 flex items-start justify-start text-9xl font-bold text-neutral-800/50"
+                className="absolute top-0 -z-10 flex items-start justify-start text-9xl font-bold text-neutral-800/50 blur-xs"
                 style={{
                   writingMode: "vertical-rl",
                   transform: "rotate(180deg)",
@@ -52,7 +52,7 @@ export default function EducationSection() {
               </div>
               <div className="relative text-neutral-100">
                 <div className="text-xl font-semibold lg:text-3xl">
-                  <div className="border-trsp mb-2 w-fit rounded-xl border bg-neutral-900 p-2">
+                  <div className="border-trsp mb-2 w-fit rounded-xl border bg-neutral-950 p-2">
                     <GiGraduateCap className="text-5xl" />
                   </div>
                   <span>Education</span>
@@ -156,7 +156,7 @@ export default function EducationSection() {
           {/* Card */}
           <div>
             <div className="size-full rounded-lg px-4 text-xl lg:mt-24">
-              <div className="border-trsp relative min-w-[24rem] rounded-xl border bg-neutral-900 p-6 transition-colors md:max-w-[28rem] md:min-w-[24rem]">
+              <div className="border-trsp relative min-w-[24rem] rounded-xl border bg-neutral-950 p-6 transition-colors md:max-w-[28rem] md:min-w-[24rem]">
                 <div className="absolute right-0 -bottom-4 text-[120px] leading-none font-bold text-white/5 select-none">
                   2022
                 </div>
@@ -217,7 +217,7 @@ export default function EducationSection() {
             Publication
           </h3>
           <div className="mt-4 flex flex-wrap gap-6">
-            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-950 p-4 text-sm md:w-[20rem]">
               <a
                 href="http://repository.upi.edu/id/eprint/124309"
                 className="text-neutral-100 hover:text-white"
@@ -245,7 +245,7 @@ export default function EducationSection() {
                 and as a contributor
               </p>
             </div>
-            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-950 p-4 text-sm md:w-[20rem]">
               <a
                 href="http://repository.upi.edu/id/eprint/124309"
                 className="text-neutral-100 hover:text-white"
@@ -254,7 +254,7 @@ export default function EducationSection() {
                 Barang
               </a>
             </div>
-            <div className="border-trsp h-fit rounded-lg border bg-neutral-900 p-4 text-sm md:w-[20rem]">
+            <div className="border-trsp h-fit rounded-lg border bg-neutral-950 p-4 text-sm md:w-[20rem]">
               <a
                 target="_blank"
                 href="https://jurnal.mdp.ac.id/index.php/forbiswira/article/view/3822"

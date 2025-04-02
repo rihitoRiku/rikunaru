@@ -233,10 +233,10 @@ export default function CertificateSection() {
           </Marquee>
 
           {/* Left Gradient Overlay */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[6rem] bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[6rem] bg-gradient-to-r from-neutral-950 via-neutral-950/50 to-transparent"></div>
 
           {/* Right Gradient Overlay */}
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[6rem] bg-gradient-to-l from-neutral-900/95 via-neutral-900/50 to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[6rem] bg-gradient-to-l from-neutral-950/95 via-neutral-950/50 to-transparent"></div>
         </div>
 
         <div className="mt-16 px-4 text-center md:px-0">

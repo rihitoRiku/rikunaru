@@ -236,7 +236,7 @@ export default function LatestProjectSection() {
         </div>
         {/* Buttons */}
         {!isExpanded && (
-          <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-neutral-950 to-transparent">
+          <div className="absolute inset-x-0 bottom-0 flex h-[30%] items-end justify-center bg-gradient-to-t from-neutral-950/95 via-neutral-950/50 to-transparent">
             <button
               onClick={toggleCards}
               className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-6 py-2 text-neutral-100"

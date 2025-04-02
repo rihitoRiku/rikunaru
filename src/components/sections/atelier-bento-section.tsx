@@ -15,7 +15,7 @@ export default function AtelierBento() {
 
   return (
     <div>
-      <div className="mx-auto h-[620px] max-w-screen-md p-4">
+      <div className="mx-auto h-[620px] max-w-screen-md p-2">
         <div className="mx-auto mt-4 grid h-[500px] w-full max-w-4xl grid-cols-2 gap-4">
           {/* Left column */}
           <div

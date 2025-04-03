@@ -12,42 +12,39 @@ export function InterestsSection() {
   const features = [
     {
       title: "Phillosophy",
-      description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
+      description: "Lorem ipsum dolor sit amet.",
+      // icon: <IconTerminal2 />,
     },
     {
       title: "Science Fiction",
-      description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      // icon: <IconEaseInOut />,
     },
     {
       title: "Anime & Game",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum!",
+      // icon: <IconCurrencyDollar />,
     },
     {
-      title: "Literature",
-      description: "We just cannot be taken down by anyone.",
-      icon: <IconCloud />,
+      title: "Food & Travel",
+      description: "Lorem ipsum dolor sit amet consectetur.",
+      // icon: <IconCloud />,
     },
     {
       title: "Spirituality",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      // icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "Music",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
+      title: "Art & Music",
+      description: "Lorem ipsum dolor sit amet.",
+      // icon: <IconHeart />,
     },
   ];
 
   return (
-    <div className="relative z-10 mx-auto max-w-7xl py-10">
+    <div className="relative z-10 mx-auto max-w-7xl">
       {/* First row - 4 items */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {features.slice(0, 4).map((feature, index) => (
@@ -84,7 +81,7 @@ const Feature = ({
 }: {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   index: number;
   isFirstRow: boolean;
 }) => {

@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import CaleidoscopHeroSectionDemo from "@/components/sections/caleidoscop-hero";
-import Quote from "@/components/sections/quote";
+import Quote from "@/components/sections/quote-section";
 import { InterestsSection } from "@/components/sections/interests-section";
 import DreamSection from "@/components/sections/dream-section";
+import BannerSection from "@/components/sections/banner-section";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
     <div className="min-h-screen">
       <CaleidoscopHeroSectionDemo />
       <Quote />
+      <BannerSection />
       <DreamSection />
       <InterestsSection />
     </div>

@@ -165,7 +165,7 @@ export default function HeroSection() {
                 </Tooltip>
               </TooltipProvider>
 
-              <TooltipProvider>
+              {/* <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
@@ -197,9 +197,9 @@ export default function HeroSection() {
                     <p>Medium</p>
                   </TooltipContent>
                 </Tooltip>
-              </TooltipProvider>
+              </TooltipProvider> */}
 
-              <TooltipProvider>
+              {/* <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
@@ -238,7 +238,7 @@ export default function HeroSection() {
                     <p>Instagram</p>
                   </TooltipContent>
                 </Tooltip>
-              </TooltipProvider>
+              </TooltipProvider> */}
 
               <TooltipProvider>
                 <Tooltip>

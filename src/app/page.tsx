@@ -4,7 +4,10 @@ import CaleidoscopHeroSectionDemo from "@/components/sections/caleidoscop-hero";
 import Quote from "@/components/sections/quote-section";
 import { InterestsSection } from "@/components/sections/interests-section";
 import DreamSection from "@/components/sections/dream-section";
-import BannerSection from "@/components/sections/banner-section";
+import MonolosofisBannerSection from "@/components/sections/monolosofis-banner-section";
+import DiscordBannerSection from "@/components/sections/discord-banner-section";
+import MediumBlogSection from "@/components/sections/medium-blog-section";
+import CaleidoscopNote from "@/components/sections/caleidoscop-note";
 
 export default function Page() {
   return (
@@ -18,9 +21,12 @@ export default function Page() {
     <div className="min-h-screen">
       <CaleidoscopHeroSectionDemo />
       <Quote />
-      <BannerSection />
-      <DreamSection />
-      <InterestsSection />
+      <CaleidoscopNote />
+      {/* <DreamSection /> */}
+      {/* <MonolosofisBannerSection /> */}
+      {/* <MediumBlogSection /> */}
+      {/* <InterestsSection /> */}
+      {/* <DiscordBannerSection /> */}
     </div>
   );
 }

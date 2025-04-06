@@ -46,9 +46,9 @@ export default function HeroSection() {
                   delay: 0.1,
                 }}
               >
-                Computer science fresh graduate who enthusiast in fullstack web
-                development with expertise in React, Next.js, Node.js, Rest API,
-                databases, and cloud environments.
+                Software Engineer specializing in fullstack web development,
+                dedicated to staying updated in the ever-evolving tech landscape
+                and bringing innovative solutions to the table.
               </motion.p>
             </div>
             {/* Resume button */}

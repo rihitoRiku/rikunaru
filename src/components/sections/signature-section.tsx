@@ -14,7 +14,7 @@ export default function SignatureSection() {
   return (
     <div>
       <div className="relative">
-        <div className="mx-auto mt-12 max-w-[38rem] text-center px-6">
+        <div className="mx-auto mt-12 max-w-[38rem] px-6 text-center">
           <div ref={svgRef} className="flex w-full items-center justify-center">
             <motion.div
               className="relative h-[5rem] w-[24rem] sm:h-[8rem] sm:w-[30rem]"
@@ -46,20 +46,20 @@ export default function SignatureSection() {
             }}
           >
             <p>
-              Hello! You can call me{" "}
-              <strong className="text-emerald-200">Rafi</strong>. I am a Software
-              Engineer specializing in fullstack web development, dedicated to
-              staying updated in the ever-evolving tech landscape and bringing
-              innovative solutions to the table.
+              Hello there! You can call me{" "}
+              <strong className="text-emerald-200">Rafi</strong>. I am a Computer
+              science fresh graduate who enthusiast in fullstack web development
+              with expertise in React, Next.js, Node.js, Rest API, databases,
+              and cloud environments.
             </p>
-            <p>
+            {/* <p>
               I was born in October 2002 in Purwakarta, Indonesia. Recently graduated
               with a degree in Computer Science from the University of
               Pendidikan Indonesia (UPI).
-            </p>
+            </p> */}
             <p>here are my current favorite tech stacks:</p>
             {/* Techstacks */}
-            <div className="text-neutral-100 flex w-max flex-wrap gap-4">
+            <div className="flex w-max flex-wrap gap-4 text-neutral-100">
               <div>
                 <button className="default-ring rounded-lg" data-state="closed">
                   <svg
@@ -146,13 +146,11 @@ export default function SignatureSection() {
             delay: 0.4,
           }}
         >
-          <div
-            className="mx-auto mt-12 flex w-full max-w-screen-lg flex-col items-center justify-center gap-8 rounded-xl border border-trsp p-12 md:flex-row"
-          >
+          <div className="border-trsp mx-auto mt-12 flex w-full max-w-screen-lg flex-col items-center justify-center gap-8 rounded-xl border p-12 md:flex-row">
             <p className="flex-[1] text-2xl font-semibold">
               What I'm up to now
             </p>
-            <ul className="text-neutral-200 flex-[2] list-inside list-disc space-y-1.5 text-sm">
+            <ul className="flex-[2] list-inside list-disc space-y-1.5 text-sm text-neutral-200">
               <li>
                 Expertise in front-end development, building responsive and
                 dynamic web applications.

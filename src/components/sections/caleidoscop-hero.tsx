@@ -14,31 +14,30 @@ import { RiInstagramFill } from "react-icons/ri";
 export default function CaleidoscopHeroSectionDemo() {
   const features = [
     {
-      title: "I am nameless entity",
+      title: "<>404: He is nameless entity</>",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?",
+        "Just ordinary one, nobody who romanticize his slow-life. Seeking to always serve humanity through meaningful work.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r border-trsp border-trsp",
     },
     {
       title: "",
-      description:
-        "",
+      description: "",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 border-trsp",
     },
     {
       title: "Read our Article on Medium",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quisquam itaque quidem?",
+        "Engage with our deep handwritten literature, poetry, and find helpful guides in our latest Medium posts.",
       skeleton: <SkeletonThree />,
       className: "col-span-1 lg:col-span-3 lg:border-r border-trsp",
     },
     {
       title: "Ask Anything!",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sequi cupiditate nisi eum illum assumenda dolor deleniti atque! A, nesciunt id quas iste ullam quo.",
+        "Note: I’m also developing an AI chatbot that’ll join this section soon to make this space even more fun and helpful.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none border-trsp",
     },
@@ -47,11 +46,11 @@ export default function CaleidoscopHeroSectionDemo() {
     <div className="relative z-20 mx-auto max-w-7xl pt-40">
       <div className="px-8">
         <h4 className="mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-neutral-100 lg:text-5xl lg:leading-tight">
-          Welcome to Black Space, Nerds!
+          Welcome to Kuro Space, Nerds:3
         </h4>
 
         <p className="mx-auto my-4 max-w-2xl text-center text-sm font-normal text-neutral-500 lg:text-base">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, expedita vero placeat a facere est ipsam sequi quis voluptate modi!
+          This little realm contains personal story of him, the good sire xD. Have a nice day!
         </p>
       </div>
 
@@ -96,9 +95,9 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        "mx-auto max-w-4xl text-left text-sm md:text-base",
+        "mx-auto max-w-lg text-left text-sm md:text-base",
         "text-center font-normal text-neutral-500",
-        "mx-0 my-2 max-w-sm text-left md:text-sm",
+        "mx-0 my-2 text-left md:text-sm",
       )}
     >
       {children}
@@ -171,7 +170,7 @@ export const SkeletonThree = () => {
 };
 
 export const SkeletonTwo = () => {
-  const words = ["Existentialist", "Writer", "Programmer", "Gamer"];
+  const words = ["Existentialist", "Writer", "Artist", "Programmer", "Gamer"];
   return (
     <div className="relative flex h-full flex-col items-start gap-10 overflow-hidden pt-28">
       {/* TODO */}
@@ -191,18 +190,26 @@ export const SkeletonTwo = () => {
         </div>
       </div>
 
-      <div className="px-8 text-base text-neutral-400 lg:px-0">
+      <div className="px-8 text-sm text-neutral-400 lg:px-4">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id blanditiis
-          assumenda, labore saepe est aperiam nihil temporibus provident omnis
-          illo, eos suscipit odit aspernatur nobis reprehenderit sunt odio? Est,
-          nisi?
-          <br />
-          That's all. You don't know me.
+          Born in October 2002, in Purwakarta, Indonesia. I am the oldest of two
+          siblings raised in a modest family. I graduated with a degree in
+          computer science at the end of 2024 and am committed to focusing on
+          the field of technology.
+        </p>
+        <p>
+          I dreamed of becoming a teacher and have written my own
+          books. I am deeply grateful for my life, which I also fill with
+          reading and writing. My interests in philosophy and arts have led
+          me on a spiritual journey of deeper self-understanding.{" "}
+        </p>
+        <p>
+          As a lifelong learner, I am enthusiast to explore and learn
+          new things.
         </p>
       </div>
 
-      <ul className="mb-20 px-8 text-base text-neutral-400 lg:mb-0 lg:px-4">
+      <ul className="mb-20 px-8 text-sm text-neutral-400 lg:mb-0 lg:px-4">
         <li className="flex items-center gap-2">
           {" "}
           <GoHomeFill /> Lives in Bandung

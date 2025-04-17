@@ -23,14 +23,20 @@ export default function ExperienceSection() {
           }}
         >
           {/* Text Background */}
-          <div className="absolute inset-0 -z-10 flex items-start justify-center text-5xl font-bold text-neutral-800/50 blur-xs md:text-9xl">
+          <div className="absolute inset-0 -z-10 flex items-start justify-center text-6xl font-bold text-neutral-800/50 blur-xs md:text-9xl">
             EXPERIENCE
           </div>
           {/* Header */}
           <div className="relative z-0 mb-8 pt-16 text-neutral-100">
             <div className="flex flex-col items-center justify-center text-center text-xl font-semibold lg:text-3xl">
-              <div className="border-trsp mb-2 w-fit rounded-xl border p-2">
-                <MdOutlineWork className="text-4xl" />
+              <div className="border-trsp relative mb-2 w-fit rounded-xl border p-2">
+                {/* <MdOutlineWork className="text-4xl" /> */}
+                <Image
+                  alt=""
+                  src="/assets/experience2.png"
+                  width={48}
+                  height={48}
+                />
               </div>
               <span>Experience</span>
             </div>
@@ -54,7 +60,7 @@ export default function ExperienceSection() {
                     height={16}
                   />
                   <p>
-                    <span className="text-neutral-200">
+                    <span className="text-sm text-neutral-200">
                       Telkom Indonesia Tbk
                     </span>{" "}
                     - Bandung, Indonesia
@@ -69,10 +75,12 @@ export default function ExperienceSection() {
                     Proposal System to streamline project creation, approvals,
                     and role assignments.
                   </p>
-                  <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-400">
+                  <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-neutral-400">
                     <li>
-                      Managed end-to-end HC project and processes, from
-                      analysis, design, to coding/development.
+                      Acted as a mediator between stakeholders and the
+                      development team to align business needs with technical
+                      implementation, from analysis, design, to
+                      coding/development.
                     </li>
                     <li>
                       Collaborated closely with development teams (project
@@ -80,9 +88,8 @@ export default function ExperienceSection() {
                       data) to translate business needs into system features.
                     </li>
                     <li>
-                      Contributed to the development of user stories, use cases,
-                      system specifications, and design interfaces to guide the
-                      development process
+                      Making user stories, use cases, system specifications
+                      (Flowchart and ERD), and design interfaces (UI/UX).
                     </li>
                   </ul>
                 </div>
@@ -106,7 +113,7 @@ export default function ExperienceSection() {
                     height={16}
                   />
                   <p>
-                    <span className="text-neutral-200">
+                    <span className="text-sm text-neutral-200">
                       Bangkit Academy Led by Google, GoTo, & Traveloka
                     </span>
                     - Remote
@@ -121,7 +128,7 @@ export default function ExperienceSection() {
                     classes and training were conducted entirely in English. I
                     also graduated with distinction honored.
                   </p>
-                  <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-400">
+                  <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-neutral-400">
                     <li>
                       Gained proficiency in web development fundamentals,
                       JavaScript, creating back-end applications with Google

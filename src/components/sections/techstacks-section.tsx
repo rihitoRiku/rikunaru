@@ -69,17 +69,17 @@ export default function TechstacksSection() {
         <section id="header" className="mt-6">
           <BlurFade delay={0.25 * 2} inView direction="left">
             <p className="mt-4 text-center text-base text-neutral-100">
-              Other technical skills
+              other technical skills
             </p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Software Development Life Cycle (SDLC)
               </span>
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
-                IT System/Bussiness Analyst
+                IT System Analyst
               </span>
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
-                Scrum Master
+                Scrum
               </span>
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 GitHub
@@ -106,24 +106,24 @@ export default function TechstacksSection() {
               some of the soft skills I've mastered
             </p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
-              <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
+              {/* <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Time Management
-              </span>
+              </span> */}
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Critical & Analytical Thinking
               </span>
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Communication
               </span>
-              <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
+              {/* <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Problem Solving
-              </span>
+              </span> */}
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Adaptability
               </span>
-              <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
+              {/* <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Fast Learning
-              </span>
+              </span> */}
               <span className="border-trsp rounded-md border px-2 py-1 text-neutral-200">
                 Project Management
               </span>

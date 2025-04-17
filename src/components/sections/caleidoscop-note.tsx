@@ -14,7 +14,7 @@ export default function CaleidoscopNote() {
           <p className="font-inter mt-2 italic">
             Still coding on it! Next update coming up ASAP.
           </p>
-          <p className="font-inter italic">Last update: 4/6/25</p>
+          <p className="font-inter italic">Last update: 4/17/25</p>
         </div>
       </div>
     </div>

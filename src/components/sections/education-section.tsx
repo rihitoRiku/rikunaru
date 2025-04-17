@@ -52,36 +52,40 @@ export default function EducationSection() {
               </div>
               <div className="relative text-neutral-100">
                 <div className="text-xl font-semibold lg:text-3xl">
-                  <div className="border-trsp mb-2 w-fit rounded-xl border bg-neutral-950 p-2">
-                    <GiGraduateCap className="text-5xl" />
+                  <div className="border-trsp relative mb-2 w-fit rounded-xl border bg-neutral-950 p-2">
+                    {/* <GiGraduateCap className="text-5xl" /> */}
+                    <Image
+                      alt=""
+                      src="/assets/education2.png"
+                      width={48}
+                      height={48}
+                    />
                   </div>
                   <span>Education</span>
                 </div>
               </div>
               <div className="z-10 mt-8 w-full max-w-[44rem] text-base font-light text-neutral-200">
                 <p>
-                  As a fresh graduate of{" "}
-                  <strong className="font-medium text-emerald-200">
-                    Computer Science
-                  </strong>{" "}
+                  A fresh graduate of{" "}
+                  <strong className="text-emerald-200">Computer Science</strong>{" "}
                   (S.Kom.) from{" "}
-                  <strong className="font-medium text-emerald-200 hover:text-emerald-100">
+                  <strong className="text-emerald-200 hover:text-emerald-100">
                     <a
                       target="_blank"
                       href="https://www.topuniversities.com/universities/universitas-pendidikan-indonesia"
                     >
-                      Indonesia University of Education (UPI)
+                      Universitas Pendidikan Indonesia (UPI)
                     </a>
                   </strong>{" "}
-                  (2020 - 2024), I have developed a strong foundation in
-                  programming, covering algorithms, object-oriented programming
-                  (OOP), databases, and web development. Graduating with a{" "}
-                  <strong className="font-medium text-emerald-200">
-                    GPA 3.85 of 4.00
+                  (2020 - 2024). Graduating with a{" "}
+                  <strong className="text-emerald-200">
+                    GPA 3.85 of 4.00,
                   </strong>{" "}
-                  , I balanced academic coursework with hands-on experience,
-                  taking on the role of an assistant lecturer and actively
-                  collaborating on projects.
+                  I have developed a strong foundation in programming, covering
+                  algorithms, object-oriented programming (OOP), databases, and
+                  web development. I also balanced academic coursework with
+                  hands-on experience, taking on the role of an assistant
+                  lecturer and actively collaborating on projects.
                 </p>
                 {/* Competition */}
                 <div className="">
@@ -97,7 +101,7 @@ export default function EducationSection() {
                         GEMASTIK XV 2022 UI/UX Design
                       </AccordionTrigger>
                       <AccordionContent>
-                        <p>
+                        <p className="text-sm text-neutral-400">
                           Our team tackled SDG 4 (Quality Education) by
                           designing the Student Collaboration System (SCS)
                           through Figma. SCS is a platform for students and
@@ -112,7 +116,7 @@ export default function EducationSection() {
                         Comfest Cyber Security CTF
                       </AccordionTrigger>
                       <AccordionContent>
-                        <p>
+                        <p className="text-sm text-neutral-400">
                           {" "}
                           Our team engaged in solving complex cybersecurity
                           challenges, including cryptography, reverse
@@ -128,11 +132,13 @@ export default function EducationSection() {
                         DINAMIK 18 Computer Programming (CP)
                       </AccordionTrigger>
                       <AccordionContent>
-                        Participated in tackling algorithmic challenges, solving
-                        problems in areas such as data structures, OOP, dynamic
-                        programming, and graph theory. The competition tested
-                        our coding skills, problem-solving abilities, and time
-                        management under pressure
+                        <p className="text-sm text-neutral-400">
+                          Participated in tackling algorithmic challenges,
+                          solving problems in areas such as data structures,
+                          OOP, dynamic programming, and graph theory. The
+                          competition tested our coding skills, problem-solving
+                          abilities, and time management under pressure
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
@@ -140,12 +146,14 @@ export default function EducationSection() {
                         Scavenger Hunt
                       </AccordionTrigger>
                       <AccordionContent>
-                        In the Scavenger Hunt, we combined adventure with
-                        intellect by solving coding and algorithmic challenges
-                        alongside traditional riddles and tasks. The event
-                        tested our programming skills, problem-solving
-                        abilities, and teamwork as we deciphered clues and
-                        tackled technical puzzles to progress.
+                        <p className="text-sm text-neutral-400">
+                          In the Scavenger Hunt, we combined adventure with
+                          intellect by solving coding and algorithmic challenges
+                          alongside traditional riddles and tasks. The event
+                          tested our programming skills, problem-solving
+                          abilities, and teamwork as we deciphered clues and
+                          tackled technical puzzles to progress.
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -185,11 +193,11 @@ export default function EducationSection() {
                       Assistant Lecturer
                     </h2>
                     <p className="text-sm text-neutral-200">
-                      I have experience in curriculum design, teaching over 50
+                      Experienced in curriculum design, teaching over 50
                       students, and laboratory management. My responsibilities
                       have included:
                     </p>
-                    <ul className="ms-2 list-inside list-disc space-y-1 text-sm text-neutral-200">
+                    <ul className="ms-2 list-inside list-disc space-y-1 text-sm text-neutral-400">
                       <li>
                         Developed lesson plans, modules, and exam materials of
                         computer networking and RPL.

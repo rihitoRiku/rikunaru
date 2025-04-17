@@ -162,12 +162,13 @@ export default function LatestProjectSection() {
         className="relative mx-auto max-w-screen-md p-4"
       >
         <div className="mb-8">
-          <div className="flex items-center justify-start gap-2 text-3xl text-emerald-100">
-            <RiArchiveDrawerFill className="mb-1" />
-            <h1 className="mb-2 font-medium">Latest Project</h1>
+          <div className="flex items-center  gap-2 text-3xl text-emerald-100 mb-4">
+            {/* <RiArchiveDrawerFill className="mb-1" /> */}
+            <img alt="" src="/assets/project.png" className="size-10" />
+            <h1 className=" font-medium">Latest Project</h1>
           </div>
 
-          <p className="text-base text-neutral-200">
+          <p className="mt-3 text-base text-neutral-200">
             Explore a collection of my projects. Each project includes a brief
             description, the technologies and tools used, and a link to the
             GitHub repository for further exploration. Some projects have been

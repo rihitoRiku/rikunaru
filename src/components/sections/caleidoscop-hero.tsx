@@ -14,9 +14,9 @@ import { RiInstagramFill } from "react-icons/ri";
 export default function CaleidoscopHeroSectionDemo() {
   const features = [
     {
-      title: "<>404: He is nameless entity</>",
+      title: "<>Introduce</>",
       description:
-        "Just ordinary one, nobody who romanticize his slow-life. Seeking to always serve humanity through meaningful work.",
+        "Just an ordinary one. Seeking to always serve humanity through meaningful work. He embraces a slow life, art, and peace in his own company. You can call me, Rafi.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r border-trsp border-trsp",
@@ -35,9 +35,9 @@ export default function CaleidoscopHeroSectionDemo() {
       className: "col-span-1 lg:col-span-3 lg:border-r border-trsp",
     },
     {
-      title: "Ask Anything!",
+      title: " ",
       description:
-        "Note: I’m also developing an AI chatbot that’ll join this section soon to make this space even more fun and helpful.",
+        "",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none border-trsp",
     },
@@ -46,11 +46,11 @@ export default function CaleidoscopHeroSectionDemo() {
     <div className="relative z-20 mx-auto max-w-7xl pt-40">
       <div className="px-8">
         <h4 className="mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-neutral-100 lg:text-5xl lg:leading-tight">
-          Welcome to Kuro Space, Nerds:3
+          
         </h4>
 
         <p className="mx-auto my-4 max-w-2xl text-center text-sm font-normal text-neutral-500 lg:text-base">
-          This little realm contains personal story of him, the good sire xD. Have a nice day!
+          {/* This little realm contains personal story of him, the good sire xD. Have a nice day! */}
         </p>
       </div>
 
@@ -192,20 +192,16 @@ export const SkeletonTwo = () => {
 
       <div className="px-8 text-sm text-neutral-400 lg:px-4">
         <p>
-          Born in October 2002, in Purwakarta, Indonesia. I am the oldest of two
-          siblings raised in a modest family. I graduated with a degree in
-          computer science at the end of 2024 and am committed to focusing on
-          the field of technology.
+          Born in October 2002, in Purwakarta. A life-long learner who dreamed
+          of becoming a teacher and write his own books.
         </p>
         <p>
-          I dreamed of becoming a teacher and have written my own
-          books. I am deeply grateful for my life, which I also fill with
-          reading and writing. My interests in philosophy and arts have led
-          me on a spiritual journey of deeper self-understanding.{" "}
+          He developed a passion for technology and finished his studies in
+          Computer Science at the end of 2024.
         </p>
         <p>
-          As a lifelong learner, I am enthusiast to explore and learn
-          new things.
+          He is also lightworker, drawn to philosophy and committed to a spiritual
+          journey of deeper self-understanding.
         </p>
       </div>
 
@@ -219,7 +215,7 @@ export const SkeletonTwo = () => {
           {" "}
           <MdAlternateEmail /> muhammadrafishidiq@gmail.com
         </li>
-        <Link
+        {/* <Link
           href="https://www.facebook.com/rihitoRiku/"
           target="__blank"
           className="flex items-center gap-2"
@@ -234,7 +230,7 @@ export const SkeletonTwo = () => {
         >
           {" "}
           <RiInstagramFill /> instagram
-        </Link>
+        </Link> */}
       </ul>
 
       <div className="pointer-events-none absolute inset-y-0 left-0 z-[100] h-full w-20 bg-gradient-to-r from-neutral-950 to-transparent" />

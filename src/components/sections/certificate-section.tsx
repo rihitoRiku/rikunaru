@@ -6,8 +6,8 @@ import Marquee from "react-fast-marquee";
 
 
 const certificates = [
-  { src: "/assets/certificates/0.png", title: "Operating Systems and You" },
-  { src: "/assets/certificates/1.png", title: "Operating Systems and You" },
+  { src: "/assets/certificates/0.png", title: "Google IT Support" },
+  { src: "/assets/certificates/1.png", title: "Operating Systems" },
   { src: "/assets/certificates/2.png", title: "Computer Networking" },
   { src: "/assets/certificates/3.png", title: "System Administration" },
   { src: "/assets/certificates/4.png", title: "IT Security" },
@@ -91,7 +91,8 @@ export default function CertificateSection() {
               className="mb-2 w-fit rounded-xl border p-2"
               style={{ borderColor: "rgba(107, 114, 128, 0.1)" }}
             >
-              <PiCertificateFill className="text-4xl" />
+              {/* <PiCertificateFill className="text-4xl" /> */}
+              <img alt="" src="/assets/certificate.png" className="size-12" />
             </div>
             <span>Certificate</span>
           </div>

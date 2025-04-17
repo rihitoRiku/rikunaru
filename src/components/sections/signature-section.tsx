@@ -45,12 +45,10 @@ export default function SignatureSection() {
               delay: 0.3,
             }}
           >
-            <p>
-              Hello there! You can call me{" "}
-              <strong className="text-emerald-200">Rafi</strong>. I am a Computer
-              science fresh graduate who enthusiast in fullstack web development
-              with expertise in React, Next.js, Node.js, Rest API, databases,
-              and cloud environments.
+            <p className="font-nunito">
+              I am a computer science fresh graduate with passionate expertise
+              in fullstack web development both user interface design and
+              server-side functionality.
             </p>
             {/* <p>
               I was born in October 2002 in Purwakarta, Indonesia. Recently graduated
@@ -152,20 +150,19 @@ export default function SignatureSection() {
             </p>
             <ul className="flex-[2] list-inside list-disc space-y-1.5 text-sm text-neutral-200">
               <li>
-                Expertise in front-end development, building responsive and
-                dynamic web applications.
+                Analyzing system requirements and translating them into
+                technical solutions.
               </li>
               <li>
-                Knowledge in back-end with Node.js and integrating back-end
-                systems.
+                Creating responsive and dynamic interfaces for modern web apps.
               </li>
               <li>
-                Experience in UI/UX design, using Figma to craft user-friendly
-                and intuitive interfaces.
+                Integrating APIs and handling data flow between the front-end
+                and back-end systems
               </li>
               <li>
-                Proficient in Excel and Phyton for data analysis, automation,
-                and visualization.
+                Researching UI/UX best practices with a focus on user behavior
+                and needs.
               </li>
             </ul>
           </div>

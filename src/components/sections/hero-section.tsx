@@ -46,9 +46,8 @@ export default function HeroSection() {
                   delay: 0.1,
                 }}
               >
-                Software Engineer specializing in fullstack web development,
-                dedicated to staying updated in the ever-evolving tech landscape
-                and bringing innovative solutions to the table.
+                A Software Engineer committed to continuous growth and crafting
+                innovative and genuinely helpful solutions.
               </motion.p>
             </div>
             {/* Resume button */}
@@ -67,7 +66,7 @@ export default function HeroSection() {
                 }}
                 className="border-trsp relative flex cursor-pointer overflow-hidden rounded-lg border bg-none px-6 py-3 text-neutral-200"
               >
-                <span className="relative z-10">Download Resume</span>
+                <span className="relative z-10">Curriculum Vitae</span>
                 <span
                   className="absolute h-28 w-28 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-neutral-800 opacity-0 blur-2xl transition-opacity duration-300"
                   style={{

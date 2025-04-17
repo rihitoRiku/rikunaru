@@ -20,7 +20,7 @@ export default function Page() {
     // </div>
     <div className="min-h-screen">
       <CaleidoscopHeroSectionDemo />
-      <Quote />
+      {/* <Quote /> */}
       <CaleidoscopNote />
       {/* <DreamSection /> */}
       {/* <MonolosofisBannerSection /> */}

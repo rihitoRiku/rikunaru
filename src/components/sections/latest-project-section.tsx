@@ -34,6 +34,15 @@ const projectItems: ProjectItem[] = [
     demo: "https://rikustore.vercel.app/",
   },
   {
+    title: "Bekebon",
+    description:
+      "A sleek and scalable landing page build, based on a beautiful Dribbble concept. Leveraged SSR, atomic & reusable components for maintainability, Pixel-perfect implementation with a focus on scalability and performance, Optimized images, responsive layout, and fast load times across devices. This project was all about clean code, modern UI practices, and getting the little details just right. ",
+    techStack:
+      "Typescript, Next.js, React.js, Tailwind, HTML, CSS, JS",
+    link: "https://github.com/rihitoRiku/bekebon",
+    demo: "https://bekebon.vercel.app/",
+  },
+  {
     title: "Monolosofis",
     description:
       "Modern dribble UI design landing page for selling my own books",
